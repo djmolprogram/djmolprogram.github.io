@@ -9,6 +9,8 @@ chapter = true
 
 # DJMol
 
+## Documentation
++ #### [Installation](docs/installation/)
 ## Mailing List
 
 ## License
