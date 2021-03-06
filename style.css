@@ -3,8 +3,37 @@ html,
 body {
     width: 100%;
     height: 100%;
-    margin: 0px;
+    margin: auto;
     padding: 0px;
+    zoom: 125%;
+}
+
+
+/*Floating Back-To-Top Button*/
+
+#myBtn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 5%;
+    max-width: 30px;
+    width: 100%;
+    font-size: 12px;
+    border-color: rgba(85, 85, 85, 0.2);
+    background-color: rgb(100, 100, 100);
+    padding: .5px;
+    border-radius: 4px;
+}
+
+.image-container {
+    text-align: center !important;
+}
+
+
+/*On Hover Color Change*/
+
+#myBtn:hover {
+    background-color: #7dbbf1;
 }
 
 body {
@@ -12,6 +41,39 @@ body {
     background-color: #ffffff;
     max-width: 70%;
     padding: 72pt 72pt 72pt 72pt;
+}
+
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 10%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li,
+#toc_container ul,
+#toc_container ul li {
+    list-style: outside none none !important;
+}
+
+
+/* p,
+span {
+    font-size: 1.5vw;
+} */
+
+table {
+    width: 100%;
 }
 
 ol.lst-kix_list_7-0 {
@@ -1567,7 +1629,6 @@ table th {
     text-decoration: underline;
     vertical-align: baseline;
     text-decoration-skip-ink: none;
-    font-size: 10pt;
     font-family: "Calibri";
     font-style: normal
 }
@@ -1577,7 +1638,6 @@ table th {
     font-weight: 400;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-family: "Calibri";
     font-style: italic
 }
@@ -1587,7 +1647,6 @@ table th {
     font-weight: 700;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-family: "Calibri";
     font-style: normal
 }
@@ -1597,7 +1656,6 @@ table th {
     font-weight: 400;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-family: "Arimo";
     font-style: normal
 }
@@ -1618,7 +1676,6 @@ table th {
     text-decoration: underline;
     vertical-align: baseline;
     text-decoration-skip-ink: none;
-    font-size: 10pt;
     font-style: normal
 }
 
@@ -1647,7 +1704,6 @@ table th {
     font-weight: 400;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-family: "Calibri";
     font-style: normal
 }
@@ -1687,7 +1743,6 @@ table th {
     font-weight: 400;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-family: "Cambria";
     font-style: normal
 }
@@ -1717,7 +1772,6 @@ table th {
     font-weight: 400;
     text-decoration: none;
     vertical-align: sub;
-    font-size: 10pt;
     font-family: "Calibri";
     font-style: normal
 }
@@ -1727,7 +1781,6 @@ table th {
     font-weight: 400;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-family: "Courier New";
     font-style: normal
 }
@@ -1738,7 +1791,6 @@ table th {
     text-decoration: underline;
     vertical-align: baseline;
     text-decoration-skip-ink: none;
-    font-size: 10pt
 }
 
 .c64 {
@@ -1754,7 +1806,6 @@ table th {
     color: #000000;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-family: "Calibri";
     font-style: italic
 }
@@ -1779,7 +1830,6 @@ table th {
     color: #000000;
     text-decoration: none;
     vertical-align: sub;
-    font-size: 10pt;
     font-style: normal
 }
 
@@ -1795,7 +1845,6 @@ table th {
     color: #000000;
     text-decoration: none;
     vertical-align: super;
-    font-size: 10pt;
     font-style: normal
 }
 
@@ -1827,7 +1876,6 @@ table th {
     color: #000000;
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt;
     font-style: normal
 }
 
@@ -2188,7 +2236,6 @@ table th {
 .c61 {
     text-decoration: none;
     vertical-align: baseline;
-    font-size: 10pt
 }
 
 .c1 {
@@ -2250,7 +2297,6 @@ table th {
 
 .c155 {
     color: #ff0000;
-    font-size: 10pt
 }
 
 .c13 {
@@ -2343,9 +2389,7 @@ table th {
     height: 72.2pt
 }
 
-.c160 {
-    font-size: 10pt
-}
+.c160 {}
 
 .c15 {
     height: 0pt
@@ -2525,7 +2569,6 @@ table th {
 .subtitle {
     padding-top: 0pt;
     color: #000000;
-    font-size: 10pt;
     padding-bottom: 36pt;
     font-family: "Calibri";
     line-height: 1.0;
@@ -2536,14 +2579,12 @@ table th {
 
 li {
     color: #000000;
-    font-size: 10pt;
     font-family: "Cambria"
 }
 
 p {
     margin: 0;
     color: #000000;
-    font-size: 10pt;
     font-family: "Cambria"
 }
 
