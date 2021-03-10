@@ -10,7 +10,9 @@ chapter = true
 ## Download and Installation
 ---
  
-#### Download [Binaries](https://djmol.s3.amazonaws.com/DJMolPlatformv2.1_Win64.zip)  [Source](https://djmol.s3.amazonaws.com/DJMolSource_2020_BETAformat.zip)
+### Download
++ #### [Binaries](https://djmol.s3.amazonaws.com/DJMolPlatformv2.1_Win64.zip)  
++ #### [Source](https://djmol.s3.amazonaws.com/DJMolSource_2020_BETAformat.zip)
 
 ## For Compiling/Installation of DJMol and Add-Ons
 
