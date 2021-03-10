@@ -45,11 +45,12 @@ body {
 
 #toc_container {
     /* background: #f9f9f9 none repeat scroll 0 0; */
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa; */
     display: table;
     /* font-size: 95%; */
     margin-bottom: 1em;
     padding: 10%;
+    padding-top: 5%;
     width: auto;
     margin-left: auto;
     margin-right: auto;
