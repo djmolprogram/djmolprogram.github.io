@@ -22,15 +22,13 @@ Some of the Tasks* that DJMol can Perform/Analyze/Calculate is:
 + Generate Nano-/Molecular Structures, and its Conversions
 + Cloud based remote computing (SSH) etc.
 
-The DJMol project evolved under the leadership of Dr.Krishna Mohan G. P., (Asst. Prof. of Chemistry, Department of Science and Humanities, Mar Baselios College of Science and Technology (MBCET), Trivandrum, Kerala, India: 695015, Rahul Sunil (BTech in Computer Science, MBCET), Dr. Kapil Gupta and Dr. Seung C Lee (Indo-Korea Science and Technology Center, Bengaluru, Karnataka, India: 560064).
-
-The program is developed by IKST, Bengaluru, India.
+> The DJMol project evolved under the leadership of Dr.Krishna Mohan G. P., (Asst. Prof. of Chemistry, Department of Science and Humanities, Mar Baselios College of Science and Technology (MBCET), Trivandrum, Kerala, India: 695015, Rahul Sunil (BTech in Computer Science, MBCET), Dr. Kapil Gupta and Dr. Seung C Lee (Indo-Korea Science and Technology Center, Bengaluru, Karnataka, India: 560064). The program is developed by IKST, Bengaluru, India.
 
 ## Documentation
-DJMol's online manual is available [here](https://djmolprogram.github.io/)
-PDF manual is also available
+DJMol's online manual is available [here](https://djmolprogram.github.io/).
+PDF manual is also [available](UserManual.pdf).
 
-## Installation
+## Download and Installation
 For getting the source code and compiling instruction [click here](installation/)
 
 ## Mailing List
@@ -39,7 +37,7 @@ Please visit https://djmol.forumotion.com/ to join the Forum
 
 ## License
 The Program is distributed under GPL-v3 (or later).
-For a detailed review on this license visit ...
+For a detailed review on this license visit [GNU Project](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ## Contact
 Mail krishna.mohan@mbcet.ac.in or krishnamohan.gp@gmail.com for further queries on the program.
