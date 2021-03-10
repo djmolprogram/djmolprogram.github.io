@@ -1,7 +1,7 @@
 +++
 title = "System Requirements"
 weight = 5
-chapter = true
+chapter = false
 +++
 
 # DJMol
