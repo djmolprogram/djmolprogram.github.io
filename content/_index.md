@@ -25,7 +25,7 @@ Some of the Tasks* that DJMol can Perform/Analyze/Calculate is:
 > The DJMol project evolved under the leadership of Dr.Krishna Mohan G. P., (Asst. Prof. of Chemistry, Department of Science and Humanities, Mar Baselios College of Science and Technology (MBCET), Trivandrum, Kerala, India: 695015, Rahul Sunil (BTech in Computer Science, MBCET), Dr. Kapil Gupta and Dr. Seung C Lee (Indo-Korea Science and Technology Center, Bengaluru, Karnataka, India: 560064). The program is developed by IKST, Bengaluru, India.
 
 ## Documentation
-DJMol's online manual is available [here](https://djmolprogram.github.io/).
+DJMol's online manual is available [here](manual).
 PDF manual is also [available](UserManual.pdf).
 
 ## Download and Installation
