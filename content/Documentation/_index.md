@@ -1,0 +1,26 @@
++++
+title = "Documentation"
+weight = 5
+chapter = true
++++
+
+# DJMol
+
+## Table of Contents
+
++ Chapter 1: Introduction
++ Chapter 2: DFTB+ Calculations
++ Chapter 3: Modeling with Siesta
++ Chapter 4: OpenMD Simulations
++ Chapter 5: Python scripting with ASE
++ Chapter 6: Tools of DJMol
++ Chapter 7: Architecture of the Program
++ Chapter 8: Software Applications
++ Appendices
+    + Python Scripting for DJMol Applications
+    + Installation of Python and NumPy
+    + Windows Subsystem Linux in DJMol
+    + Saved Data
+    + Demonstration Videos
+    + For Compiling/Installation of DJMol and Add-Ons
+    + Forthcoming Features
