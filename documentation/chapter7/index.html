@@ -1,0 +1,80 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.81.0"><meta name=description content><link rel=icon href=/images/favicon.png type=image/png><title>Chaper 7 :: DJMol Docs</title><link href=/css/nucleus.css?1615995166 rel=stylesheet><link href=/css/fontawesome-all.min.css?1615995166 rel=stylesheet><link href=/css/hybrid.css?1615995166 rel=stylesheet><link href=/css/featherlight.min.css?1615995166 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1615995166 rel=stylesheet><link href=/css/auto-complete.css?1615995166 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1615995166 rel=stylesheet><link href=/css/theme.css?1615995166 rel=stylesheet><link href=/css/hugo-theme.css?1615995166 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1615995166></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/documentation/chapter7/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=/><h1>DJMol</h1></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1615995166></script><script type=text/javascript src=/js/auto-complete.js?1615995166></script><script type=text/javascript>var baseurl="https://djmolprogram.github.io"</script><script type=text/javascript src=/js/search.js?1615995166></script></div><section id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i>Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/installation/ title=Installation class=dd-item><a href=/installation/>Installation</a><ul><li data-nav-id=/installation/requirements/ title="System Requirements" class=dd-item><a href=/installation/requirements/>System Requirements</a></li></ul></li><li data-nav-id=/documentation/ title=Documentation class="dd-item
+parent"><a href=/documentation/>Documentation</a><ul><li data-nav-id=/documentation/chapter1/ title="Chaper 1" class=dd-item><a href=/documentation/chapter1/>Chaper 1</a></li><li data-nav-id=/documentation/chapter2/ title="Chaper 2" class=dd-item><a href=/documentation/chapter2/>Chaper 2</a></li><li data-nav-id=/documentation/chapter3/ title="Chaper 3" class=dd-item><a href=/documentation/chapter3/>Chaper 3</a></li><li data-nav-id=/documentation/chapter4/ title="Chaper 4" class=dd-item><a href=/documentation/chapter4/>Chaper 4</a></li><li data-nav-id=/documentation/chapter5/ title="Chaper 5" class=dd-item><a href=/documentation/chapter5/>Chaper 5</a></li><li data-nav-id=/documentation/chapter6/ title="Chaper 6" class=dd-item><a href=/documentation/chapter6/>Chaper 6</a></li><li data-nav-id=/documentation/chapter7/ title="Chaper 7" class="dd-item active"><a href=/documentation/chapter7/>Chaper 7</a></li><li data-nav-id=/documentation/chapter8/ title="Chaper 8" class=dd-item><a href=/documentation/chapter8/>Chaper 8</a></li></ul></li></ul><section id=footer><p>2021, GP Krishna Mohan, Rahul Sunil, K. Gupta, SC Lee</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span class=links><a href=/>DJMol Docs</a> > <a href=/documentation/>Documentation</a> > Chaper 7</span></div></div></div><div id=head-tags></div><div id=chapter><div id=body-inner><h1 id=architecture-of-the-program>Architecture of the Program</h1><p>Software Architecture</p><p>In practice, computational materials science research encompasses three
+distinctive steps, viz. (1), constructing the geometrical data or
+structure of the system (2), performing computations and, (3), obtaining
+results by the post processing of calculated data. All these steps can
+be effectively coupled by means of modeling platform such that a user
+can create, visualize, and share various input data files and run it
+with appropriate programs to obtain output data to analyze the results.</p><p>By integrating molecular (or crystal) visualizer, scripting tools (in
+this case, Python and Jmol scripting) and other standard features of an
+IDE (integrated development environment), a user can interactively build
+or manipulate structures of materials or molecules, and its atomistic
+properties can be calculated with appropriate ab initio programs from
+either a local or a remote machine. A number of built-in tools, scripts
+are provided for the analysis purpose. To demonstrate the platform we
+have used DFTB+ as well as Siesta electronic structure code along with
+ASE (atomic simulation environment) and OpenMD molecular dynamics
+package.</p><p>   The programming language, Java (version 8) was chosen for this
+project since it is free, strongly object-oriented and shows its
+neutrality to the various operating systems. The object oriented
+programming is arguably the most popular software development technique
+which effectively manages the complexity in code development [9]. We
+preferred Java, since (1) it does not use pointers, and (2), it supports
+threads implicitly. Although pointers provide direct access to the
+computer memory, careless use of the pointers will easily leads to
+segmentation fault and other vulnerables. It is our personal opinion
+that the bugs emerged from the improper application of pointers are
+difficult to trace or debug, in addition to this, code with pointers is
+difficult to translate into other computer languages without the pointer
+features. Concerning threads, in this application, we used a number of
+threads (i.e. user threads), apart from the JVM generated daemon
+threads. Since the threads are inherently supported by the language one
+can readily create a thread by extending a Thread class. Exception
+handling of Java is equipped with two types, namely, unchecked and
+checked exception handling. And in most of the cases we used checked
+exceptions, as it is less tedious to implement.</p><p>   The core of the DJMol application consists of (Apache-) Netbeans
+Platform and it can be regarded as the engine behind the Netbeans IDE.
+In other words, many of the technical features of DJMol program is
+inherited from Netbeans IDE which is initially designed for developing
+Java/Javascript and C/C++ applications and consists a number of
+utilities to increase the productivity of a user (for example, it has an
+advanced sourcecode editor with code completion utilities, tools for
+refactoring, version control systems, Git based collaboration tools
+etc.) and these utilities can also be used efficiently for various
+modeling or scripting tasks. Moreover, this platform consists of a set
+of independent modular software components called modules (e.g., an SSH
+module to communicate with an external cloud platform). Apart from this,
+the program supports plug-ins so that one can selectively add or remove
+new features into it (e.g. Python interpreter) without being re-compiled
+the code. Optionally, users of the code can make their own plug-ins, for
+example, to incorporate another ab initio package. See the below for the
+schematic structure of the program. To the best of our knowledge, DJMol
+is the first opensource modeling platform which is built from a
+programming IDE.</p><p>To display the molecular, crystal, nanostructures a Java library, Jmol,
+has been embedded into the program. The Jmol program is an open source,
+cross-platform and a highly independent (i.e. it does not depend on any
+third party libraries like Java3D or OpenGL) 3D visualization
+application. Apart from this, there are two distinct features associated
+with Jmol: (1) Jmol can be programmatically embedded into any Java code
+which uses Swing application programming interface (2), It supports an
+internal command scripting, so that a user can control or manipulate the
+display or send and retrieve parameters, data, commands etc. For
+example, to manipulate Gaussian cube files a user can effectively apply
+this internal scripting ability of Jmol. Unlike most of the visualizers,
+Jmol is capable of perceiving the molecular structure in three
+dimensions by applying stereographic projections. A viewer, with
+appropriate anaglyph spectacles, 3D perspective images of the molecules
+can be interactively visualized. Apart from this, Jmol consists of an
+UFF (uniform force field) method and it can be used to pre-optimize a
+variety of organic as well as inorganic molecules. To create 2D data
+plots we have used either Matplotlib based scripts or Jfreechart
+libraries. In the case of 3D data plots, (for example, the potential
+energy surfaces or orbital contour diagrams), a Java based opensource
+library jzy3d has been used.</p><p><img src=/images/image24.png alt></p><p>Figure 7.1: A schematic diagram of DJMol software architecture. The core
+of the program is an IDE which is connected to other modules or
+programs.</p><p><img src=/images/image25.png alt></p><p>Figure 7.2: A standard workflow for a modeling task under the DJMol
+program (mandate workflows are indicated by black arrows).</p><p>Java’s native thread is used to initiate add-ons so that its console can
+be controlled independently, if needed. Below figure shows Windos’ Task
+managers snapshot of OpenMD add-on, while it is under running (and it
+indicate two independent processes).</p><p><img src=/images/image27.png alt></p><footer class=footline></footer></div></div></div><div id=navigation><a class="nav nav-prev" href=/documentation/chapter6/ title="Chaper 6"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=/documentation/chapter8/ title="Chaper 8" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1615995166></script><script src=/js/perfect-scrollbar.min.js?1615995166></script><script src=/js/perfect-scrollbar.jquery.min.js?1615995166></script><script src=/js/jquery.sticky.js?1615995166></script><script src=/js/featherlight.min.js?1615995166></script><script src=/js/highlight.pack.js?1615995166></script><script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1615995166></script><script src=/js/learn.js?1615995166></script><script src=/js/hugo-learn.js?1615995166></script><script src=/mermaid/mermaid.js?1615995166></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>

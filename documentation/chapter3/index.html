@@ -1,0 +1,57 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.81.0"><meta name=description content><link rel=icon href=/images/favicon.png type=image/png><title>Chaper 3 :: DJMol Docs</title><link href=/css/nucleus.css?1615995166 rel=stylesheet><link href=/css/fontawesome-all.min.css?1615995166 rel=stylesheet><link href=/css/hybrid.css?1615995166 rel=stylesheet><link href=/css/featherlight.min.css?1615995166 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1615995166 rel=stylesheet><link href=/css/auto-complete.css?1615995166 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1615995166 rel=stylesheet><link href=/css/theme.css?1615995166 rel=stylesheet><link href=/css/hugo-theme.css?1615995166 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1615995166></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/documentation/chapter3/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=/><h1>DJMol</h1></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1615995166></script><script type=text/javascript src=/js/auto-complete.js?1615995166></script><script type=text/javascript>var baseurl="https://djmolprogram.github.io"</script><script type=text/javascript src=/js/search.js?1615995166></script></div><section id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i>Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/installation/ title=Installation class=dd-item><a href=/installation/>Installation</a><ul><li data-nav-id=/installation/requirements/ title="System Requirements" class=dd-item><a href=/installation/requirements/>System Requirements</a></li></ul></li><li data-nav-id=/documentation/ title=Documentation class="dd-item
+parent"><a href=/documentation/>Documentation</a><ul><li data-nav-id=/documentation/chapter1/ title="Chaper 1" class=dd-item><a href=/documentation/chapter1/>Chaper 1</a></li><li data-nav-id=/documentation/chapter2/ title="Chaper 2" class=dd-item><a href=/documentation/chapter2/>Chaper 2</a></li><li data-nav-id=/documentation/chapter3/ title="Chaper 3" class="dd-item active"><a href=/documentation/chapter3/>Chaper 3</a></li><li data-nav-id=/documentation/chapter4/ title="Chaper 4" class=dd-item><a href=/documentation/chapter4/>Chaper 4</a></li><li data-nav-id=/documentation/chapter5/ title="Chaper 5" class=dd-item><a href=/documentation/chapter5/>Chaper 5</a></li><li data-nav-id=/documentation/chapter6/ title="Chaper 6" class=dd-item><a href=/documentation/chapter6/>Chaper 6</a></li><li data-nav-id=/documentation/chapter7/ title="Chaper 7" class=dd-item><a href=/documentation/chapter7/>Chaper 7</a></li><li data-nav-id=/documentation/chapter8/ title="Chaper 8" class=dd-item><a href=/documentation/chapter8/>Chaper 8</a></li></ul></li></ul><section id=footer><p>2021, GP Krishna Mohan, Rahul Sunil, K. Gupta, SC Lee</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span class=links><a href=/>DJMol Docs</a> > <a href=/documentation/>Documentation</a> > Chaper 3</span></div></div></div><div id=head-tags></div><div id=chapter><div id=body-inner><h1 id=modeling-with-siesta>Modeling with Siesta</h1><p>This add-on is mainly used for performing small to moderate level Siesta
+DFT calculations (with hundred of atoms). For larger calculations users
+are advised to use cluster/GCP machines with MPI parallel binaries. This
+add-on is equipped with OpenMP so that multi core machines can be used
+for its calculations, if it is found necessary. Note that Siesta 4.1
+version is used in this add-on.</p><p>At the present version all molecular structural data and non Z-matrix
+styled crystalline FDF data is supported by this add-on.</p><h4 id=1-siesta-script-writer>[1] Siesta Script Writer</h4><p>A basic Siesta script (.fdf file) write is written; it can be used to
+make a template FDF file for molecular as well as crystalline systems.
+Most commonly used key words are added and this can be selected
+optionally. However user is advised to refer Siesta 4.1 manual for
+finalizing the script. This tool can be invoked as:</p><p>Set Up ➤ Siesta Scripting</p><p><img src=/images/image64.png alt></p><p>Figure 3.1: A script writer tool (FDF writer) in the Siesta add-on.</p><p>The newly generated file is kept in: .\Input directory.</p><p>If an XYZ file is loaded into the Main Viewer, FDF file will generated
+with that geometry.</p><h4 id=2-siesta-add-on-and-executing-the-program>[2] Siesta Add-On and Executing the Program</h4><p>All the basic tasks for Siesta (except its script writing) is carried
+out in Siesta add-on and it can be called by:</p><p>Execute  ➤ Siesta Calculator</p><p>It will launch the add-on as a separate program. A variety of FDF file
+is supported by the Jmol and hence this add-on. Use &lt;Open> for calling
+these FDF files.</p><p>For example, h2o2.fdf can be opened and it can be submitted in this
+application, by simply going to the tab &lt;Run> and clicking the Run
+button. The below figure shows a console output of a Siesta run. Note
+that the output file is stored in,</p><p>.\SiestaApp\SiestaBinary.4.0.CygWin64 directory. And its console log
+file is saved in .\SiestaApp\siestaMAIN.log.</p><p><img src=/images/image11.png alt></p><p>Figure 3.2: Siesta log is shown in the console window of the add-on.</p><p>In &lt;Analysis> some standard or routine calculations or analysis can be
+done, such as checking SCF convergence, Cartesian Force components and
+vectors (of optimized structure), Eigenvalues etc. from the relevant
+files in .\SiestaApp\SiestaBinary.4.0.CygWin64. See the below figure
+of h2o2.fdf out file examples.</p><h4 id=3-basic-analayzers>[3] Basic analayzers</h4><p>After running the calculations, one can use many basic analyzers, for
+example to check SCF convergence for single point as well as geometry
+optimization etc.</p><p><img src=/images/image12.png alt></p><p>Figure 3.3: The window shows basic commands for the Siesta post
+processing.</p><p>Some of the analyzers results are shown below.</p><ul><li>Basic Analyzers Results:</li></ul><p><img src=/images/image13.png alt></p><p>Figure 3.4: Results from the Siesta post processing is shown.</p><p><img src=/images/image14.png alt></p><p>Figure 3.5: Force component vectors of each atom in H2O2 (non
+equilibrium geometry).</p><ul><li>Denchar Results</li></ul><p>Denchar is a Siesta utility-program to plot charge densities and wave
+functions in real space. It can be used in 2D or in 3D. A template
+script for water molecule is given (but this can be modified very easily
+for other molecules), and its 2D/3D data can be obtained by following
+Steps I-IV, systematically. Note that Γ point used in this calculations.</p><p><img src=/images/image15.png alt></p><p>(a)</p><p><img src=/images/image16.png alt></p><p>(b)</p><p>Figure 3.6: (a)Shows list of 2D data files of water molecule from the
+Denchar utility, with two different real wavefunctions (the first two
+low lying orbitals in a contour diagram);(b) shows equivalent 3D data.</p><p>Similary, band diagram can also be generates with template scripts.</p><p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| <img src=/images/image17.png alt> | <img src=/images/image18.png alt> |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p><p>Figure 3.7: Band and DOS diagram of Aluminium (FCC). Note that in DOS
+plot, there are actually  three lines (lower orange line is composed of
+two lines which corresponds to spin up and down contributions, whereas
+green line corresponds to the total DOS).</p><h4 id=4-wannier-orbitals-and-band-diagrams>[4] Wannier Orbitals and Band Diagrams</h4><p>To Wannier get localized molecular orbitals of crystalline or extended
+systems from the Bloch wavefunction, Wannier90.exe program is used in
+conjunction with the Siesta binaries. See <a href=http://www.wannier.org>www.wannier.org</a>  for more
+details.</p><p>In the tab &lt;Wannier DOS/Orbitals> this information can be obtained by
+following steps I to VII (as an example template, FCC bulk Si is used).
+ Results can be viewed by using &lt;Plot Bands> or by &lt;View Wannier
+Orbitals>. This template files can be easily modified for other
+systems.</p><p><img src=/images/image2.png alt></p><p>Figure 3.8: Steps of Wannier data calculations.</p><p>&lt;Plot Bands> give Wannier band diagram and &lt;View Wannier Orbitals>
+list XSF files and that can be converted into the CUBE file format to
+display Wannier functions.</p><p><img src=/images/image3.png alt></p><p>Figure 3.9: A Wannier orbital of bulk Si generated from a XSF file.</p><h4 id=5-molecular-vibrations>[5] Molecular Vibrations</h4><p>Molecular vibrations (using  point) can be easily calculated with the
+application. In the tab, &lt;Vibrations>, execute the steps I-V, one
+after another (note that example script is made for water molecule, but
+it can be readily modified for other molecules.). The last command,
+&lt;Run Vibra> calculates eigenvalues/vectors and it gives an another
+window in which different modes can be animated. The essential molecules
+vibrational data is saved in
+.\SiestaApp\SiestaBinary.4.0.CygWin64\SiestaVibModes.xyz.</p><p><img src=/images/image4.png alt></p><p>Figure 3.10: A vibrational frequency calculator module and its
+mode-displayer.</p><footer class=footline></footer></div></div></div><div id=navigation><a class="nav nav-prev" href=/documentation/chapter2/ title="Chaper 2"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=/documentation/chapter4/ title="Chaper 4" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1615995166></script><script src=/js/perfect-scrollbar.min.js?1615995166></script><script src=/js/perfect-scrollbar.jquery.min.js?1615995166></script><script src=/js/jquery.sticky.js?1615995166></script><script src=/js/featherlight.min.js?1615995166></script><script src=/js/highlight.pack.js?1615995166></script><script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1615995166></script><script src=/js/learn.js?1615995166></script><script src=/js/hugo-learn.js?1615995166></script><script src=/mermaid/mermaid.js?1615995166></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>

@@ -1,0 +1,55 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.81.0"><meta name=description content><link rel=icon href=/images/favicon.png type=image/png><title>Chaper 4 :: DJMol Docs</title><link href=/css/nucleus.css?1615995166 rel=stylesheet><link href=/css/fontawesome-all.min.css?1615995166 rel=stylesheet><link href=/css/hybrid.css?1615995166 rel=stylesheet><link href=/css/featherlight.min.css?1615995166 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1615995166 rel=stylesheet><link href=/css/auto-complete.css?1615995166 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1615995166 rel=stylesheet><link href=/css/theme.css?1615995166 rel=stylesheet><link href=/css/hugo-theme.css?1615995166 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1615995166></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/documentation/chapter4/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=/><h1>DJMol</h1></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1615995166></script><script type=text/javascript src=/js/auto-complete.js?1615995166></script><script type=text/javascript>var baseurl="https://djmolprogram.github.io"</script><script type=text/javascript src=/js/search.js?1615995166></script></div><section id=homelinks><ul><li><a class=padding href=/><i class="fas fa-home"></i>Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/installation/ title=Installation class=dd-item><a href=/installation/>Installation</a><ul><li data-nav-id=/installation/requirements/ title="System Requirements" class=dd-item><a href=/installation/requirements/>System Requirements</a></li></ul></li><li data-nav-id=/documentation/ title=Documentation class="dd-item
+parent"><a href=/documentation/>Documentation</a><ul><li data-nav-id=/documentation/chapter1/ title="Chaper 1" class=dd-item><a href=/documentation/chapter1/>Chaper 1</a></li><li data-nav-id=/documentation/chapter2/ title="Chaper 2" class=dd-item><a href=/documentation/chapter2/>Chaper 2</a></li><li data-nav-id=/documentation/chapter3/ title="Chaper 3" class=dd-item><a href=/documentation/chapter3/>Chaper 3</a></li><li data-nav-id=/documentation/chapter4/ title="Chaper 4" class="dd-item active"><a href=/documentation/chapter4/>Chaper 4</a></li><li data-nav-id=/documentation/chapter5/ title="Chaper 5" class=dd-item><a href=/documentation/chapter5/>Chaper 5</a></li><li data-nav-id=/documentation/chapter6/ title="Chaper 6" class=dd-item><a href=/documentation/chapter6/>Chaper 6</a></li><li data-nav-id=/documentation/chapter7/ title="Chaper 7" class=dd-item><a href=/documentation/chapter7/>Chaper 7</a></li><li data-nav-id=/documentation/chapter8/ title="Chaper 8" class=dd-item><a href=/documentation/chapter8/>Chaper 8</a></li></ul></li></ul><section id=footer><p>2021, GP Krishna Mohan, Rahul Sunil, K. Gupta, SC Lee</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span class=links><a href=/>DJMol Docs</a> > <a href=/documentation/>Documentation</a> > Chaper 4</span></div></div></div><div id=head-tags></div><div id=chapter><div id=body-inner><h1 id=openmd-simulations>OpenMD Simulations</h1><p>OpenMD add-on is aimed to perform MD calculations with OpenMD
+binary/scripts. This tool has four parts, (1), Viewer (2), Editor (3),
+Terminal and, (4), Utilities.</p><p><img src=/images/image5.png alt></p><p>Figure 4.1: Front end of the OpenMD add-on tool displays Ag nanoparticle
+obtained using OpenMD.</p><p>In viewer a normal XYZ file can be viewed (usually it is obtained from
+OMD dump file by using a converter, Dump2XYZ). All other standard Jmol
+view facilities are available here. Note that XYZ file will keep in the
+&lt;OpenMD/Tempview> directory whereas the OMD file will be kept in the
+&lt;./OpenMD> folder.</p><p>The Editor tool will open an OMD file. Since OMD file is a kind of XML
+file, a special editor is used to fold and un-fold many sections of this
+file as shown in the following file.</p><p> In Terminal-Tab, simple DOS commands can be executed. Note that one
+should add:</p><p>cmd.exe /c</p><p>before the Python scripts (eg. cmd.exe /c python.exe slabBuilder.py).
+The commands are stored in a stack-array and it can be easily called
+back (See Stored Commands).</p><p>In the Utility-Tab several tools are added (eg. &lt;Clean OpenMD> will
+delete the MD out files and &lt;Open Trajectory> will open a separate
+viewer window to animate trajectories etc.).  The &lt;Plot Energies> will
+open &lt;Stat> file and plot total, kinetic and potential energies.
+Similarly, &lt;T P V> plot variation of temperature, pressure and volume
+during the MD run as it is stored in the &lt;Stat> file.</p><p><img src=/images/image6.png alt></p><p>Figure 4.2: OpenMD Tool’s XML styled editor for the OMD scripts.</p><p><img src=/images/image7.png alt></p><p><img src=/images/image8.png alt></p><p>Figure 4.3: OpenMD Analyze variation of different energies during an MD
+simulation.</p><p>Since analyzing bond length gives an indication of reaction progress,
+&lt;Calculate Bond Length> tool can be used to extract Bond length
+between two selected atoms (“Atom Number 1” and “Atom Number 2”). This
+will read XYZ file which doesn’t use Periodic Boundary Conditions or PBC
+(as an example see, SampleAnimationTest.xyz file).</p><p><img src=/images/image9.png alt></p><p>Figure 4.4: An out file from the MDAnalysis script. It describes that
+the bond is break near 400’th frame (in a periodic cubic box cell).</p><p>However, if PBC is applied more advanced script is needed to extract
+this bond length information. For example, if the system is equipped
+with Python and MDAnalysis package, a user can:</p><p>1.       Edit &lt;MDAnalysis> script (MDanalysisv1.py) if needed, eg. to
+change atom numbers</p><p>2.       Use &lt;Add MDAnalysis in Terminal>, which will add cmd.exe /c
+python.exe MDanalysisv1.py in the Terminal window</p><p>3.       Go to Terminal and execute the above command.</p><p>The sample MDAnalysis script is:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> MDAnalysis <span style=color:#f92672>as</span> mda
+<span style=color:#f92672>from</span> MDAnalysis.analysis.distances <span style=color:#f92672>import</span> dist
+<span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#f92672>as</span> plt
+<span style=color:#f92672>import</span> numpy <span style=color:#f92672>as</span> np
+                                                                         
+u <span style=color:#f92672>=</span> mda<span style=color:#f92672>.</span>Universe(<span style=color:#e6db74>&#39;mdPBCTrajectoryTest.xyz&#39;</span>)
+mybox<span style=color:#f92672>=</span>np<span style=color:#f92672>.</span>array([<span style=color:#ae81ff>16.</span>, <span style=color:#ae81ff>16.</span>, <span style=color:#ae81ff>16.</span>, <span style=color:#ae81ff>90.</span>, <span style=color:#ae81ff>90.</span>, <span style=color:#ae81ff>90.</span>], dtype<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;f&#39;</span>)
+<span style=color:#75715e># 1-2&#39;th BL atoms in XYZ</span>
+distances <span style=color:#f92672>=</span> []
+                                                                         
+<span style=color:#66d9ef>for</span> ts <span style=color:#f92672>in</span> u<span style=color:#f92672>.</span>trajectory:        
+    distances<span style=color:#f92672>.</span>append(
+        dist(
+            mda<span style=color:#f92672>.</span>AtomGroup([u<span style=color:#f92672>.</span>atoms[<span style=color:#ae81ff>0</span>]]),
+            mda<span style=color:#f92672>.</span>AtomGroup([u<span style=color:#f92672>.</span>atoms[<span style=color:#ae81ff>1</span>]]),
+            box<span style=color:#f92672>=</span>[<span style=color:#ae81ff>16.</span>,<span style=color:#ae81ff>16.</span>, <span style=color:#ae81ff>16.</span>, <span style=color:#ae81ff>90</span>, <span style=color:#ae81ff>90</span>, <span style=color:#ae81ff>90</span>]
+        )[<span style=color:#ae81ff>2</span>][<span style=color:#ae81ff>0</span>]
+    )
+    plt<span style=color:#f92672>.</span>switch_backend(<span style=color:#e6db74>&#39;agg&#39;</span>)
+    plt<span style=color:#f92672>.</span>plot(distances)
+plt<span style=color:#f92672>.</span>xlabel(<span style=color:#e6db74>&#39;Frames&#39;</span>)
+plt<span style=color:#f92672>.</span>ylabel(<span style=color:#e6db74>&#39;Bond Length (Å)&#39;</span>)
+plt<span style=color:#f92672>.</span>show()
+plt<span style=color:#f92672>.</span>savefig(<span style=color:#e6db74>&#39;1-2.png&#39;</span>)                                                   
+</code></pre></div><p> </p><p>We strongly recommend to use MDAnalysis tools to post process the OpenMD
+data.</p><p>The details of MDAnalysis package is available at: <a href=https://www.mdanalysis.org/>https://www.mdanalysis.org/</a></p><footer class=footline></footer></div></div></div><div id=navigation><a class="nav nav-prev" href=/documentation/chapter3/ title="Chaper 3"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=/documentation/chapter5/ title="Chaper 5" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1615995166></script><script src=/js/perfect-scrollbar.min.js?1615995166></script><script src=/js/perfect-scrollbar.jquery.min.js?1615995166></script><script src=/js/jquery.sticky.js?1615995166></script><script src=/js/featherlight.min.js?1615995166></script><script src=/js/highlight.pack.js?1615995166></script><script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1615995166></script><script src=/js/learn.js?1615995166></script><script src=/js/hugo-learn.js?1615995166></script><script src=/mermaid/mermaid.js?1615995166></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>
