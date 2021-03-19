@@ -1,0 +1,9 @@
+.. title:: HTML documentation
+
+========================================================================
+DJMOL web documentation
+========================================================================
+
+.. raw:: html
+
+    <iframe src="_static/index.html" height="345px" width="100%"></iframe>
