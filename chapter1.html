@@ -1,0 +1,693 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter-1 HTML documentation &mdash; DJMOL  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="DJMOL web documentation" href="webdoc.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> DJMOL
+          
+
+          
+            
+            <img src="_static/djmol_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of DJMOL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#compiling-installation-of-djmol-and-add-ons">Compiling/Installation of DJMol and Add-Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#system-requirements">System Requirements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="webdoc.html">DJMOL web documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="webdoc.html#table-of-contents">Table of contents</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 1: Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#computational-tools">Computational Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#major-components-of-the-software">Major Components of the Software</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DJMOL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="webdoc.html">DJMOL web documentation</a> &raquo;</li>
+        
+      <li>Chapter-1 HTML documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-1-introduction">
+<h1>Chapter 1: Introduction<a class="headerlink" href="#chapter-1-introduction" title="Permalink to this headline">¶</a></h1>
+<p>DJMol is an ongoing open source (licensed with GPL v3 or later) ‘Modeling Platform’ project and
+it is architectured for performing various simulations in computational materials science / chemistry.
+It is a free, object-oriented software developed by IKST, (Indo-Korea Science and Technology Centre,
+17/1, Bellary Rd, Yashoda Nagar, Yelahanka, Bengaluru, Karnataka 560064), Bangalore.</p>
+<p>In its core level, DJMol is integrated with widely accepted and open source (GPL/LGPL )
+computational software, such as,
+DFTB+ (University of Bremen, Germany), the default calculator of DJMol
+Atomic Simulation Environment (ASE, Technical University of Denmark)
+SIESTA (Institut de Ciencia de Materials de Barcelona (ICMAB), Spain)
+OpenMD (University of Notre Dame., USA).</p>
+<p>The main target of this software is the researchers (including experimentalists)
+and academicians and industrial researchers. In addition to this, a site,
+<a class="reference external" href="https://sites.google.com/view/djmolplatform">https://sites.google.com/view/djmolplatform</a> is created for more technical details,
+updates and demonstration videos/notes etc. The code-development resources are recently included in its official site, www.djmol.info .</p>
+<p>As mentioned before, the software is integrated with DFTB+ (as its default calculator),
+and Siesta (for higher level DFT calculations), along with ASE and OpenMD,. Hence a short review
+on these packages is added for a quick-reference.</p>
+<div class="section" id="computational-tools">
+<h2>Computational Tools<a class="headerlink" href="#computational-tools" title="Permalink to this headline">¶</a></h2>
+<p>Here, a short overview of the four main components of the platform is described.</p>
+<p><strong>DFTB+:</strong> DFTB (Density functional tight binding) method is an electronic structure method which is specially
+designed to model large molecular/crystal/nano-systems. The origin of this method is routed in DFT
+itself, which is, arguably, the most popular ab initio method in computational materials science or
+in quantum chemistry. It is developed in 80’s and it has been introduced into the computational
+chemistry area mainly by work of Prof. Helmut Eschrig, Prof. Gotthard Seifert, and Prof. T
+homas Frauenheim et. al. Since it uses DFT parameters, DFTB is also known as approximate DFT method.</p>
+<p>This method uses atomic parameters (as it is stored in the SK file set, a text file)
+which are generated from highly accurate atomic DFT calculations using PBE functional.
+It also consists of diatomic repulsive potentials from B3LYP functional. Note that DFTB+
+uses minimal valence basis set (numerical Slater type AOs) and one has to explicitly specify a
+particular SK data file for a given calculation.</p>
+<p>A list of SK <strong>file set</strong> list is given below (see, www.dftb.org), which is by default,
+added in the DJMol suite. Other SK file which are not included (such as, &lt;3ob:freq&gt; set
+which requires &lt;3ob&gt;) should manually incorporate into their input scripts (it is freely available);
+For more details, see: <a class="reference external" href="https://www.dftbplus.org/">https://www.dftbplus.org/</a> and <a class="reference external" href="https://www.dftb.org/parameters/download/">https://www.dftb.org/parameters/download/</a></p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/001.png"><img alt="001" src="_images/001.png" style="width: 825.6px; height: 344.0px;" /></a>
+<p class="caption"><span class="caption-text">Table 1: Set of common SK data set.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>SIESTA:</strong> Spanish Initiative for Electronic Simulations with Thousands of Atoms is a fast
+(since it uses linear scaling DFT methods) density functional theoretical code which uses
+pseudopotentials. It can handle molecular as well as extended systems (metals, polymers,
+defects in the metals, surfaces etc.) It is a free code and for more details see:
+<a class="reference external" href="https://departments.icmab.es/leem/siesta">https://departments.icmab.es/leem/siesta</a>. And routinely it can be used to predict:</p>
+<ul class="simple">
+<li><p>Total and partial energies.</p></li>
+<li><p>Atomic forces.</p></li>
+<li><p>Stress tensor.</p></li>
+<li><p>Electric dipole moment.</p></li>
+<li><p>Atomic, orbital and bond populations (Mulliken).</p></li>
+<li><p>Electron density.</p></li>
+<li><p>Geometry relaxation, fixed or variable cell.</p></li>
+<li><p>Constant-temperature molecular dynamics (Nose thermostat).</p></li>
+<li><p>Variable cell dynamics (Parrinello-Rahman).</p></li>
+<li><p>Spin polarized calculations (collinear or not).</p></li>
+<li><p>k-sampling of the Brillouin zone.</p></li>
+<li><p>Local and orbital-projected density of states.</p></li>
+<li><p>COOP and COHP curves for chemical bonding analysis.</p></li>
+<li><p>Dielectric polarization.</p></li>
+<li><p>Vibrations (phonons).</p></li>
+<li><p>Band structure.</p></li>
+</ul>
+<p>Note that at present TranSiesta (electron transport module) is not supported by DJMol.</p>
+<p>Since Siesta uses Numerical Atomic Orbital (i.e. localized basis set) as its basis,
+some familiarity with these sets are highly appreciated. Note that a user can give ‘Basis set’
+information to Siesta in two different ways. The most simple method is to provide a ‘keyword’of the
+basis set. See the next table for its details:</p>
+<table class="colwidths-given docutils align-center" id="id2">
+<caption><span class="caption-text">Table-2: A set of common basis set in Siesta.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Single-Zeta</p></th>
+<th class="head"><p>Double-Zeta</p></th>
+<th class="head"><p>Triple-Zeta</p></th>
+<th class="head"><p>Single-Zeta Polarized</p></th>
+<th class="head"><p>Double-Zeta Polarized</p></th>
+<th class="head"><p>Triple-Zeta Polarized</p></th>
+<th class="head"><p>Triple-Zeta Double-Polarized</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SZ</p></td>
+<td><p>DZ</p></td>
+<td><p>TZ</p></td>
+<td><p>SZP</p></td>
+<td><p>DZP</p></td>
+<td><p>TZP</p></td>
+<td><p>TZDP</p></td>
+</tr>
+</tbody>
+</table>
+<p>However, for advanced calculations a user can also give the basis set data explicitly. Refer Siesta manual for its description.
+Apart from the basis set, one should also select an appropriate pseudopotential (PP).
+For more details, see:</p>
+<p>[1]https://departments.icmab.es/leem/siesta/Pseudopotentials/index.html or,</p>
+<p>[2]https://departments.icmab.es/leem/siesta/Databases/Pseudopotentials/periodictable-gga-abinit.html</p>
+<p>The first link redirects to ATOM program which can be used to generate PP for elements within the GGA/LDA functionals. The second link gives a database of PP
+which was converted from the Abinit PP. Note that choosing PP is a crucial step in Siesta calculation so a user must be Very Careful at this step.</p>
+<p><strong>Note: By default, DJMol use PP from the Second link [2].</strong></p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/002.png"><img alt="002" src="_images/002.png" style="width: 828.0px; height: 535.1999999999999px;" /></a>
+<p class="caption"><span class="caption-text">The pseudopotentials of Abinit which is converted for Siesta (figure courtesy: ICMAB)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>A note on Functionals:</strong> In Siesta you can specify either LDA or GGA type functionals in a
+&lt;.fdf&gt; input file.</p>
+<p>For example, see below for a part of the &lt;fdf&gt; file, which define functionals :</p>
+<table class="colwidths-given docutils align-center" id="id4">
+<caption><span class="caption-text">Table-3: Specefication of functional in Siesta FDF file.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>XC.functional</p></td>
+<td><p>LDA</p></td>
+<td><p># Exchange-correlation functional ( GGA can be also used)</p></td>
+</tr>
+<tr class="row-even"><td><p>XC.authors</p></td>
+<td><p>CA</p></td>
+<td><p># Particular parametrization of xc func.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SpinPolarized</p></td>
+<td><p>.false.</p></td>
+<td><p># Spin unpolarized calculation</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given docutils align-center" id="id5">
+<caption><span class="caption-text">Table-4: Set of choice of <strong>XC.authors</strong> (with its type) variables.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>CA (equivalent to PZ)</p></td>
+<td><p>A LDA type</p></td>
+</tr>
+<tr class="row-even"><td><p>PW92</p></td>
+<td><p>LDA</p></td>
+</tr>
+<tr class="row-odd"><td><p>PW91</p></td>
+<td><p>GGA</p></td>
+</tr>
+<tr class="row-even"><td><p>PBE</p></td>
+<td><p>GGA</p></td>
+</tr>
+<tr class="row-odd"><td><p>revPBE</p></td>
+<td><p>Modified GGA-PBE</p></td>
+</tr>
+<tr class="row-even"><td><p>RPBE</p></td>
+<td><p>Modified GGA-PBE</p></td>
+</tr>
+<tr class="row-odd"><td><p>WC</p></td>
+<td><p>Modified GGA-PBE</p></td>
+</tr>
+<tr class="row-even"><td><p>AM05</p></td>
+<td><p>Modified GGA-PBE</p></td>
+</tr>
+<tr class="row-odd"><td><p>PBEsol</p></td>
+<td><p>Modified GGA-PBE</p></td>
+</tr>
+<tr class="row-even"><td><p>PBEJsJrLO</p></td>
+<td><p>GGA-PBE</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLYP (equivalent to LYP)</p></td>
+<td><p>GGA</p></td>
+</tr>
+<tr class="row-even"><td><p>DRSLL (equivalent to DF1)</p></td>
+<td><p>van der Waals density functional (vdW-DF)</p></td>
+</tr>
+<tr class="row-odd"><td><p>LMKLL (equivalent to DF2)</p></td>
+<td><p>vdW-DF functional</p></td>
+</tr>
+<tr class="row-even"><td><p>KBM</p></td>
+<td><p>vdW-DF functional</p></td>
+</tr>
+<tr class="row-odd"><td><p>C09</p></td>
+<td><p>vdW-DF functional</p></td>
+</tr>
+<tr class="row-even"><td><p>BH</p></td>
+<td><p>vdW-DF functional</p></td>
+</tr>
+<tr class="row-odd"><td><p>VV</p></td>
+<td><p>vdW-DF functional</p></td>
+</tr>
+</tbody>
+</table>
+<p>For a complete specification on &lt;fdf&gt; input format please read the Siesta Manual (v 4.0 or greater).
+The DJMol, is currently equipped with a SIESTA 4.1 version (with OpenMP support) and a number of
+its pre - as well as post-processing tools.</p>
+<p><strong>ASE:</strong> Atomic Simulation Environment - is a Python based LGPL library which comprises a variety of
+post processing tools or methods. A general outline of ASE is following (block diagram courtesy:
+Dr. A H Larsen)</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/003.png"><img alt="003" src="_images/003.png" style="width: 360.90000000000003px; height: 511.2px;" /></a>
+<p class="caption"><span class="caption-text">Different modules in ASE. Interface denotes the DJMol platform.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>One should note that to use ASE, a minimum-level knowledge on Python programming language (version 3.x)
+is a mandate. See Appendix-A for a basic course on Python programming.  ASE’s input should written in
+an object-oriented style, so that the syntax of the input is highly flexible and it can be used to perform
+a series of jobs, by using, say, a for-loop. Another advantage is, it can be effectively coupled with other
+python base libraries such as NumPy, Matplotlib etc. to create different types of output files or data set.</p>
+<p>Most useful tasks with ASE are: structure optimization (with or without constraints), molecular dynamics,
+and performing nudged elastic band calculations or its variants. For more details see:
+<a class="reference external" href="https://wiki.fysik.dtu.dk/ase/">https://wiki.fysik.dtu.dk/ase/</a>.</p>
+<p><strong>OpenMD:</strong> it is an MD tool based on force-field type potential and it is widely used for performing MD
+simulations of open systems (such as  liquids, proteins, nanoparticles, interfaces, and other complex
+systems). Note that we used 2.6 version of the program. The code is written in C++ and uses Python for
+its data pre/post processing. In the DJMol CygWin based C++ binaries are used and it is kept in ./OpenMD
+folder with other relevant parameter-files, Python scripts etc.</p>
+<p>The OpenMD manual is accompanied with the DJMol and it is available at: <a class="reference external" href="http://openmd.org/wp-content/docs/OpenMD-2.6.pdf">http://openmd.org/wp-content/docs/OpenMD-2.6.pdf</a></p>
+<p>OpenMD uses a range of programs and Python scripts and a user must familiarize with its uses before the
+production calculation. Examples of OpenMD is illustrated in: <a class="reference external" href="http://openmd.org/category/examples/">http://openmd.org/category/examples/</a> .</p>
+<table class="colwidths-given docutils align-center" id="id7">
+<caption><span class="caption-text">Table-5: Important binaries of OpenMD and its descriptions.</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>openmd.exe</p></td>
+<td><p>The Main OpenMD Executable for MD run.</p></td>
+</tr>
+<tr class="row-even"><td><p>atom2omd.exe</p></td>
+<td><p>atom2omd attempts to construct .omd files from files containing only atomic coordinate information</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dump2XYZ.exe</p></td>
+<td><p>Converts an OpenMD dump file into a file suitable for viewing in a molecular dynamics viewer.</p></td>
+</tr>
+<tr class="row-even"><td><p>DynamicProps.exe</p></td>
+<td><p>Computes time correlation functions like the velocity autocorrelation function, or the mean square displacement.</p></td>
+</tr>
+<tr class="row-odd"><td><p>elasticConstants.exe</p></td>
+<td><p>elasticConstants computes the general elastic constants that relate stress and strain for a given input configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p>Hydro.exe</p></td>
+<td><p>Hydro generates hydrodynamic resistance tensor (.hydro) files which are required when using the Langevin integrator using complex rigid bodies.</p></td>
+</tr>
+<tr class="row-odd"><td><p>icosahedralBuilder.exe</p></td>
+<td><p>icosahedralBuilder creates single-component geometric solids that can be useful in simulating nanostructures.</p></td>
+</tr>
+<tr class="row-even"><td><p>nanoparticleBuilder.exe, nanorodBuilder.exe, nanorod_</p></td>
+<td><p>programs to construct nanoparticles of various sizes and geometries.</p></td>
+</tr>
+<tr class="row-odd"><td><p>omd2omd.exe</p></td>
+<td><p>omd2omd is a utility script which helps in replicating, rotating, and translating already built OpenMD .omd, .dump, and.eor files.</p></td>
+</tr>
+<tr class="row-even"><td><p>randomBuilder.exe, simpleBuilder.exe</p></td>
+<td><p>generate crystals.</p></td>
+</tr>
+<tr class="row-odd"><td><p>recenter.exe</p></td>
+<td><p>recenter is a utility script which moves all integrable objects in an OpenMD file so that the center of mass is at the origin.</p></td>
+</tr>
+<tr class="row-even"><td><p>SequentialProps.exe</p></td>
+<td><p>Computes a time history of static properties from a dump file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>StaticProps.exe</p></td>
+<td><p>Computes static properties like the pair distribution function.</p></td>
+</tr>
+<tr class="row-even"><td><p>thermalizer.exe</p></td>
+<td><p>Thermalizer gives the atoms some initial velocities (at a given temperature) before the  equilibration.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-center" id="id8">
+<caption><span class="caption-text">Truth table for “not”</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>affineScale.py</p></td>
+<td><p>OpenMD affine scaling transform
+Takes an OpenMD file and scales both the periodic box and the coordinates of all StuntDoubles in the system by the same amount.</p>
+<p>You can either specify a new volume scaling for isotropic scaling, or specify one (or more) of the coordinates for non-isotropic scaling.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>dumpConverter.py</p></td>
+<td><p>Dump File Converter Converts old-style OOPSE md and dump files into new OpenMD style combined files</p></td>
+</tr>
+<tr class="row-odd"><td><p>funcflExtractor.py</p></td>
+<td><p>Funcfl Extractor Opens an DYNAMO86 EAM funcfl file, parses the data and writes out separate files for F[rho], rho(r), and Z(r)</p></td>
+</tr>
+<tr class="row-even"><td><p>hbtetAnalyzer.py</p></td>
+<td><p>It is used for doing analysis on Hydrogen Bond Tetrahedrality matrices</p></td>
+</tr>
+<tr class="row-odd"><td><p>hydroExplainer.py</p></td>
+<td><p>Computes predicted diffusion constants and rotational relaxation times from a hydro file.  Explains the values in the hydro file in terms of properties that can be calculated from a molecular dynamics simulation.</p></td>
+</tr>
+<tr class="row-even"><td><p>lcorrzFit.py</p></td>
+<td><p>A utility script to analyze of Legendre correlation functions</p></td>
+</tr>
+<tr class="row-odd"><td><p>omdLast.py</p></td>
+<td><p>OpenMD File Extractor: Makes omd file from the last good frame of OpenMD dump file.</p></td>
+</tr>
+<tr class="row-even"><td><p>omdShrink.py</p></td>
+<td><p>OpenMD File Trimmer: Skips every n frames of an OpenMD dump file and loads it into new dump file</p></td>
+</tr>
+<tr class="row-odd"><td><p>omd-solvator.py</p></td>
+<td><p>OMD Solvator: Opens two omd files, one with a solute structure and one with a solvent structure.  Deletes any solvent molecules that overlap with solute molecules and produces a new combined omd file.  The output omd
+file must be edited to run properly in OpenMD.  Note that the two boxes must have identical box geometries (specified on the Hmat line).</p></td>
+</tr>
+<tr class="row-even"><td><p>omdSplit.py</p></td>
+<td><p>OpenMD File Splitter: Splits OpenMD dump file frames into separate omd files</p></td>
+</tr>
+<tr class="row-odd"><td><p>pack2omd.py</p></td>
+<td><p>Packmol RigidBody Replacer: Finds atomistic rigid bodies in a packmol-generated xyz file and generates an OpenMD (omd) file with center of mass and orientational coordinates for rigid bodies.</p></td>
+</tr>
+<tr class="row-even"><td><p>principalAxisCalculator.py</p></td>
+<td><p>It opens an XYZ file and computes the moments of inertia and principal axes for the structure in the XYZ file.  Optionally rotates the structure so that the long axis (that with the smallest eigenvalue) is pointing along the z-axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p>protonSampler.py</p></td>
+<td><p>This python script will generate proton disordered configurations of ice-Ih, given an input of the (.xyz) coordinates of the oxygen positions in the lattice.</p></td>
+</tr>
+<tr class="row-even"><td><p>slabBuilder.py</p></td>
+<td><p>SlabBuilder to create starting omd files for arbitrary surface cuts specified by Miller indices (hkl) of FCC, BCC and SC materials</p></td>
+</tr>
+<tr class="row-odd"><td><p>slipLength.py</p></td>
+<td><p>slipLength is a built in analysis script which can compute the slip-length of a solid-liquid interface under shear. The script assumes the solid is placed in the middle of the box, with equal amounts of liquid on either side.</p></td>
+</tr>
+<tr class="row-even"><td><p>solLiqFricCalc.py</p></td>
+<td><p>Used for calculating solid liquid friction coefficients</p></td>
+</tr>
+<tr class="row-odd"><td><p>solvator.py</p></td>
+<td><p>A script that reads in a water box and solute xyz (or pdb), merges the two systems, and
+deletes overlapping molecules</p></td>
+</tr>
+<tr class="row-even"><td><p>stat2dielectric.py</p></td>
+<td><p>A script that computes the static dielectric constant.</p></td>
+</tr>
+<tr class="row-odd"><td><p>stat2dipolecorr.py</p></td>
+<td><p>A script that computes the system dipole correlation function</p></td>
+</tr>
+<tr class="row-even"><td><p>stat2tension.py</p></td>
+<td><p>Used for computing surface tensions from pressure tensors in stat files</p></td>
+</tr>
+<tr class="row-odd"><td><p>stat2thcond.py</p></td>
+<td><p>Computes the correlation function of the heat flux vector that has been stored in a stat file.   These can be used to compute the thermal conductivity.</p></td>
+</tr>
+<tr class="row-even"><td><p>stat2visco.py</p></td>
+<td><p>Computes various correlation functions of the pressure and pressure tensor that have been stored in a stat file.   These can be used to compute shear and bulk viscosities.</p></td>
+</tr>
+<tr class="row-odd"><td><p>vcorr2spectrum.py</p></td>
+<td><p>A script that processes a velocity autocorrelation function into a amplitude spectrum Post-processes a vcorr file and creates a normalized spectrum.</p></td>
+</tr>
+<tr class="row-even"><td><p>waterBoxer.py</p></td>
+<td><p>builds a lattice of water molecules in a periodic box</p></td>
+</tr>
+<tr class="row-odd"><td><p>waterReplacer.py</p></td>
+<td><p>Finds atomistic waters in an xyz file and generates an OpenMD (omd) file with center of mass and orientational coordinates for rigid body waters.</p></td>
+</tr>
+<tr class="row-even"><td><p>waterRotator.py</p></td>
+<td><p>Samples water orientations from a list of known good orientations</p></td>
+</tr>
+<tr class="row-odd"><td><p>wcorr2spectrum.py</p></td>
+<td><p>A script that processes a charge velocity autocorrelation function into a amplitude spectrum ;Post-processes a wcorr file and creates a normalized spectrum.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="major-components-of-the-software">
+<h2>Major Components of the Software<a class="headerlink" href="#major-components-of-the-software" title="Permalink to this headline">¶</a></h2>
+<p>DJMol program is, in essence, a rich client platform (RCP) GUI application that has been built on the top
+of the RCP framework of the Netbeans IDE. The underlying OOP paradigm permits simple and straight-forward
+addition and extension of extra modules or plug-ins into its RCP frame work. This application can also be
+viewed as a molecular workbench that integrates many application programs for modeling molecular systems
+into a single framework. The main components of the GUI are discussed below.</p>
+<p>(1)Basic IDE components: As indicated earlier the IDE component, inherited from Netbeans RCP module, is
+the core part the user-interface. The IDE framework offers a standard set of tools dedicated for advanced
+programming or scripting tasks. IDE significantly improve productivity of its users since it automates
+several text based processes (code completion, version control, project management, restoring old versions
+of the text files etc.). Several of native IDE menus are integrated; e.g. the File menu selects a
+coordinate data by its file extension (eg. xyz or hsd) to visualize the structure and open its text to
+the text editor of the IDE. Note that in the current version of the program xyz or hsd files are
+selected as the default file extensions for the viewer. The selected file can be manipulated at
+different levels by using its Edit, View and Source menus. Other basic IDE features like refactoring
+of files, Git facility, visual diff utility (to compare the contents of two text files) etc. are also
+supported. Project Explorer - which is placed on the far left side - shows the packages (directories
+and it files) that make up Python projects; It can also be used to systematically arrange or manipulate
+other data. Files and Favorite explorer panels are two tools for managing files (including binaries) in
+general. See Fig A for the IDE text editor which displays a Python script.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/004.png"><img alt="004" src="_images/004.png" style="width: 657.9px; height: 267.3px;" /></a>
+<p class="caption"><span class="caption-text">A Python script is displayed in the IDE text editor with syntax highlighting option.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>(2)Top Component Window: The center panel of the software is set to display molecules and it embeds an
+unabridged Jmol visualizer binary and it is used in the TopComponent class (the basic unit of RCP display).
+Optionally a scripting tool (for Jmol scripting) can be invoked from this panel to create more sophisticated
+and customized molecular visualizations (See Table 5).</p>
+<table class="colwidths-given docutils align-center" id="id10">
+<caption><span class="caption-text">Table-7: Some selected one-liner commands of Jmol scripts and its descriptions.</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\texttt{load =cod/1000373 {2,2,2}}\)</span></p></td>
+<td><p>Loads 2x2x2 supercell of NaVO2F2 from COD database</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\texttt{minimize}\)</span></p></td>
+<td><p>Molecular mechanics (UFF) steepest descent minimization</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\texttt{write &quot;C:\\file.pdb&quot;}\)</span></p></td>
+<td><p>Save the molecule into a PDB file</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\texttt{isosurface cutoff 0.01 &quot;C:\\cube.gz&quot;}\)</span></p></td>
+<td><p>Visualize an isosurface from a gzipped CUBE file</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\texttt{q=quaternion()}\)</span></p></td>
+<td><p>Saving orientation in quaternion rather than Euler angles</p></td>
+</tr>
+</tbody>
+</table>
+<p>(3)2D and 3D Data Windows: JFreeChart library (a Java library for displaying various types of
+scientific data) is used to create a 2D graphs and it is usually projected onto a JPanel (a
+Swing GUI widget toolkit) to display the plots. By this, one can add more control options to the
+rendered graphs (See, Fig-D for a 2D plot with more control options). It is the default 2D data plot
+library of the DJMol and it has several graphic styles and it offers many configuration options to
+customize the rendering of graphics and it export the graphic content in PNG format. Apart from this,
+Matplotlib library is also used to display 2D graphics especially with Siesta add-on. The 3D graphics
+(scalar volumetric data such as density isosurface) windows all are embedded with Jmol application with
+some internal Jmol script commands. To manipulate the 3D data either Jmol scripts or Pythons scripts are used.
+For example, a Python script is used to convert xsf file format (which is frequently used in Siesta) into
+the cube format.</p>
+<p>(4)Terminal Window: One can run OS commands and Python scripts with this window. Note that in the Windows
+version of the program the CygWin environment is automatically linked with this terminal. If necessary,
+WSL (a compatibility layer for running native Linux executables under Windows 10 OS) can also be linked.
+See the manual for more details. The plug-in for the Python integration into the software can be switched
+to get Python 2.x as well as Python 3.x. It gives the terminal based (interactive mode) access to the
+language. As an example, by using this terminal one can install many additional packages like ASE or
+Matplotlib library. Using SSH commands of CygWin or WSL this terminal can be connected with other remote
+machines.</p>
+<p>(5)Console Window: This window is usually placed immediately below the Top Component window and it is
+mainly used to display console output text (eg. to show DFTB+ output when it runs). It also contains Start
+and Stop buttons to execute the DFTB+ program. The log text from this window can be saved or post processed,
+optionally.</p>
+<p>(6)Add-on Windows: Other major window components are from the add-on programs based on Swing API.
+Currently there are six add-ons are constructed and all these programs are independent of each other.
+And these add-ons are built from JFrame – the base container of the application. At present it supports
+all the AWT (abstract window toolkit) components. Although more recent JavaFX class to create desktop
+applications exist in Java, we always used Swing based GUIs since more libraries and tools are available
+for Swing API.</p>
+<p>Schematically all these key GUI components are shown in the figure below:</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/005.png"><img alt="004" src="_images/005.png" style="width: 864.9px; height: 513.9px;" /></a>
+<p class="caption"><span class="caption-text">A schematic classification of major window components which constitute the entire GUI of DJMol program.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="webdoc.html" class="btn btn-neutral float-left" title="DJMOL web documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Indo-Korea Science and Technology Center, Bengaluru INDIA | Written by GP Krishna mohan, Rahul Sunil, Kapil Gupta, and SC Lee
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
