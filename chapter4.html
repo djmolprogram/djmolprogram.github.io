@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter-4 :: HTML documentation &mdash; DJMOL  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter 3: Modeling with Siesta" href="chapter3.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> DJMOL
+          
+
+          
+            
+            <img src="_static/djmol_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of DJMOL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#compiling-installation-of-djmol-and-add-ons">Compiling/Installation of DJMol and Add-Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#system-requirements">System Requirements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="webdoc.html">DJMOL web documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tableofcontent.html">Table of contents :: DJMOL web documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">Chapter 1: Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#computational-tools">Computational Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#major-components-of-the-software">Major Components of the Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Chapter 2: DFTB+ Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Chapter 3: Modeling with Siesta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-script-writer">Siesta Script Writer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-add-on-and-executing-the-program">Siesta Add-On and Executing the Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#basic-analayzers">Basic analayzers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#wannier-orbitals-and-band-diagrams">Wannier Orbitals and Band Diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#molecular-vibrations">Molecular Vibrations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Chapter 4: OpenMD Simulations</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DJMOL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="webdoc.html">DJMOL web documentation</a> &raquo;</li>
+        
+      <li>Chapter-4 :: HTML documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-4-openmd-simulations">
+<h1>Chapter 4: OpenMD Simulations<a class="headerlink" href="#chapter-4-openmd-simulations" title="Permalink to this headline">¶</a></h1>
+<p>OpenMD add-on is aimed to perform MD calculations with OpenMD binary/scripts.
+This tool has four parts, <strong>(1)</strong> Viewer, <strong>(2)</strong> Editor, <strong>(3)</strong> Terminal, and <strong>(4)</strong> Utilities.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/031.png"><img alt="031" src="_images/031.png" style="width: 627.0px; height: 334.0px;" /></a>
+<p class="caption"><span class="caption-text">Front end of the OpenMD add-on tool displays Ag nanoparticle obtained using OpenMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>In viewer a normal XYZ file can be viewed (usually it is obtained from OMD dump file by using a
+converter, Dump2XYZ). All other standard Jmol view facilities are available here. Note that XYZ
+file will keep in the &lt;OpenMD/Tempview&gt; directory whereas the OMD file will be kept in the &lt;./OpenMD&gt; folder.</p>
+<p>The Editor tool will open an OMD file. Since OMD file is a kind of XML file, a special editor
+is used to fold and un-fold many sections of this file as shown in the following file.</p>
+<p>In Terminal-Tab, simple DOS commands can be executed. Note that one should add:</p>
+<p><strong>cmd.exe /c</strong></p>
+<p>before the Python scripts (eg. <strong>cmd.exe /c python.exe slabBuilder.py</strong>). The commands are stored
+in a stack-array and it can be easily called back (See Stored Commands).</p>
+<p>In the Utility-Tab several tools are added (eg. &lt;Clean OpenMD&gt; will delete the MD out files
+and &lt;Open Trajectory&gt; will open a separate viewer window to animate trajectories etc.).
+The &lt;Plot Energies&gt; will open &lt;Stat&gt; file and plot total, kinetic and potential energies.
+Similarly, &lt;T P V&gt; plot variation of temperature, pressure and volume during the MD run as it is
+stored in the &lt;Stat&gt; file.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/032.png"><img alt="032" src="_images/032.png" style="width: 628.0px; height: 530.0px;" /></a>
+<p class="caption"><span class="caption-text">OpenMD Tool’s XML styled editor for the OMD scripts.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/033.png"><img alt="033" src="_images/033.png" style="width: 474.0px; height: 291.0px;" /></a>
+</div>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/034.png"><img alt="034" src="_images/034.png" style="width: 476.0px; height: 306.0px;" /></a>
+<p class="caption"><span class="caption-text">OpenMD Analyze variation of different energies during an MD simulation.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Since analyzing bond length gives an indication of reaction progress, &lt;Calculate Bond Length&gt; tool
+can be used to extract Bond length between two selected atoms (“Atom Number 1” and “Atom Number 2”). T
+his will read XYZ file which doesn’t use Periodic Boundary Conditions or PBC (as an example see,
+SampleAnimationTest.xyz file).</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/035.png"><img alt="035" src="_images/035.png" style="width: 431.0px; height: 324.0px;" /></a>
+<p class="caption"><span class="caption-text">An out file from the MDAnalysis script. It describes that the bond is break near 400’th frame (in a periodic cubic box cell).</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>However, if PBC is applied more advanced script is needed to extract this bond length information. For example, if the system is equipped with Python and MDAnalysis package, a user can:</p>
+<ol class="arabic simple">
+<li><p>Edit &lt;MDAnalysis&gt; script (MDanalysisv1.py) if needed, eg. to change atom numbers</p></li>
+<li><p>Use &lt;Add MDAnalysis in Terminal&gt;, which will add cmd.exe /c python.exe MDanalysisv1.py in the Terminal window</p></li>
+<li><p>Go to Terminal and execute the above command.</p></li>
+</ol>
+<p>The sample MDAnalysis script is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis</span> <span class="k">as</span> <span class="nn">mda</span>
+<span class="kn">from</span> <span class="nn">MDAnalysis.analysis.distances</span> <span class="kn">import</span> <span class="n">dist</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">mda</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;mdPBCTrajectoryTest.xyz&#39;</span><span class="p">)</span>
+<span class="n">mybox</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">16.</span><span class="p">,</span> <span class="mf">16.</span><span class="p">,</span> <span class="mf">16.</span><span class="p">,</span> <span class="mf">90.</span><span class="p">,</span> <span class="mf">90.</span><span class="p">,</span> <span class="mf">90.</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="c1"># 1-2&#39;th BL atoms in XYZ</span>
+<span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ts</span> <span class="ow">in</span> <span class="n">u</span><span class="o">.</span><span class="n">trajectory</span><span class="p">:</span>
+    <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dist</span><span class="p">(</span><span class="n">mda</span><span class="o">.</span><span class="n">AtomGroup</span><span class="p">([</span><span class="n">u</span><span class="o">.</span><span class="n">atoms</span><span class="p">[</span><span class="mi">0</span><span class="p">]]),</span><span class="n">mda</span><span class="o">.</span><span class="n">AtomGroup</span><span class="p">([</span><span class="n">u</span><span class="o">.</span><span class="n">atoms</span><span class="p">[</span><span class="mi">1</span><span class="p">]]),</span><span class="n">box</span><span class="o">=</span><span class="p">[</span><span class="mf">16.</span><span class="p">,</span> <span class="mf">16.</span><span class="p">,</span> <span class="mf">16.</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">])[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">switch_backend</span><span class="p">(</span><span class="s1">&#39;agg&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frames&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Bond Length (Å)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;1-2.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We strongly recommend to use MDAnalysis tools to post process the OpenMD data.</p>
+<p>The details of MDAnalysis package is available at: <a class="reference external" href="https://www.mdanalysis.org/">https://www.mdanalysis.org/</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="chapter3.html" class="btn btn-neutral float-left" title="Chapter 3: Modeling with Siesta" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Indo-Korea Science and Technology Center, Bengaluru INDIA | Written by GP Krishna mohan, Rahul Sunil, Kapil Gupta, and SC Lee
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7fe0e58116a0> 
+ <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+ 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

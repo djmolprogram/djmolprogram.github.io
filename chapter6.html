@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter-6 :: HTML documentation &mdash; DJMOL  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter 5: Python scripting with ASE" href="chapter5.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> DJMOL
+          
+
+          
+            
+            <img src="_static/djmol_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of DJMOL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#compiling-installation-of-djmol-and-add-ons">Compiling/Installation of DJMol and Add-Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#system-requirements">System Requirements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="webdoc.html">DJMOL web documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tableofcontent.html">Table of contents :: DJMOL web documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">Chapter 1: Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#computational-tools">Computational Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#major-components-of-the-software">Major Components of the Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Chapter 2: DFTB+ Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Chapter 3: Modeling with Siesta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-script-writer">Siesta Script Writer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-add-on-and-executing-the-program">Siesta Add-On and Executing the Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#basic-analayzers">Basic analayzers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#wannier-orbitals-and-band-diagrams">Wannier Orbitals and Band Diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#molecular-vibrations">Molecular Vibrations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4.html">Chapter 4: OpenMD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5.html">Chapter 5: Python scripting with ASE</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Chapter 6: Tools of  DJMol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#analysing-point-group">Analysing Point Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#z-matrix-editor">Z-Matrix Editor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#changing-z-mat-data">Changing Z-Mat Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-submission-of-scripts">Remote Submission of Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#version-control-using-git">Version Control using GIT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#database-file-retrieving">Database File Retrieving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#miscellaneous-tools">Miscellaneous Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DJMOL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="webdoc.html">DJMOL web documentation</a> &raquo;</li>
+        
+      <li>Chapter-6 :: HTML documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-6-tools-of-djmol">
+<h1>Chapter 6: Tools of  DJMol<a class="headerlink" href="#chapter-6-tools-of-djmol" title="Permalink to this headline">¶</a></h1>
+<p>Tools are generally calculator independent (add-on) modules which can assist some steps in the modeling.
+Some of the important Tools are described below.</p>
+<div class="section" id="analysing-point-group">
+<h2>Analysing Point Group<a class="headerlink" href="#analysing-point-group" title="Permalink to this headline">¶</a></h2>
+<p>DJMol use a point group analyzer and from this one can easily find the point group of a molecule
+and its subgroups. It can also tell the next possible point group within a specified error-bar.
+This module can be invoked by:</p>
+<p><strong>Tools ➤ PointGroup Analyzer</strong></p>
+<p>This tool can also be used to deform the geometry of molecules so that one can modify a
+molecule’s PG into another one (in other words, we can constrain a PG into its sub group).</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/040.png"><img alt="040" src="_images/040.png" style="width: 673.0px; height: 687.0px;" /></a>
+<p class="caption"><span class="caption-text">PointGroup Analyzer</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="z-matrix-editor">
+<h2>Z-Matrix Editor<a class="headerlink" href="#z-matrix-editor" title="Permalink to this headline">¶</a></h2>
+<p>Z-Matrix or Z-mat tool can be called by:</p>
+<p><strong>Extra ➤ Z-Matrix Tool</strong></p>
+<p>This Z-Mat editor is made for the XYZ files; It can be either used as an independent program
+(use File button to load a required XYZ file) or as an auxiliary program to manipulate the loaded
+XYZ file. Use either &lt;New File&gt; button to vary Z-matrix a of a new Cartesian file or &lt;Current File&gt;
+button to fetch the currently loaded geometry from the main panel of DJmol.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/041.png"><img alt="041" src="_images/041.png" style="width: 1004.0px; height: 535.0px;" /></a>
+<p class="caption"><span class="caption-text">A butane molecule (exaggerated) and its Z-matrix data.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="changing-z-mat-data">
+<h3>Changing Z-Mat Data<a class="headerlink" href="#changing-z-mat-data" title="Permalink to this headline">¶</a></h3>
+<p>After displaying the geometry, select &lt;Select a Z-mat variable&gt; radio button to show the corresponding
+Z-matrix data (MOPAC style, generated from the OpenBabel application) of the displayed molecule in this
+application.</p>
+<p>Also select any single cell from either &lt;X&gt;, or &lt;Y&gt; or &lt;Z&gt; column, which represents bond-length,
+bond angles, or dihedral angles, respectively. After that select &lt;Insert Variable&gt; button to make the
+cell element as a Z-mat variable.</p>
+<p>And then use the &lt;Save&gt; button and close the window. After that, immediately select the
+&lt;Start Zmatrix Variation&gt; menu from the top of the window, and by using [+] and [-] buttons,
+start the variation.</p>
+<p>One can either save the data (&lt;Update Zmat&gt; button) or discard the variation and to move the
+molecule into its original state by using &lt;Undo Update&gt; button.</p>
+<p>It is also important to note that to stop and undo the current variation,first to select
+&lt;Stop Variations&gt; and press &lt;Undo Update&gt; button&gt;.</p>
+<p>If you want to move only X or Y or Z positions of a single atom use the menu ( &lt;Move selected Atom&gt; ),</p>
+<p>and select an atom (use a click on the desired atom) , and press any[x+][x-]…buttons near the bottom
+left corner.</p>
+<p>Important: To save the updated Geometry press &lt;Update Zmat&gt; AND then &lt;Save Structure&gt; button.</p>
+<p>Or to discard the variation and to move the molecule into its original state by using &lt;Undo Update&gt; button.</p>
+<p>Also don’t forget to use &lt;Save Structure&gt; button to save the modified Cartesian file. It will be
+saved as CurrentFinalXYZ.xyz file in the folder &lt;ZMATfolder&gt; in the program directory.</p>
+<p>If necessary use:
+#. &lt;Select Atoms Labels&gt;  to see individual atom labels, which may be useful when one manipulates Z-Mat.
+#. &lt;Show initial bonds&gt; for keeping the original bonding pattern, irrespective of the current geometric state. This can be useful when some bonds are too far away from the initial bonded state.
+#. &lt;Show axis&gt; to show cartesian axis
+#. &lt;Add New Bond&gt;[n1] [n2] - to show a new bond between the atomlabel, n1 to atomlabel2, n2 atoms.
+#. &lt;Builder&gt; option can be used if necessary.</p>
+<p>Note that a user can also enter numerical values (in float) to the Text Fields.
+Also Move the slide bar to maximum when you vary the Angles/Dihedral angles and to a minimum if you
+want to manipulate the distance.</p>
+</div>
+</div>
+<div class="section" id="remote-submission-of-scripts">
+<h2>Remote Submission of Scripts<a class="headerlink" href="#remote-submission-of-scripts" title="Permalink to this headline">¶</a></h2>
+<p>For time consuming job, such as MD calculations, it is a better idea to use a dedicated machine
+like Linux cluster/Google Cloud etc. instead of a PC. In this case, one need to generate SSH keys
+(ie. one private and one public key), preferably, by using PUTTYGEN application;
+see <a class="reference external" href="https://www.puttygen.com/">https://www.puttygen.com/</a> to download this mandate application.</p>
+<p>Note that we need &lt;RSA&gt; based private key (which is stored in your PC) and a public key
+(stored in the Remote machine). Note that you must enter a &lt;Passphrase&gt; for the &lt;Private key&gt; and
+its format should be in the OpenSSH (ie. not in the PPK format, which is the PuttyGens’ default).
+PuttyGEN can convert this private key in PPK format to OpenSSH format. Finally the Private Key should
+be kept in the &lt;ssh&gt; folder with a file name, &lt;id_rsa&gt;. Make sure that the file &lt;known_hosts&gt; is
+existed in &lt;ssh&gt; format. After this one can invoke the &lt;Remote Submission Tool&gt; as:</p>
+<p><strong>RunProject ➤ Remote Submission</strong></p>
+<p>This tool can be used instead of PUTTY, and it is equipped with tools for file upload/download purposes.
+The downloaded files are kept in &lt;SCP&gt; folder, by default.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/042.png"><img alt="042" src="_images/042.png" style="width: 564.0px; height: 544.0px;" /></a>
+<p class="caption"><span class="caption-text">A sample SSH session (for Google Cloud Platform remote connection and file transactions).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="version-control-using-git">
+<h2>Version Control using GIT<a class="headerlink" href="#version-control-using-git" title="Permalink to this headline">¶</a></h2>
+<p>Version control (VC) systems are a category of software tools that help a software team manage
+changes to source code over time. Version control software keeps track of every modification to the
+code in a special kind of database. If a mistake is made, developers can turn back the clock and
+compare earlier versions of the code to help fix the mistake while minimizing disruption to all
+team members. Git is an example of VCS.</p>
+<p>Why the VC is used in the DJMol? Since the text based input scripts are
+playing an important role in the modeling (inputs of Siesta/DFTB/ASE, all
+are text files). Using VC, these data can be re-edited remotely and at the
+same time it keeps different version of these files in a systematic way (for example,
+later, it can be used by collaborators/public).</p>
+<p>Some Basic Definitions to be familiarized are:</p>
+<ol class="arabic simple">
+<li><p><strong>FETCH:</strong> The git fetch command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on.</p></li>
+<li><p><strong>PULL:</strong> The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content.</p></li>
+<li><p><strong>PUSH:</strong> The git push command is used to upload local repository content to a      remote repository. Pushing is how you transfer commits from your local repository to a remote repo. It is the counterparts to git fetch.</p></li>
+</ol>
+<p>How to use Git to push and pull in DJMol?</p>
+<ol class="arabic">
+<li><p>Initializing Version Control.</p>
+<ol class="arabic">
+<li><p>Set up a Git Remote Repository in GitHub and copy the Repository URL.</p></li>
+<li><p>Open the project in which you need to use version Control.</p></li>
+<li><p>Initializing the Local Repository.</p>
+<p>Team ➤ Git ➤ Initialize ➤ (OK)</p>
+</li>
+<li><p>Linking the Local Repository and the online Repository</p>
+<p><strong>Team ➤ Remote ➤ Pull ➤ Fill ➤ Check Master ➤ Finish</strong>
+<strong>Specify  ➤ PateTheRepository ➤ UserName/PassWord (if needed) ➤ Next</strong></p>
+</li>
+</ol>
+</li>
+<li><p>Push</p>
+<ol class="arabic">
+<li><p>After making necessary changes in the Project.</p></li>
+<li><p>From the Project sidebar, add the needed files to the repository by right-clicking on the file and Clicking on Add.</p></li>
+<li><p>Commit the files to the Repository</p>
+<p><strong>Team ➤ Commit ➤ AddACommitMessage ➤ Commit</strong></p>
+</li>
+<li><p>Push to remote repository.</p>
+<p><strong>Team ➤ Remote ➤ PushToUpstream ➤ Yes</strong></p>
+</li>
+</ol>
+</li>
+<li><p>Pull</p>
+<ol class="arabic">
+<li><p>Fetch</p>
+<p><strong>Team ➤ Remote ➤ Fetch ➤ Next ➤ Finish</strong></p>
+</li>
+<li><p>Pull</p>
+<p><strong>Team ➤ Remote ➤ Pull ➤ Next ➤ CheckMaster ➤ Finish</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Installation of Git</strong></p>
+<p><em>Adding Github Plugins</em></p>
+<p>After installing the application, search &lt;Git&gt; in the plug-ins search field. Select the &lt;Git&gt;
+from the &lt;Installed Packages&gt; and click on &lt;Activate&gt; as shown below figure.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/043.png"><img alt="043" src="_images/043.png" style="width: 600.0px; height: 395.0px;" /></a>
+<p class="caption"><span class="caption-text">Installation of Github plugin in DJMol.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="database-file-retrieving">
+<h2>Database File Retrieving<a class="headerlink" href="#database-file-retrieving" title="Permalink to this headline">¶</a></h2>
+<p>To fetch different structural file form various open file repositories, a Database tool is
+implemented. It is essentially uses Jmol’s DB module.
+It can be launched by:</p>
+<p><strong>Extra ➤ Database Tool</strong></p>
+<p>Open URL: It can be used to open XYZ or PDB file or any other Jmol recognizable file from the web server,
+say from Github.</p>
+<p>Open MOL: It is mainly for, SMILES, InChI, or CAS from either a PubChem database or from NCI/NIH database.</p>
+<p>Open PDB: It use RCSB web (please prefer RCSB) to load 4-character PDB ID (eg. 1crn) or 3 -character l
+igand (eg. 60C).</p>
+<p>Open COD: It opens a specific COD ID from <a class="reference external" href="http://www.crystallography.net/cod/">http://www.crystallography.net/cod/</a></p>
+<p>Open Materials Project: It opens a specific Materials Project ID number:</p>
+<p>All opened file is saved in ./Database folder from</p>
+<p>Export To: Only MOL, XYZ and PDB formats are supported for export its images.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/044.png"><img alt="044" src="_images/044.png" style="width: 805.0px; height: 509.59999999999997px;" /></a>
+<p class="caption"><span class="caption-text">Showing a Database window with a retrieved COD file from COD databse.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="miscellaneous-tools">
+<h2>Miscellaneous Tools<a class="headerlink" href="#miscellaneous-tools" title="Permalink to this headline">¶</a></h2>
+<p>Some of the miscellaneous tools are shown below:</p>
+<ul>
+<li><p><strong>Start Batch Process:</strong></p>
+<p>For DFTB+ calculation, a number of HSD files in a particular folder can be
+called one after another (known as batch processing). This will be useful for building 1D PES or to
+analyze energies of particular set of molecules. The resultant TGZ files contain all the out files
+including the submitted HSD file, and it will be transformed to the folder at the end of the each
+calculation.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/045.png"><img alt="045" src="_images/045.png" style="width: 541.8px; height: 415.09999999999997px;" /></a>
+<p class="caption"><span class="caption-text">Batch Processing.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p><strong>Calculator:</strong> System’s default calculator can be invoked.</p></li>
+<li><p><strong>GIF Utility:</strong> GIF animation files can be viewed or generated using this utility
+(eg. phonon modes). Time between two frames can be adjusted and the resultant file is stored
+in ./Scratch_images.</p></li>
+<li><p><strong>Process Status:</strong> It is used to monitor current resources of the computer system
+(used/availble RAM, HDD space etc.). This can be used before starting a calculation. For example,
+if the PC memory is low, allocate more RAM by stopping other less important process by using Window’s
+<strong>Task Manager</strong> utility.</p></li>
+<li><p><strong>Unit Conversion:</strong> A basic unit converter for length, time, energy etc. it also includes atomic unit.</p></li>
+<li><p><strong>Matrix Viewer:</strong> 2D matrix data viewer of the program. It is useful to analyze the overall shape and
+symmetry of the matrix data, such as Hessian or Hamiltonian. See example directory for its sample file.</p></li>
+<li><p><strong>Convert Structure:</strong> Open Babel is used to convert from one structure data into another data. See
+Figure below.</p></li>
+<li><p><strong>Standard Orientation:</strong> Using symmetry a disoriented molecule can be oriented with respect to a
+symmetry axis. This tool is useful for making a more systematic Z-matrix or Cartesian file. It is
+strongly recommended that the standard oriented geometry data should be used in the Z-matrix tool to
+re-adjust its coordinates.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/046.png"><img alt="046" src="_images/046.png" style="width: 793.8px; height: 424.9px;" /></a>
+<p class="caption"><span class="caption-text">Batch Processing.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p><strong>Open DJMol Directory:</strong> It will open the parent directory.</p></li>
+<li><p><strong>Send Message:</strong> User can mail the forum using this utility. Please academic E-mail ID
+(avoid .com E-mail IDs – it won’t support). If needed images should be linked as an URL link
+(say, by drive.google.com/… link).</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="chapter5.html" class="btn btn-neutral float-left" title="Chapter 5: Python scripting with ASE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Indo-Korea Science and Technology Center, Bengaluru INDIA | Written by GP Krishna mohan, Rahul Sunil, Kapil Gupta, and SC Lee
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
