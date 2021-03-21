@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter-2 :: HTML documentation &mdash; DJMOL  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter 1: Introduction" href="chapter1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> DJMOL
+          
+
+          
+            
+            <img src="_static/djmol_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of DJMOL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#compiling-installation-of-djmol-and-add-ons">Compiling/Installation of DJMol and Add-Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#system-requirements">System Requirements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="webdoc.html">DJMOL web documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tableofcontent.html">Table of contents :: DJMOL web documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">Chapter 1: Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#computational-tools">Computational Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#major-components-of-the-software">Major Components of the Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Chapter 2: DFTB+ Calculations</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DJMOL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="webdoc.html">DJMOL web documentation</a> &raquo;</li>
+        
+      <li>Chapter-2 :: HTML documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-2-dftb-calculations">
+<h1>Chapter 2: DFTB+ Calculations<a class="headerlink" href="#chapter-2-dftb-calculations" title="Permalink to this headline">¶</a></h1>
+<p>Here we illustrate some standard procedures that can be performed by the DFTB+ program in
+conjunction with DJMol platform. At present there are three distinct file types can be opened for
+DFTB+ calculations, viz., [1] dftb_in.hsd, &lt;.xyz&gt; and &lt;.gen&gt; files. The first one is the default unique
+file type for the program and the  last two file extensions can be converted into &lt;dftb_in.hsd&gt; file by
+using a script writer (see below section).</p>
+<p>If one opens a &lt;.xyz&gt; or &lt;.hsd&gt; file, for visualizing the structure, subsequently one can also try to make a corresponding &lt;dftb_in.hsd&gt; file using a DFTB+ script writer program. Using this, a user can make a basic &lt;dftb_in.hsd&gt; script for a range of jobs, including, geometry optimization, calculating excited states or Hessian etc. It can be retrieved by:</p>
+<p><strong>Set Up ➤ DFTB Scripting</strong></p>
+<p>And the generated &lt;dftb_in.hsd&gt; file is kept in &lt;Input&gt; folder. Note that the atomic information
+including its geometry is directly taken from &lt;gen&gt; data of the currently loaded file.</p>
+<p>Note that, the Script-Writer module will write &lt;TEMPdftb_in.hsd&gt; into the &lt;Input&gt; folder. It is
+strongly recommended that, a user should always try to inspect/modify this script before its submission,
+if it is necessary.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/006.png"><img alt="006" src="_images/006.png" style="width: 633.6px; height: 416.7px;" /></a>
+</div>
+<p>A screen shot of the script writer tool for the DFTB+ program.</p>
+<p>Running DFTB+ calculator is possible when you load a <strong>&lt;dftb_in.hsd&gt;</strong> file.
+Make sure that the &lt;Input&gt; folder should have this file before the execution and this file can be
+executed as:</p>
+<p><strong>Execute ➤ Run DFTB+</strong></p>
+<p>And if necessary, this Run can be killed by</p>
+<p><strong>Execute ➤ Stop DFTB+</strong></p>
+<p>The generated/loaded files are usually placed in the <strong>&lt;DFTB_Scratch&gt;</strong> folder. And these files are also
+sent back as a Zip file, to the directory where your current &lt;hsd&gt; file resides.</p>
+<p>DFTB+ generated data can be analyzed or visualized by the program. Main data analyzers are given below.</p>
+<p>DFTB+ out file contains information about Cartesian force components (in atomic units) and this
+can be visualized as a line chart as shown below. The &lt;detailed.out&gt; file can be opened by:</p>
+<p><strong>Tools ➤  ForceComponents</strong></p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/007.png"><img alt="007" src="_images/007.png" style="width: 688.5px; height: 388.8px;" /></a>
+<p class="caption"><span class="caption-text">The <em>x</em> components of the Cartesian forces of the Fullerene molecule after the geometry optimization. The shaded portion can be easily zoomed in for more details.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>MO information (including density and density difference files) are stored in the .CUBE format. In order to
+get cube files one needs to ensure that dftb_in.hsd file contains relevant keywords (WriteDetailedXML and
+WriteEigenvectors, see example directory for a template file). After running this file it will produce 3 out
+files (detailed.xml, charges.bin, and eigenvec.bin) and these files should be transferred from
+&lt;DFTB_Scratch&gt; directory to &lt;ModesBinary&gt; folder.  Then invoke:</p>
+<p><strong>Execute ➤ Run Waveplot</strong></p>
+<p>From this window, select the proper SK file set (look at the combo box entitled, Specify SK set and
+Generate HSD file) and press on the button &lt;Generate Waveplot File&gt;. This will produce the needed HSD
+file for the Waveplot.exe binary file. View this file from the second tab and edit it if needed. Then
+invoke the &lt;Calculate&gt; button to produce the necessary CUBE file. Note that it might take some minutes
+to complete the task (depending on the size of the system).</p>
+<p>To visualize the cubes file, first copy the Full Path of the folder, &lt;ModesBinary&gt; and then go to:</p>
+<p><strong>Tools ➤ View Cube</strong></p>
+<p>Then click on the button, &lt;Open Directory&gt; and insert the recently copied Full Path into it and select
+a CUBE file. This will list all the CUBE files into the table, and this can be visualized easily by
+selecting the needed file name from the table and by clicking on the &lt;Open&gt; button. Optionally one can
+also use JMol scripting facility for more advanced file visualizations or manipulations.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/008.png"><img alt="008" src="_images/008.png" style="width: 661.5px; height: 436.79999999999995px;" /></a>
+<p class="caption"><span class="caption-text">Visual of one of the MOs from the list of CUBE files.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>To view only MO energy levels and its degeneracies, one can use the &lt;detailed.out&gt; file and this
+can be called by:</p>
+<p><strong>Tools ➤  MO Levels</strong></p>
+<p>The green lines represent occupied and red lines represent the un occupied levels. For accurate
+calculations (which use tight SCC parameters) one can also look at the degeneracies levels.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/009.png"><img alt="009" src="_images/009.png" style="width: 501.3px; height: 594.0px;" /></a>
+<p class="caption"><span class="caption-text">MO energy levels from the detailed.out file.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>DFTB+ uses TD-DFTB for calculating oscillator strength of the optical excitations and this is stored
+in SPX.dat file. An add-on is used for reading this data and this can be invoked by:</p>
+<p><strong>Tools ➤  UV-Vis Spectrum</strong></p>
+<p>Select a SPX.dat file to proceed. This will plot the oscillator strengths (vertical red lines) and its
+fitted function ( broadened through convolution with a Gaussian, Lorentzian function or its linear
+combination, known as pseudo-Voigt functions - shown by blue curves). By default it uses eV however
+one can also obtain an equivalent spectrum using nm units (this creates a separate plot). Note that
+the oscillator strength is dimensionless quantity and it is described in the y axis.</p>
+<p>By right clicking the plot, one can adjust several parameters (Auto Range, Zoom, Grid Lines, Axes
+properties etc.) of the figure and can save the image into PNG format.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/010.png"><img alt="010" src="_images/010.png" style="width: 900.9px; height: 344.7px;" /></a>
+<p class="caption"><span class="caption-text">UV-Visible spectrum of an organic molecule fitted with Lorentzian convolution.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>DFTB+ caclulates partial charges and this charges can be projected out into the individual atoms.
+This Utility can be invoked by:</p>
+<p><strong>Tools ➤ Partial Charges</strong></p>
+<p>This utility read both the XYZ geometry and its corresponding detailed.out file. A color scale will
+also be shown for a reference. Note that this will generate a file and this file be saved for a
+reference (See Appendix section for the Saved Data).</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/011.png"><img alt="011" src="_images/011.png" style="width: 712.8000000000001px; height: 450.0px;" /></a>
+<p class="caption"><span class="caption-text">Numerical values of Mulliken’s partial charges are represented on atoms</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>By using Harmonic approximation DFTB+ calculates the vibrational normal modes and frequencies.
+This requires Hessian Matrix (calculated by the DFTB+) and a script file for modes.exe binary
+(which calculates modes and frequencies).</p>
+<p>The first step is to optimize the geometry. And once the optimized geometry is ready one can
+do the vibrational calculation with the necessary keywords (it includes Driver = SecondDerivatives{}
+keywords; See the example directory). This will generate the needed hessian.out file for the modes.exe.</p>
+<p>To calculate vibrational modes vectors, to visualize/animate these modes and to get the frequencies,
+invoke the tool as:</p>
+<p><strong>Execute ➤ Run Modes</strong></p>
+<p>Here in this tool one has to enter the optimized GEN styled geometry</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">Geometry</span><span class="o">=</span> GenFormat <span class="o">{</span>
+...
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>and the hessian data as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">hessian</span> <span class="o">=</span> <span class="o">{</span>
+...
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Note that the dots (…) represents the numerical value of the Hessian matrix ie. ALL the
+numerical value of the file , hessian.out, which is 3Nx3N matrix data (force constant matrix).</p>
+<p>After these two data entry select the corresponding SK file set and then click on the button:
+Generate Script. This will generate modes_in.hsd file in the ModesBinary folder. This file contains
+all the information for the modes.exe program which diagonalizes the hessian matrix to give modes/frequency
+information. The button, Generate Modes/Frequencies initiate this operation and produces the file,
+modes.xyz which contains the frequency/modes information.</p>
+<p>To view this file another application is used this can be called by:</p>
+<p><strong>Tools ➤ View Modes</strong></p>
+<p>This will read the files modes.xyz and visualize the vectors/animations etc. Note that the Hessian
+data is used by the modes.exe binary as such. In other words it does not projects out translational
+and rotational motions. So that the user should be optimize the molecule well enough.
+If needed see <a class="reference external" href="http://gaussian.com/vib/">http://gaussian.com/vib/</a> on the projection technique of Hessian matrix (Sayvetz conditions).</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/012.png"><img alt="012" src="_images/012.png" style="width: 753.3000000000001px; height: 477.90000000000003px;" /></a>
+<p class="caption"><span class="caption-text">Vibrational modes of water molecules read from the file modes.xyz in the ModesBinary directory.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>MD simulations can be done with or without using this tool. Normally one can submit MD
+job as usual (like a static calculation job). However, this MD tool is mainly used in real time so
+that a user can analyze Trajectory properties (Total Energy, Kinetic/Potential Energies,
+structure of each step) at Run Time. Moreover FFT based autocorrelation functions can be used to
+calculate IR spectra (from the dipole moments or from the velocity autocorrelation functions) after
+finishing the MD run. Note that, the MD analyzer tool should be invoked before the DFTB+ calculation.
+While running the MD calculation it will show
+the progress of the data along with the current structure. Its step are:</p>
+<ol class="arabic simple">
+<li><p>Remove all the files from ./DFTB_Scratch directory. It is Mandate.</p></li>
+<li><p>Open MD file as,             <strong>File ➤ Open (hsd)</strong></p></li>
+<li><p>Invoke the MD tool as,               <strong>Tools ➤ MD  Analyzer</strong></p></li>
+<li><p>Execute MD run as,           <strong>Execute ➤ Run DFTB+</strong></p></li>
+<li><p>Wait for the MD calculation to finish; and after that use tools like, &lt;Velocity Autocorrelation Spectra&gt;.</p></li>
+</ol>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/013.png"><img alt="013" src="_images/013.png" style="width: 936.0px; height: 525.6px;" /></a>
+<p class="caption"><span class="caption-text">Variations of energies during the MD, in real time.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>The DJMol creates 2D PES (potential energy surface) by performing a series of DFTB+ calculations.
+For example, PES of H2O2 (hydrogen peroxide) molecule is created by doing a batch process. To create
+2D PES we need two independent internal coordinate variables and, arbitrarily, we have chosen the O-O
+bond length and the H-H dihedral angle (in degrees) as shown in Fig. below.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="_images/014.png"><img alt="014" src="_images/014.png" style="width: 466.2px; height: 321.3px;" /></a>
+<p class="caption"><span class="caption-text">The two independent variables of H2O2  PES. The unit of bond length is in Angstrom and that of the dihedral angle is in degrees.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>In first, make the structure of the molecule (or see Example folder for its coordinates);
+then using the &lt;Convert Structure&gt; tool (See Fig.2), convert this XYZ formatted file into the MOPIN
+format (which contains an equivalent z-matrix data). And copy the content of this file into
+&lt;Build PES HSD&gt; tool as shown in the Fig. 3.</p>
+<p>By clicking the button, &lt;Generate PES HSD Files&gt;, this will generate 441 HSD input files for the
+DFTB+ program (it will take around ten minutes); copy all of these HSD files into the &lt;SCRATCH&gt;
+folder (a user can also select any other directory instead of this one) and then invoke the
+&lt;Batch Processing Tool&gt;. This will start DFTB+ program to execute all these files and create
+the PES in the &lt;PESScan&gt; folder.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/015.png"><img alt="015" src="_images/015.png" style="width: 740.5999999999999px; height: 417.2px;" /></a>
+<p class="caption"><span class="caption-text">The Convert tool is used to transform Cartesian file into a Mopin file (which essentially contain the z-matrix in Mopac’s format).</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="_images/016.png"><img alt="016" src="_images/016.png" style="width: 767.1999999999999px; height: 533.4px;" /></a>
+<p class="caption"><span class="caption-text">The converted MOPIN files content is inserted in the below text area and insert the variable name in the appropriate position.
+VariableI represents the O-O bond length (starts from 1.2Å) and VariableII, it H-H dihedral angle (starts with 0.0o).</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>After finishing the batch process, &lt;PESViewer&gt; can be invoked to get the plot of 2D PES or
+its contour diagram as shown in the Fig. 4. This utility will also indicates the minimum energy
+data point on the PES (in other words from this point one can start geometry optimization to locate
+local minimum) and its corresponding geometry file.</p>
+<p>In &lt;PESScan&gt; folder one will see the following data files (See Table below).</p>
+<table class="colwidths-given docutils align-center" id="id11">
+<caption><span class="caption-text">Table-5: Datafiles of PES calculations.</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>View2DPES.dat</p></td>
+<td><p>Gives the data intervals in x and y directions and energy as E(x,y) in eV</p></td>
+</tr>
+<tr class="row-even"><td><p>2DPESscan.dat</p></td>
+<td><p>It contains the sorted file names used in the PES creation with energy (in eV and in Hartree).</p></td>
+</tr>
+<tr class="row-odd"><td><p>2DPESscanmovie.xyz</p></td>
+<td><p>Contains the geometry of the individual molecules in xyz format. It can be visualized/animated with DJMol. This can be userd to construct PES with other ab initio programs.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/017.png"><img alt="017" src="_images/017.png" style="width: 146.0px; height: 151.0px;" /></a>
+</div>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/018.png"><img alt="018" src="_images/018.png" style="width: 177.0px; height: 164.0px;" /></a>
+<p class="caption"><span class="caption-text">The PES of the cis-trans conversion of H <sub>2</sub> O <sub>2</sub>. Note that the optimum bond length is around 1.48 Å and for shorter bond lengths the energy minimum is located near to 90.0 <sup>o</sup> or 270.0 <sup>o</sup>.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="chapter1.html" class="btn btn-neutral float-left" title="Chapter 1: Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Indo-Korea Science and Technology Center, Bengaluru INDIA | Written by GP Krishna mohan, Rahul Sunil, Kapil Gupta, and SC Lee
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
