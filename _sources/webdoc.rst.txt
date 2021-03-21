@@ -45,3 +45,15 @@ DJMOL web documentation
     :caption: Chapter-6:
 
     chapter6
+
+.. toctree::
+    :maxdepth: 10
+    :caption: Chapter-7:
+
+    chapter7
+
+.. toctree::
+    :maxdepth: 10
+    :caption: Chapter-8:
+
+    chapter8
