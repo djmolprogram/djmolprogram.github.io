@@ -105,7 +105,18 @@
 <li class="toctree-l3"><a class="reference internal" href="chapter1.html#major-components-of-the-software">Major Components of the Software</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Chapter 2: DFTB+ Calculations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Chapter 2: DFTB+ Calculations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dftb-script-writer">DFTB+ Script Writer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#executing-dftb-scripts">Executing DFTB+ Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#force-components">Force Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#molecular-orbitals-and-energy-levels">Molecular Orbitals and Energy Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uv-visible-spectrum-convolution">UV-Visible Spectrum Convolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#partial-charges">Partial Charges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#molecular-vibrations">Molecular-Vibrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#real-time-molecular-dynamics">Real Time Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#potential-energy-surfaces-2d-1d">Potential Energy Surfaces (2D/1D)</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="chapter3.html">Chapter 3: Modeling with Siesta</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-script-writer">Siesta Script Writer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-add-on-and-executing-the-program">Siesta Add-On and Executing the Program</a></li>
@@ -213,6 +224,8 @@ conjunction with DJMol platform. At present there are three distinct file types 
 DFTB+ calculations, viz., [1] dftb_in.hsd, &lt;.xyz&gt; and &lt;.gen&gt; files. The first one is the default unique
 file type for the program and the  last two file extensions can be converted into &lt;dftb_in.hsd&gt; file by
 using a script writer (see below section).</p>
+<div class="section" id="dftb-script-writer">
+<h2>DFTB+ Script Writer<a class="headerlink" href="#dftb-script-writer" title="Permalink to this headline">¶</a></h2>
 <p>If one opens a &lt;.xyz&gt; or &lt;.hsd&gt; file, for visualizing the structure, subsequently one can also try to make a corresponding &lt;dftb_in.hsd&gt; file using a DFTB+ script writer program. Using this, a user can make a basic &lt;dftb_in.hsd&gt; script for a range of jobs, including, geometry optimization, calculating excited states or Hessian etc. It can be retrieved by:</p>
 <p><strong>Set Up ➤ DFTB Scripting</strong></p>
 <p>And the generated &lt;dftb_in.hsd&gt; file is kept in &lt;Input&gt; folder. Note that the atomic information
@@ -224,6 +237,9 @@ if it is necessary.</p>
 <a class="reference internal image-reference" href="_images/006.png"><img alt="006" src="_images/006.png" style="width: 633.6px; height: 416.7px;" /></a>
 </div>
 <p>A screen shot of the script writer tool for the DFTB+ program.</p>
+</div>
+<div class="section" id="executing-dftb-scripts">
+<h2>Executing DFTB+ Scripts<a class="headerlink" href="#executing-dftb-scripts" title="Permalink to this headline">¶</a></h2>
 <p>Running DFTB+ calculator is possible when you load a <strong>&lt;dftb_in.hsd&gt;</strong> file.
 Make sure that the &lt;Input&gt; folder should have this file before the execution and this file can be
 executed as:</p>
@@ -233,6 +249,9 @@ executed as:</p>
 <p>The generated/loaded files are usually placed in the <strong>&lt;DFTB_Scratch&gt;</strong> folder. And these files are also
 sent back as a Zip file, to the directory where your current &lt;hsd&gt; file resides.</p>
 <p>DFTB+ generated data can be analyzed or visualized by the program. Main data analyzers are given below.</p>
+</div>
+<div class="section" id="force-components">
+<h2>Force Components<a class="headerlink" href="#force-components" title="Permalink to this headline">¶</a></h2>
 <p>DFTB+ out file contains information about Cartesian force components (in atomic units) and this
 can be visualized as a line chart as shown below. The &lt;detailed.out&gt; file can be opened by:</p>
 <p><strong>Tools ➤  ForceComponents</strong></p>
@@ -240,6 +259,9 @@ can be visualized as a line chart as shown below. The &lt;detailed.out&gt; file 
 <a class="reference internal image-reference" href="_images/007.png"><img alt="007" src="_images/007.png" style="width: 688.5px; height: 388.8px;" /></a>
 <p class="caption"><span class="caption-text">The <em>x</em> components of the Cartesian forces of the Fullerene molecule after the geometry optimization. The shaded portion can be easily zoomed in for more details.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="molecular-orbitals-and-energy-levels">
+<h2>Molecular Orbitals and Energy Levels<a class="headerlink" href="#molecular-orbitals-and-energy-levels" title="Permalink to this headline">¶</a></h2>
 <p>MO information (including density and density difference files) are stored in the .CUBE format. In order to
 get cube files one needs to ensure that dftb_in.hsd file contains relevant keywords (WriteDetailedXML and
 WriteEigenvectors, see example directory for a template file). After running this file it will produce 3 out
@@ -270,6 +292,9 @@ calculations (which use tight SCC parameters) one can also look at the degenerac
 <a class="reference internal image-reference" href="_images/009.png"><img alt="009" src="_images/009.png" style="width: 501.3px; height: 594.0px;" /></a>
 <p class="caption"><span class="caption-text">MO energy levels from the detailed.out file.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="uv-visible-spectrum-convolution">
+<h2>UV-Visible Spectrum Convolution<a class="headerlink" href="#uv-visible-spectrum-convolution" title="Permalink to this headline">¶</a></h2>
 <p>DFTB+ uses TD-DFTB for calculating oscillator strength of the optical excitations and this is stored
 in SPX.dat file. An add-on is used for reading this data and this can be invoked by:</p>
 <p><strong>Tools ➤  UV-Vis Spectrum</strong></p>
@@ -284,6 +309,9 @@ properties etc.) of the figure and can save the image into PNG format.</p>
 <a class="reference internal image-reference" href="_images/010.png"><img alt="010" src="_images/010.png" style="width: 900.9px; height: 344.7px;" /></a>
 <p class="caption"><span class="caption-text">UV-Visible spectrum of an organic molecule fitted with Lorentzian convolution.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="partial-charges">
+<h2>Partial Charges<a class="headerlink" href="#partial-charges" title="Permalink to this headline">¶</a></h2>
 <p>DFTB+ caclulates partial charges and this charges can be projected out into the individual atoms.
 This Utility can be invoked by:</p>
 <p><strong>Tools ➤ Partial Charges</strong></p>
@@ -294,6 +322,9 @@ reference (See Appendix section for the Saved Data).</p>
 <a class="reference internal image-reference" href="_images/011.png"><img alt="011" src="_images/011.png" style="width: 712.8000000000001px; height: 450.0px;" /></a>
 <p class="caption"><span class="caption-text">Numerical values of Mulliken’s partial charges are represented on atoms</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="molecular-vibrations">
+<h2>Molecular-Vibrations<a class="headerlink" href="#molecular-vibrations" title="Permalink to this headline">¶</a></h2>
 <p>By using Harmonic approximation DFTB+ calculates the vibrational normal modes and frequencies.
 This requires Hessian Matrix (calculated by the DFTB+) and a script file for modes.exe binary
 (which calculates modes and frequencies).</p>
@@ -332,6 +363,9 @@ If needed see <a class="reference external" href="http://gaussian.com/vib/">http
 <a class="reference internal image-reference" href="_images/012.png"><img alt="012" src="_images/012.png" style="width: 753.3000000000001px; height: 477.90000000000003px;" /></a>
 <p class="caption"><span class="caption-text">Vibrational modes of water molecules read from the file modes.xyz in the ModesBinary directory.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="real-time-molecular-dynamics">
+<h2>Real Time Molecular Dynamics<a class="headerlink" href="#real-time-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
 <p>MD simulations can be done with or without using this tool. Normally one can submit MD
 job as usual (like a static calculation job). However, this MD tool is mainly used in real time so
 that a user can analyze Trajectory properties (Total Energy, Kinetic/Potential Energies,
@@ -351,6 +385,9 @@ the progress of the data along with the current structure. Its step are:</p>
 <a class="reference internal image-reference" href="_images/013.png"><img alt="013" src="_images/013.png" style="width: 936.0px; height: 525.6px;" /></a>
 <p class="caption"><span class="caption-text">Variations of energies during the MD, in real time.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="potential-energy-surfaces-2d-1d">
+<h2>Potential Energy Surfaces (2D/1D)<a class="headerlink" href="#potential-energy-surfaces-2d-1d" title="Permalink to this headline">¶</a></h2>
 <p>The DJMol creates 2D PES (potential energy surface) by performing a series of DFTB+ calculations.
 For example, PES of H2O2 (hydrogen peroxide) molecule is created by doing a batch process. To create
 2D PES we need two independent internal coordinate variables and, arbitrarily, we have chosen the O-O
@@ -406,6 +443,7 @@ local minimum) and its corresponding geometry file.</p>
 <div class="figure align-center" id="id12">
 <a class="reference internal image-reference" href="_images/018.png"><img alt="018" src="_images/018.png" style="width: 177.0px; height: 164.0px;" /></a>
 <p class="caption"><span class="caption-text">The PES of the cis-trans conversion of H <sub>2</sub> O <sub>2</sub>. Note that the optimum bond length is around 1.48 Å and for shorter bond lengths the energy minimum is located near to 90.0 <sup>o</sup> or 270.0 <sup>o</sup>.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 

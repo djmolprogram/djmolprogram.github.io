@@ -10,6 +10,9 @@ DFTB+ calculations, viz., [1] dftb_in.hsd, <.xyz> and <.gen> files. The first on
 file type for the program and the  last two file extensions can be converted into <dftb_in.hsd> file by 
 using a script writer (see below section).
 
+DFTB+ Script Writer
+==========================
+
 If one opens a <.xyz> or <.hsd> file, for visualizing the structure, subsequently one can also try to make a corresponding <dftb_in.hsd> file using a DFTB+ script writer program. Using this, a user can make a basic <dftb_in.hsd> script for a range of jobs, including, geometry optimization, calculating excited states or Hessian etc. It can be retrieved by:
 
 **Set Up ➤ DFTB Scripting**
@@ -28,6 +31,8 @@ if it is necessary.
 
 A screen shot of the script writer tool for the DFTB+ program.
 
+Executing DFTB+ Scripts
+=========================
 Running DFTB+ calculator is possible when you load a **<dftb_in.hsd>** file. 
 Make sure that the <Input> folder should have this file before the execution and this file can be 
 executed as:
@@ -43,6 +48,9 @@ sent back as a Zip file, to the directory where your current <hsd> file resides.
 
 DFTB+ generated data can be analyzed or visualized by the program. Main data analyzers are given below.
 
+Force Components
+==================
+
 DFTB+ out file contains information about Cartesian force components (in atomic units) and this 
 can be visualized as a line chart as shown below. The <detailed.out> file can be opened by:
 
@@ -54,6 +62,9 @@ can be visualized as a line chart as shown below. The <detailed.out> file can be
    :scale: 90%
 
    The *x* components of the Cartesian forces of the Fullerene molecule after the geometry optimization. The shaded portion can be easily zoomed in for more details.
+
+Molecular Orbitals and Energy Levels
+======================================
 
 MO information (including density and density difference files) are stored in the .CUBE format. In order to 
 get cube files one needs to ensure that dftb_in.hsd file contains relevant keywords (WriteDetailedXML and 
@@ -100,6 +111,9 @@ calculations (which use tight SCC parameters) one can also look at the degenerac
 
    MO energy levels from the detailed.out file.
 
+UV-Visible Spectrum Convolution
+=================================
+
 DFTB+ uses TD-DFTB for calculating oscillator strength of the optical excitations and this is stored 
 in SPX.dat file. An add-on is used for reading this data and this can be invoked by:
 
@@ -121,6 +135,9 @@ properties etc.) of the figure and can save the image into PNG format.
 
    UV-Visible spectrum of an organic molecule fitted with Lorentzian convolution.
 
+Partial Charges
+=================
+
 DFTB+ caclulates partial charges and this charges can be projected out into the individual atoms. 
 This Utility can be invoked by:
 
@@ -136,6 +153,9 @@ reference (See Appendix section for the Saved Data).
    :scale: 90%
 
    Numerical values of Mulliken's partial charges are represented on atoms
+
+Molecular-Vibrations
+======================
 
 By using Harmonic approximation DFTB+ calculates the vibrational normal modes and frequencies. 
 This requires Hessian Matrix (calculated by the DFTB+) and a script file for modes.exe binary 
@@ -191,6 +211,9 @@ If needed see http://gaussian.com/vib/ on the projection technique of Hessian ma
 
    Vibrational modes of water molecules read from the file modes.xyz in the ModesBinary directory.
 
+Real Time Molecular Dynamics
+===============================
+
 MD simulations can be done with or without using this tool. Normally one can submit MD 
 job as usual (like a static calculation job). However, this MD tool is mainly used in real time so 
 that a user can analyze Trajectory properties (Total Energy, Kinetic/Potential Energies,  
@@ -212,6 +235,9 @@ the progress of the data along with the current structure. Its step are:
    :scale: 90%
 
    Variations of energies during the MD, in real time.
+
+Potential Energy Surfaces (2D/1D)
+=====================================
 
 The DJMol creates 2D PES (potential energy surface) by performing a series of DFTB+ calculations. 
 For example, PES of H2O2 (hydrogen peroxide) molecule is created by doing a batch process. To create 
