@@ -57,3 +57,9 @@ DJMOL web documentation
     :caption: Chapter-8:
 
     chapter8
+
+.. toctree::
+    :maxdepth: 20
+    :caption: Appendices:
+
+    appendices

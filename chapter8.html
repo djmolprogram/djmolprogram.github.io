@@ -41,6 +41,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Appendices" href="appendices.html" />
     <link rel="prev" title="Chapter 7: Architecture of the Program" href="chapter7.html" /> 
 </head>
 
@@ -104,7 +105,18 @@
 <li class="toctree-l3"><a class="reference internal" href="chapter1.html#major-components-of-the-software">Major Components of the Software</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Chapter 2: DFTB+ Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Chapter 2: DFTB+ Calculations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#dftb-script-writer">DFTB+ Script Writer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#executing-dftb-scripts">Executing DFTB+ Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#force-components">Force Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#molecular-orbitals-and-energy-levels">Molecular Orbitals and Energy Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#uv-visible-spectrum-convolution">UV-Visible Spectrum Convolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#partial-charges">Partial Charges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#molecular-vibrations">Molecular-Vibrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#real-time-molecular-dynamics">Real Time Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#potential-energy-surfaces-2d-1d">Potential Energy Surfaces (2D/1D)</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="chapter3.html">Chapter 3: Modeling with Siesta</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-script-writer">Siesta Script Writer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-add-on-and-executing-the-program">Siesta Add-On and Executing the Program</a></li>
@@ -134,6 +146,31 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Chapter 8: Software Applications</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#demonstration-of-djmol">Demonstration of DJMol</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#uv-visible-spectrum-of-silver-nanocluster-using-dftb">UV-Visible Spectrum of Silver Nanocluster using DFTB+</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frontier-orbitals-of-c-60-calculated-with-siesta">Frontier Orbitals of C <sub>60</sub> Calculated with Siesta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openmd-md-simulation-of-gold-nanoparticle">OpenMD MD simulation of Gold-nanoparticle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ase-simulation-of-an-adatom-diffusion">ASE simulation of an adatom diffusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="appendices.html">Appendices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#appendix-a">Appendix-A</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="appendices.html#python-scripting-for-djmol-applications">Python Scripting for DJMol Applications</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#how-to-use-python-within-the-djmol">How to use Python within the DJMol?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#basics-of-python-scripting">Basics of python scripting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#variable-assignment-and-operators">Variable assignment and Operators</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#string-list-methods-etc">String, List, Methods etc.</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#list-manipulation-rules">List Manipulation Rules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#list-openrations">List openrations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#methods-for-the-lists">Methods for the Lists</a></li>
+<li class="toctree-l5"><a class="reference internal" href="appendices.html#libraries">Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="appendices.html#basics-of-ase-scripting">Basics of ASE scripting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="appendices.html#appendix-b">Appendix-B</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="appendices.html#installation-of-python-and-numpy">Installation of Python and NumPy</a></li>
 </ul>
 </li>
 </ul>
@@ -277,6 +314,361 @@ Spectrum tool. The vertical red line shows the oscillator strengths of electroni
 The inset figure shows HOMOs (green lines) and LUMOs (red lines) of the system.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
+<div class="section" id="frontier-orbitals-of-c-60-calculated-with-siesta">
+<h3>Frontier Orbitals of C <sub>60</sub> Calculated with Siesta<a class="headerlink" href="#frontier-orbitals-of-c-60-calculated-with-siesta" title="Permalink to this headline">¶</a></h3>
+<p>Volumetric MO data can be made by using executing steps described in Denchar Utility, systematically
+using the Siesta add-on. The Siesta add-on can be invoked by:</p>
+<p><strong>Execute ➤ Siesta Calculator</strong></p>
+<p>In this section we shall obtain the frontier orbitals of Buckminster fullerene.
+See the example file Fullerene.fdf under the Siesta_Samples folder for its coordinate
+(note that it is an un-optimized structure; its optimization procedure is left to the
+user as an additional exercise).  Since we used a molecular system in a unit cell,
+the default k-point (-point) is used to represent electronic wavefunction coefficients. Note that HOMO and LUMO coefficients are at 120 and 121’th k-points. See the Siesta Manual for more details.
+And change the main setting of the fdf file as (ie. except the coordinate as it is
+inserted between, AtomicCoordinatesAndAtomSpecies block):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------------------------------</span>
+<span class="c1">#   IMPORTANT: DO NOT CHANGE SystemLabel</span>
+<span class="c1">#------------------------------------------------</span>
+
+
+SystemName          Fullerene molecule        <span class="c1"># Descriptive name of the system</span>
+SystemLabel         siesta                    <span class="c1"># Short name for naming files</span>
+
+NumberOfAtoms       <span class="m">60</span>
+NumberOfSpecies     <span class="m">1</span>
+
+SpinPolarized               T
+
+WriteDenchar                T
+WriteWaveFunctions          T
+COOP.Write                  T
+
+%block WaveFuncKpoints
+<span class="m">0</span>.000 <span class="m">0</span>.000 <span class="m">0</span>.000 from <span class="m">120</span> to <span class="m">121</span>            <span class="c1"># Gamma wavefuncs Here, 120 = HOMO</span>
+%endblock WaveFuncKPoints
+
+%block ChemicalSpeciesLabel
+<span class="m">1</span>  <span class="m">6</span>  C                                       <span class="c1"># SpeciesIndex,AtomicNumber,SpeciesLabel</span>
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant       <span class="m">25</span>.0 Ang
+%block LatticeVectors
+<span class="m">1</span>.0    <span class="m">0</span>.0    <span class="m">0</span>.0
+<span class="m">0</span>.0    <span class="m">1</span>.0    <span class="m">0</span>.0
+<span class="m">0</span>.0    <span class="m">0</span>.0    <span class="m">1</span>.0
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat  Ang                   <span class="c1"># Format for coordinates</span>
+
+%block AtomicCoordinatesAndAtomicSpecies
+. . .
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+WriteEigenvalues      T
+
+<span class="c1">#######################################################</span>
+<span class="c1"># For the following parameters, default value is ok.</span>
+MeshCutoff               <span class="m">100</span>. Ry       <span class="c1"># Mesh cutoff. real space mesh (Ry)</span>
+PAO.BasisType            split         <span class="c1"># Type of PAO basis set</span>
+PAO.EnergyShift          <span class="m">50</span> meV
+PAO.BasisSize            DZ            <span class="c1"># with polarization</span>
+
+<span class="c1"># SCF options</span>
+MaxSCFIterations         <span class="m">60</span>            <span class="c1"># Maximum number of SCF iter</span>
+
+DM.MixingWeight          <span class="m">0</span>.1           <span class="c1"># New DM amount for next SCF cycle</span>
+DM.Tolerance             <span class="m">1</span>.d-4         <span class="c1"># Tolerance in maximum difference</span>
+                                    <span class="c1"># between input and output DM</span>
+DM.NumberPulay           <span class="m">3</span>
+DM.UseSaveDM             F             <span class="c1"># to use continuation files</span>
+MD.USeSaveXV             F
+
+NeglNonOverlapInt        <span class="nb">false</span>         <span class="c1"># Neglect non-overlap interactions</span>
+
+SolutionMethod           diagon        <span class="c1"># OrderN or Diagon</span>
+ElectronicTemperature    <span class="m">6</span> K           <span class="c1"># Temp. for Fermi smearing (Ry)</span>
+
+XC.Functional            GGA
+XC.Authors               PBE
+</pre></div>
+</div>
+<p>From this we can seen that, a double zeta type basis is used along with the PBE functional
+for the DFT calculation. A cubic box of 25 Å lengths is used to place the molecule.</p>
+<p>Run the calculation as usual and after finishing the run, plot MO energy levels, using MO Energies,
+which also indicate the level of HOMO (from the first occupied level, which is level 1):</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/051.png"><img alt="051" src="_images/051.png" style="width: 395.0px; height: 140.0px;" /></a>
+</div>
+<p>Then using, Edit denchar3D.fdf option insert the below text therein, and execute its next step,
+which is Run Denchar. After finishing View 2D/3D Files buttons can be clicked to view orbitals. Please see the next figures for the MOs of HOMO and LUMO
+(MO level, 120 and 121, respectively).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#------------------------------------------------</span>
+<span class="c1">#   Note: It is a Sample Script only</span>
+<span class="c1">#         You have to Modify this according</span>
+<span class="c1">#         to your system/requirement</span>
+<span class="c1">#     See the Manual for more details</span>
+<span class="c1">#------------------------------------------------</span>
+
+Denchar.TypeOfRun                   3D
+
+Denchar.PlotCharge                  T     <span class="c1"># If .true. SystemLabel.DM   must be present</span>
+Denchar.PlotWaveFunctions           T     <span class="c1"># If .true. SystemLabel.WFSX must be present</span>
+
+Denchar.CoorUnits       Ang
+Denchar.DensityUnits    Ele/Ang**3
+
+<span class="c1"># set the mesh for wavefunction plot</span>
+Denchar.NumberPointsX <span class="m">100</span>
+Denchar.NumberPointsY <span class="m">100</span>
+Denchar.NumberPointsZ <span class="m">100</span>
+
+Denchar.MinX          -12.5 Ang
+Denchar.MaxX           <span class="m">12</span>.5 Ang
+Denchar.MinY          -12.5 Ang
+Denchar.MaxY           <span class="m">12</span>.5 Ang
+Denchar.MinZ          -12.5 Ang
+Denchar.MaxZ           <span class="m">12</span>.5 Ang
+
+%block ChemicalSpeciesLabel
+<span class="m">1</span>  <span class="m">6</span>  C      <span class="c1"># Species index, atomic number, species label</span>
+%endblock ChemicalSpeciesLabel
+</pre></div>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/052.png"><img alt="051" src="_images/052.png" style="width: 795.9px; height: 447.29999999999995px;" /></a>
+</div>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/053.png"><img alt="053" src="_images/053.png" style="width: 795.9px; height: 447.29999999999995px;" /></a>
+<p class="caption"><span class="caption-text">Using <span class="math notranslate nohighlight">\(\Gamma\)</span>-point Siesta’s SCF calculations yields MO coefficients.
+Here 120’th wavefunction at the -point (alias MO-120) is HOMO (upper figure) and MO-121 is LUMO.
+The qualities can be adjusted with Denchar parameter settings.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="openmd-md-simulation-of-gold-nanoparticle">
+<h3>OpenMD MD simulation of Gold-nanoparticle<a class="headerlink" href="#openmd-md-simulation-of-gold-nanoparticle" title="Permalink to this headline">¶</a></h3>
+<p>In this demonstration, we would obtain the gold-gold atom pair distribution function from the
+OpenMD molecular dynamics trajectory. One can open OpenMD tool by:</p>
+<p><strong>Execute ➤ OpenMD Tool</strong></p>
+<p>In first we have to construct a Au-nanoparticle (with icosahedron symmetry). A basic starting script
+for the calculation is given below (its file name is gold.omd, and note HTML styled tags in it)</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;OpenMD&gt;</span>
+<span class="nt">&lt;MetaData&gt;</span>
+
+molecule{
+name = &quot;Au&quot;;
+
+atom[0]{
+type = &quot;Au&quot;;
+position(0.0, 0.0, 0.0);
+    }
+}
+
+component{
+type = &quot;Au&quot;;
+nMol = 1;
+}
+
+forceField = &quot;SC&quot;;
+forceFieldFileName = &quot;SuttonChen.QSC.frc&quot;;
+
+<span class="nt">&lt;/MetaData&gt;</span>
+<span class="nt">&lt;/OpenMD&gt;</span>
+</pre></div>
+</div>
+<p>Using the command (in the OpenMD tool’s command shell window) save the file, gold.omd ,with the above data.</p>
+<p><strong>cmd.exe /c notepad.exe gold.omd</strong></p>
+<p>Then run the following commands one after another:</p>
+<p><strong>cmd.exe /c .icosahedralBuilder.exe  -o file.omd –shell=8 –latticeConstant=4.08 –ico gold.omd</strong></p>
+<p><strong>cmd.exe /c Dump2XYZ -i file.omd</strong></p>
+<p><strong>cmd.exe /c more file.xyz</strong></p>
+<p>If everything is correct you will get a gold-nanoparticle structure as shown in the below figure-a.
+The above procedure construct a file called, file.omd which contains all the XYZ data of the nanoparticle.
+However in order to start an MD run, we need initial velocities. For the purpose please run the command:</p>
+<p><strong>cmd.exe /c .thermalizer -t 5 -o file-5K.omd file.omd</strong></p>
+<p>It will create a new file, file-5K.omd with new initial velovities and 5 Kelvin as its target temperature.
+Its main parameters are:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">forceField</span> <span class="o">=</span> <span class="s2">&quot;SC&quot;</span><span class="p">;</span>
+<span class="nv">forceFieldFileName</span> <span class="o">=</span> <span class="s2">&quot;SuttonChen.QSC.frc&quot;</span><span class="p">;</span>
+
+<span class="nv">ensemble</span> <span class="o">=</span> <span class="s2">&quot;LHull&quot;</span><span class="p">;</span>
+<span class="nv">targetTemp</span> <span class="o">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="nv">targetPressure</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
+<span class="nv">viscosity</span> <span class="o">=</span> <span class="m">0</span>.1<span class="p">;</span>
+
+<span class="nv">dt</span> <span class="o">=</span> <span class="m">2</span>.0<span class="p">;</span>
+<span class="nv">runTime</span> <span class="o">=</span> 2E5<span class="p">;</span>
+<span class="nv">sampleTime</span> <span class="o">=</span> <span class="m">500</span>.0<span class="p">;</span>
+<span class="nv">statusTime</span> <span class="o">=</span> <span class="m">4</span><span class="p">;</span>
+<span class="nv">seed</span> <span class="o">=</span> <span class="m">985456376</span><span class="p">;</span>
+<span class="nv">usePeriodicBoundaryConditions</span> <span class="o">=</span> <span class="s2">&quot;false&quot;</span><span class="p">;</span>
+<span class="nv">tauThermostat</span> <span class="o">=</span> 1E3<span class="p">;</span>
+<span class="nv">tauBarostat</span> <span class="o">=</span> 5E3<span class="p">;</span>
+</pre></div>
+</div>
+<p>Then run the actual OpenMD molecular dynamics run as,</p>
+<p><strong>cmd.exe /c openmd file-5K.omd</strong></p>
+<p>This may take a while (2 hour), and its trajectory information will stored in the dump file. From
+this MD animation can be retrived as:</p>
+<p><strong>cmd.exe /c Dump2XYZ -b  -i file-5K.dump</strong></p>
+<p>Moreover, from the below figure one can see that the 5K thermalization is achieved in the MD run
+(note its convergence to 5K)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/054.png"><img alt="051" src="_images/054.png" style="width: 794.5px; height: 431.2px;" /></a>
+</div>
+<p>After that, a script utility to retrieve, <span class="math notranslate nohighlight">\(g_{Au-Au}(r)\)</span>, as</p>
+<p>cmd.exe /c StaticProps.exe -i file-5K.dump –gofr –sele1=”select Au* –sele2=”select Au*”</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/055.png"><img alt="053" src="_images/055.png" style="width: 354.2px; height: 226.79999999999998px;" /></a>
+<p class="caption"><span class="caption-text">Pair correlation function (g(r)) obtained from the MD trajectory data which use only test-level
+parameters. Note the similarity with g(r) obtained by a hard-sphere model (inset figure courtesy,
+J. Nanopart. Res, 13, 4277 (2011).)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/056.png"><img alt="051" src="_images/056.png" style="width: 452.2px; height: 254.79999999999998px;" /></a>
+</div>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/057.png"><img alt="053" src="_images/057.png" style="width: 454.29999999999995px; height: 255.49999999999997px;" /></a>
+<p class="caption"><span class="caption-text">The initial (top) and final (bottom) snapshot of the MD run. Note that the system’s
+initial temperature was
+0K and it was equilibrated to 5K during the MD run.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="ase-simulation-of-an-adatom-diffusion">
+<h3>ASE simulation of an adatom diffusion<a class="headerlink" href="#ase-simulation-of-an-adatom-diffusion" title="Permalink to this headline">¶</a></h3>
+<p>Here we use ASE to obtain the energy profile of a physical process - diffusion of an
+adatom or adsorbed atom (Au) on the top of a metallic surface of Al atoms. Nudged elastic band (NEB)
+method is used for the calculation, in which an initial structure (where an adatom i.e. gold atom is
+placed in the left side) and a final structure (adatom is placed in the right side) of the process is used as its input data. For more details please visit ASE tutorial web page. Note that we used EMT calculators (it is a really fast albeit highly approximated potential function) for this calculation however one can use Siesta within ASE to obtain more realistic diffusion barrier.</p>
+<p>Refer <a class="reference internal" href="chapter5.html#chapter-5-python-scripting-with-ase"><span class="std std-ref">Chapter-5</span></a> for creating a Python Project.
+Then add an Empty module (InitialFinalStructure.py fie)
+into the src directory. Then add the following Python source into it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">fcc100</span><span class="p">,</span> <span class="n">add_adsorbate</span>
+<span class="kn">from</span> <span class="nn">ase.constraints</span> <span class="kn">import</span> <span class="n">FixAtoms</span>
+<span class="kn">from</span> <span class="nn">ase.calculators.emt</span> <span class="kn">import</span> <span class="n">EMT</span>
+<span class="kn">from</span> <span class="nn">ase.optimize</span> <span class="kn">import</span> <span class="n">QuasiNewton</span>
+
+<span class="c1"># 3x3-Al(001) surface with 3 layers and an</span>
+<span class="c1"># Au atom adsorbed in a hollow site:</span>
+<span class="n">slab</span> <span class="o">=</span> <span class="n">fcc100</span><span class="p">(</span><span class="s1">&#39;Al&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">add_adsorbate</span><span class="p">(</span><span class="n">slab</span><span class="p">,</span> <span class="s1">&#39;Au&#39;</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;hollow&#39;</span><span class="p">)</span>
+<span class="n">slab</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">vacuum</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+
+<span class="c1"># Fix second and third layers:</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="p">[</span><span class="n">atom</span><span class="o">.</span><span class="n">tag</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">slab</span><span class="p">]</span>
+<span class="n">slab</span><span class="o">.</span><span class="n">set_constraint</span><span class="p">(</span><span class="n">FixAtoms</span><span class="p">(</span><span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">))</span>
+
+<span class="c1"># Use EMT potential:</span>
+<span class="n">slab</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">EMT</span><span class="p">()</span>
+
+<span class="c1"># Initial state:</span>
+<span class="n">qn</span> <span class="o">=</span> <span class="n">QuasiNewton</span><span class="p">(</span><span class="n">slab</span><span class="p">,</span> <span class="n">trajectory</span><span class="o">=</span><span class="s1">&#39;initial.traj&#39;</span><span class="p">)</span>
+<span class="n">qn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fmax</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+
+<span class="c1"># Final state:</span>
+<span class="n">slab</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">slab</span><span class="o">.</span><span class="n">get_cell</span><span class="p">()[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="n">qn</span> <span class="o">=</span> <span class="n">QuasiNewton</span><span class="p">(</span><span class="n">slab</span><span class="p">,</span> <span class="n">trajectory</span><span class="o">=</span><span class="s1">&#39;final.traj&#39;</span><span class="p">)</span>
+<span class="n">qn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fmax</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then Run the file (Run ► Run File). This will create, initial.traj and final.traj files which contains
+the initial and final structure respectively.</p>
+<p>After this, the NEB calculation can be started (don’t forget to create a new Python file
+for this) and its Python source is given below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># To change this license header, choose License Headers in Project Properties.</span>
+<span class="c1"># To change this template file, choose Tools | Templates</span>
+<span class="c1"># and open the template in the editor.</span>
+<span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span>
+<span class="kn">from</span> <span class="nn">ase.constraints</span> <span class="kn">import</span> <span class="n">FixAtoms</span>
+<span class="kn">from</span> <span class="nn">ase.calculators.emt</span> <span class="kn">import</span> <span class="n">EMT</span>
+<span class="kn">from</span> <span class="nn">ase.neb</span> <span class="kn">import</span> <span class="n">NEB</span>
+<span class="kn">from</span> <span class="nn">ase.optimize</span> <span class="kn">import</span> <span class="n">BFGS</span>
+
+<span class="n">initial</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="s1">&#39;initial.traj&#39;</span><span class="p">)</span>
+<span class="n">final</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="s1">&#39;final.traj&#39;</span><span class="p">)</span>
+
+<span class="n">constraint</span> <span class="o">=</span> <span class="n">FixAtoms</span><span class="p">(</span><span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="n">atom</span><span class="o">.</span><span class="n">tag</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">initial</span><span class="p">])</span>
+
+<span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="n">initial</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">initial</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">calc</span> <span class="o">=</span> <span class="n">EMT</span><span class="p">()</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">set_constraint</span><span class="p">(</span><span class="n">constraint</span><span class="p">)</span>
+    <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+<span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">final</span><span class="p">)</span>
+
+<span class="n">neb</span> <span class="o">=</span> <span class="n">NEB</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+<span class="n">neb</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+<span class="n">qn</span> <span class="o">=</span> <span class="n">BFGS</span><span class="p">(</span><span class="n">neb</span><span class="p">,</span> <span class="n">trajectory</span><span class="o">=</span><span class="s1">&#39;neb.traj&#39;</span><span class="p">)</span>
+<span class="n">qn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fmax</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The energy profile can be saved in a PNG image by using the following script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">ase.neb</span> <span class="kn">import</span> <span class="n">NEBTools</span>
+<span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span>
+
+<span class="n">images</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="s1">&#39;neb.traj@-11:&#39;</span><span class="p">)</span>
+
+<span class="n">nebtools</span> <span class="o">=</span> <span class="n">NEBTools</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+
+<span class="c1"># Get the calculated barrier and the energy change of the reaction.</span>
+<span class="n">Ef</span><span class="p">,</span> <span class="n">dE</span> <span class="o">=</span> <span class="n">nebtools</span><span class="o">.</span><span class="n">get_barrier</span><span class="p">()</span>
+
+<span class="c1"># Get the barrier without any interpolation between highest images.</span>
+<span class="n">Ef</span><span class="p">,</span> <span class="n">dE</span> <span class="o">=</span> <span class="n">nebtools</span><span class="o">.</span><span class="n">get_barrier</span><span class="p">(</span><span class="n">fit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Get the actual maximum force at this point in the simulation.</span>
+<span class="n">max_force</span> <span class="o">=</span> <span class="n">nebtools</span><span class="o">.</span><span class="n">get_fmax</span><span class="p">()</span>
+
+<span class="c1"># Create a figure like that coming from ASE-GUI.</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">nebtools</span><span class="o">.</span><span class="n">plot_band</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;diffusion-barrier.png&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create a figure with custom parameters.</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">5.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">((</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">))</span>
+<span class="n">nebtools</span><span class="o">.</span><span class="n">plot_band</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;diffusion-barrier.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, the neb.traj file, which contains the entire geometry of the process in binary format,
+is then used to obtain XYZ format by the following script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">ase.calculators.emt</span> <span class="kn">import</span> <span class="n">EMT</span>
+<span class="kn">from</span> <span class="nn">ase.neb</span> <span class="kn">import</span> <span class="n">NEB</span>
+<span class="kn">from</span> <span class="nn">ase.optimize</span> <span class="kn">import</span> <span class="n">BFGS</span>
+<span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span><span class="p">,</span> <span class="n">write</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># read the last structures (of 5 images used in NEB)</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="s1">&#39;neb.traj@-11:&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>  <span class="nb">len</span><span class="p">(</span><span class="n">images</span><span class="p">)):</span>
+    <span class="n">atoms</span> <span class="o">=</span> <span class="n">images</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="c1">#print(atoms.get_positions())</span>
+    <span class="n">write</span><span class="p">(</span><span class="s1">&#39;delete.xyz&#39;</span><span class="p">,</span> <span class="n">atoms</span><span class="p">)</span>
+    <span class="n">inFile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="s1">&#39;delete.xyz&#39;</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">fileStr</span> <span class="o">=</span> <span class="n">inFile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">outFile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;neb_movie.xyz&quot;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+    <span class="n">outFile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">fileStr</span><span class="p">)</span>
+
+<span class="c1"># @type outFile</span>
+<span class="n">outFile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">inFile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Additionally, using DJMol’s xyz File loader (File►Open Structure) the geometries of the process as it
+is saved in “neb_movie.xyz” can be displayed or animated (See the below figure).</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/058.png"><img alt="058" src="_images/058.png" style="width: 683.1999999999999px; height: 297.5px;" /></a>
+</div>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/059.png"><img alt="059" src="_images/059.png" style="width: 793.0999999999999px; height: 246.39999999999998px;" /></a>
+<p class="caption"><span class="caption-text">Starting (I) and ending (F) geometries of the Diffusion of gold atom; The diffusion barrier
+(around 0.35 eV) is shown in the inset.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 </div>
 </div>
 
@@ -287,6 +679,8 @@ The inset figure shows HOMOs (green lines) and LUMOs (red lines) of the system.<
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="appendices.html" class="btn btn-neutral float-right" title="Appendices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="chapter7.html" class="btn btn-neutral float-left" title="Chapter 7: Architecture of the Program" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

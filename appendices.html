@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Appendices :: HTML documentation &mdash; DJMOL  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my_theme.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Chapter 8: Software Applications" href="chapter8.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> DJMOL
+          
+
+          
+            
+            <img src="_static/djmol_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">installation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation of DJMOL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#compiling-installation-of-djmol-and-add-ons">Compiling/Installation of DJMol and Add-Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#system-requirements">System Requirements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">documentation:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="webdoc.html">DJMOL web documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tableofcontent.html">Table of contents :: DJMOL web documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">Chapter 1: Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#computational-tools">Computational Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter1.html#major-components-of-the-software">Major Components of the Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Chapter 2: DFTB+ Calculations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#dftb-script-writer">DFTB+ Script Writer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#executing-dftb-scripts">Executing DFTB+ Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#force-components">Force Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#molecular-orbitals-and-energy-levels">Molecular Orbitals and Energy Levels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#uv-visible-spectrum-convolution">UV-Visible Spectrum Convolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#partial-charges">Partial Charges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#molecular-vibrations">Molecular-Vibrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#real-time-molecular-dynamics">Real Time Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter2.html#potential-energy-surfaces-2d-1d">Potential Energy Surfaces (2D/1D)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Chapter 3: Modeling with Siesta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-script-writer">Siesta Script Writer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#siesta-add-on-and-executing-the-program">Siesta Add-On and Executing the Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#basic-analayzers">Basic analayzers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#wannier-orbitals-and-band-diagrams">Wannier Orbitals and Band Diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter3.html#molecular-vibrations">Molecular Vibrations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter4.html">Chapter 4: OpenMD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter5.html">Chapter 5: Python scripting with ASE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter6.html">Chapter 6: Tools of  DJMol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#analysing-point-group">Analysing Point Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#z-matrix-editor">Z-Matrix Editor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter6.html#changing-z-mat-data">Changing Z-Mat Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#remote-submission-of-scripts">Remote Submission of Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#version-control-using-git">Version Control using GIT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#database-file-retrieving">Database File Retrieving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter6.html#miscellaneous-tools">Miscellaneous Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter7.html">Chapter 7: Architecture of the Program</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter7.html#software-architecture">Software Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter8.html">Chapter 8: Software Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter8.html#demonstration-of-djmol">Demonstration of DJMol</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter8.html#uv-visible-spectrum-of-silver-nanocluster-using-dftb">UV-Visible Spectrum of Silver Nanocluster using DFTB+</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter8.html#frontier-orbitals-of-c-60-calculated-with-siesta">Frontier Orbitals of C <sub>60</sub> Calculated with Siesta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter8.html#openmd-md-simulation-of-gold-nanoparticle">OpenMD MD simulation of Gold-nanoparticle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter8.html#ase-simulation-of-an-adatom-diffusion">ASE simulation of an adatom diffusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Appendices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#appendix-a">Appendix-A</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python-scripting-for-djmol-applications">Python Scripting for DJMol Applications</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#how-to-use-python-within-the-djmol">How to use Python within the DJMol?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#basics-of-python-scripting">Basics of python scripting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#variable-assignment-and-operators">Variable assignment and Operators</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#string-list-methods-etc">String, List, Methods etc.</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#list-manipulation-rules">List Manipulation Rules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#list-openrations">List openrations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#methods-for-the-lists">Methods for the Lists</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#libraries">Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#basics-of-ase-scripting">Basics of ASE scripting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#appendix-b">Appendix-B</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installation-of-python-and-numpy">Installation of Python and NumPy</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#python-installation">Python Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#python-modules-installations">Python Modules Installations</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#numpy-installation">NumPy Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DJMOL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="webdoc.html">DJMOL web documentation</a> &raquo;</li>
+        
+      <li>Appendices :: HTML documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="appendices">
+<h1>Appendices<a class="headerlink" href="#appendices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="appendix-a">
+<h2>Appendix-A<a class="headerlink" href="#appendix-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python-scripting-for-djmol-applications">
+<h3>Python Scripting for DJMol Applications<a class="headerlink" href="#python-scripting-for-djmol-applications" title="Permalink to this headline">¶</a></h3>
+<p>Since DJMol uses Python for its scripting (and in ASE), a basic knowledge of Python (version 3) is h
+ighly appreciated. This appendix is based on the book, <strong>Think Python</strong> 2nd Edition by Allen B. Downey
+(Creative Commons Attribution-NonCommercial 3.0 Unported License). Some familiarity with programming is
+assumed for this appendix.</p>
+<div class="section" id="how-to-use-python-within-the-djmol">
+<h4>How to use Python within the DJMol?<a class="headerlink" href="#how-to-use-python-within-the-djmol" title="Permalink to this headline">¶</a></h4>
+<p>To use DJMol, Python is a mandate tool and it should be installed. For this, you have
+to install the Python (windows version 3 or later) immediately after the installation of the DJMol program into your system. See Appendix - 3 for its details (including the details of running a python in the DJMol)</p>
+</div>
+<div class="section" id="basics-of-python-scripting">
+<h4>Basics of python scripting<a class="headerlink" href="#basics-of-python-scripting" title="Permalink to this headline">¶</a></h4>
+<p>Python is designed as an interpreter language and it is widely used in scripting purposes.
+It supports both procedural and object-oriented paradigm.</p>
+</div>
+<div class="section" id="variable-assignment-and-operators">
+<h4>Variable assignment and Operators<a class="headerlink" href="#variable-assignment-and-operators" title="Permalink to this headline">¶</a></h4>
+<p>In Python variable assignment is performed by, = operator. It also provides operators, which are
+special symbols that represent operations like addition or multiplication. The operators +, -, /, and *
+perform addition, subtraction, division, and multiplication, respectively. And the operator ** performs
+exponentiation; that is, it raises a number to a power. An illustration (hopefully self-explanatory!) of
+these commands are following (here, &gt;&gt;&gt; string represents a command prompt; for the comment one can use #).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">=</span><span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">+</span><span class="mi">2</span> <span class="c1"># a comment</span>
+<span class="go">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">-</span><span class="mi">2</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">*</span><span class="mi">2</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="go">25</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">%</span><span class="mi">2</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">/</span><span class="mi">2</span>
+<span class="go">2.5</span>
+</pre></div>
+</div>
+<p>Note that in numerical computation one need to use integers and decimals. Though it doesn’t
+require explicit declaration of type of the variables, there may be times when you want to specify the type of a variable. This can be done with casting operation.</p>
+<dl class="simple">
+<dt>Casting in python is therefore done using constructor functions:</dt><dd><ul class="simple">
+<li><p>int() - constructs an integer number from an integer literal, a float literal (by rounding down to the previous whole number), or a string literal (providing the string represents a whole number)</p></li>
+<li><p>float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)</p></li>
+<li><p>str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">=</span><span class="mf">3.1415</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="go">&lt;class &#39;float&#39;&gt;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="go">4.141500000000001</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">**</span><span class="n">b</span>
+<span class="go">36.45491472872008</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">2.8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span>
+<span class="go">2</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">1.0</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span>
+<span class="go">3.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="string-list-methods-etc">
+<h4>String, List, Methods etc.<a class="headerlink" href="#string-list-methods-etc" title="Permalink to this headline">¶</a></h4>
+<p>Apart from <strong>int</strong>, <strong>string</strong> type is also used in python. Its initiation is simple
+(you can use either ‘ or “ to make string):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="s1">&#39;thisStringI&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span>
+<span class="go">&#39;thisString&#39;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;thisString&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span>
+<span class="go">&#39;thisString&#39;</span>
+</pre></div>
+</div>
+<p>Like a string, a list is a sequence of values (perhaps it may be the Pythons most important
+built-in data type; unlike C or Fortran python does not have an <strong>Array</strong> data type). In a string,
+the values are characters; in a <strong>list</strong>, they can be <strong>any type</strong>. The values in a list are called
+<strong>elements</strong> or sometimes <strong>items</strong>. There are several ways to create a new list; the simplest is to
+enclose the elements in square brackets:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;is&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;nice&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;my&#39;</span><span class="p">,</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;my&#39;</span>
+</pre></div>
+</div>
+<p>Note that a list can be used as an Array (and its index starts from 0 and not from 1, like a
+C array).</p>
+</div>
+<div class="section" id="list-manipulation-rules">
+<h4>List Manipulation Rules<a class="headerlink" href="#list-manipulation-rules" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-given docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">&#39;my&#39;</span>
+</pre></div>
+</div>
+</td>
+<td><p>Select the first item</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">[&#39;list&#39;, &#39;is&#39;]</span>
+</pre></div>
+</div>
+</td>
+<td><p>Select items at index 1 and 2</p></td>
+</tr>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="go">[&#39;list&#39;, &#39;is&#39;, &#39;nice&#39;]</span>
+</pre></div>
+</div>
+</td>
+<td><p>Select items after index 0</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="p">[:]</span>
+<span class="go">[&#39;my&#39;, &#39;list&#39;, &#39;is&#39;, &#39;nice&#39;]</span>
+</pre></div>
+</div>
+</td>
+<td><p>Select items before index 3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="list-openrations">
+<h4>List openrations<a class="headerlink" href="#list-openrations" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">+</span> <span class="n">my_list</span>
+<span class="go">[&#39;my&#39;, &#39;list&#39;, &#39;is&#39;, &#39;nice&#39;, &#39;my&#39;, &#39;list&#39;, &#39;is&#39;, &#39;nice&#39;]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="go">[&#39;my&#39;, &#39;list&#39;, &#39;is&#39;, &#39;nice&#39;, &#39;my&#39;, &#39;list&#39;, &#39;is&#39;, &#39;nice&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="methods-for-the-lists">
+<h4>Methods for the Lists<a class="headerlink" href="#methods-for-the-lists" title="Permalink to this headline">¶</a></h4>
+<p>The Methods are equivalent to functions/subroutines; Since the List is an object a
+method for that list is called by a DOT (.) operator immediately after the Object name, as it is
+illustrated below:</p>
+<table class="colwidths-given docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+</td>
+<td><p>Get the index of an item</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">1</span>
+</pre></div>
+</div>
+</td>
+<td><p>Count an item</p></td>
+</tr>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;NewOne&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+<td><p>Append an item at a time</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+<td><p>Remove an item</p></td>
+</tr>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span>
+<span class="go">[&#39;my&#39;, &#39;list&#39;, &#39;nice&#39;, &#39;NewOne&#39;]</span>
+</pre></div>
+</div>
+</td>
+<td><p>It shows the appended List</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="libraries">
+<h4>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h4>
+<p>In Python a good collection of libraries are available say, for doing math,
+or to do string/array manipulation, Numerical computations, graphics etc.</p>
+<p>The math library of python can be imported like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">9.99</span><span class="p">)</span>
+<span class="go">3.1606961258558215</span>
+</pre></div>
+</div>
+<p>For ASE scripting, most of the times you need to use NumPy and Scipy libraries
+(and it is not shipped with standard Python, so one needs to install it, see the next appendix).
+If you installed NumPy you can call it like:</p>
+<table class="colwidths-given docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>&gt;&gt;&gt;import numpy
+Or
+&gt;&gt;&gt;import numpy as np</p></td>
+<td><p>Importing NumPy Lib.</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Array</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+</td>
+<td><p>Construct an array</p></td>
+</tr>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Array</span>
+<span class="go">array([[1, 2],</span>
+<span class="go">      [3, 4]])</span>
+</pre></div>
+</div>
+</td>
+<td><p>Print that array</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">Array</span><span class="p">)</span>
+<span class="go">array([[1, 3],</span>
+<span class="go">      [2, 4]])</span>
+</pre></div>
+</div>
+</td>
+<td><p>Transpose of the matrix</p></td>
+</tr>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Array</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Array</span><span class="p">)</span>
+<span class="go">array([[ 7, 10],</span>
+<span class="go">      [15, 22]])</span>
+</pre></div>
+</div>
+</td>
+<td><p>Matrix multiplication</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="basics-of-ase-scripting">
+<h3>Basics of ASE scripting<a class="headerlink" href="#basics-of-ase-scripting" title="Permalink to this headline">¶</a></h3>
+<p>Hopefully one can be now understood ASE scripting. A sample ASE script is given below with some
+explanations. The aim is to calculate N2 molecular energy with EMT calculator (Effective Medium
+Potential, a crude empirical model generally used for testing purposes or for very large scale MD).
+Note that the following code has six lines (didn’t use line-breaker)</p>
+<table class="colwidths-given docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase</span> <span class="kn">import</span> <span class="n">Atoms</span>
+</pre></div>
+</div>
+</td>
+<td><p>Import Atoms object</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.calculators.emt</span> <span class="kn">import</span> <span class="n">EMT</span>
+</pre></div>
+</div>
+</td>
+<td><p>Import EMT</p></td>
+</tr>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="mf">1.1</span> <span class="c1"># Bond Length in Angstrom</span>
+<span class="go">    molecule = Atoms(&#39;2N&#39;, [(0., 0., 0.), (0., 0., d)])</span>
+</pre></div>
+</div>
+</td>
+<td><p>Define a molecule with Atoms Object</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">molecule</span><span class="o">.</span><span class="n">set_calculator</span><span class="p">(</span><span class="n">EMT</span><span class="p">())</span>
+</pre></div>
+</div>
+</td>
+<td><p>The molecule is attached with EMT</p></td>
+</tr>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">molecule</span><span class="o">.</span><span class="n">get_potential_energy</span><span class="p">()</span>
+</pre></div>
+</div>
+</td>
+<td><p>Calculate PE
+(this Really invoke the EMT calculations)</p></td>
+</tr>
+<tr class="row-even"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Nitrogen molecule energy: </span><span class="si">%5.2f</span><span class="s1"> eV&#39;</span> <span class="o">%</span> <span class="n">e_molecule</span><span class="p">)</span>
+</pre></div>
+</div>
+</td>
+<td><p>Printing the PE</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note that the important step is to create the <strong>Atoms object</strong> - which is a collection of atoms.
+Everything else is based on this <strong>Atoms object</strong> (for example DFT <strong>calculators</strong> can be attached
+to this object to get DFT total energy).</p>
+<p>A little more advanced example is following (an infinite gold wire with BL= 2.9A).</p>
+<table class="colwidths-given docutils align-center" id="id1">
+<caption><span class="caption-text"><strong>Courtesy: ASE Camd</strong></span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase</span> <span class="kn">import</span> <span class="n">Atoms</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="mf">2.9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wire</span> <span class="o">=</span> <span class="n">Atoms</span><span class="p">(</span><span class="s1">&#39;Au&#39;</span><span class="p">,</span>
+<span class="go">           positions=[[0, L / 2, L / 2]],</span>
+<span class="go">           cell=[d, L, L],</span>
+<span class="go">           pbc=[1, 0, 0])</span>
+</pre></div>
+</div>
+</td>
+<td><p><a class="reference internal" href="_images/060.png"><img alt="wire" src="_images/060.png" style="width: 215.20000000000002px; height: 148.8px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>A list of generally used GET/SET methods for the Atoms Object is:</p>
+<table class="colwidths-given docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>GET Methods</p></th>
+<th class="head"><p>SET Methods</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>get_atomic_numbers()</p></td>
+<td><p>set_atomic_numbers()</p></td>
+</tr>
+<tr class="row-odd"><td><p>get_initial_charges()</p></td>
+<td><p>set_initial_charges()</p></td>
+</tr>
+<tr class="row-even"><td><p>get_charges()</p></td>
+<td><p>set_chemical_symbols()</p></td>
+</tr>
+<tr class="row-odd"><td><p>get_chemical_symbols()</p></td>
+<td><p>set_initial_magnetic_moments()</p></td>
+</tr>
+<tr class="row-even"><td><p>get_initial_magnetic_moments()</p></td>
+<td><p>set_masses()</p></td>
+</tr>
+<tr class="row-odd"><td><p>get_magnetic_moments()</p></td>
+<td><p>set_momenta()</p></td>
+</tr>
+<tr class="row-even"><td><p>get_masses()</p></td>
+<td><p>set_positions()</p></td>
+</tr>
+<tr class="row-odd"><td><p>get_momenta()</p></td>
+<td><p>set_scaled_positions()</p></td>
+</tr>
+<tr class="row-even"><td><p>get_forces()</p></td>
+<td><p>set_tags()</p></td>
+</tr>
+<tr class="row-odd"><td><p>get_positions()</p></td>
+<td><p>set_velocities()</p></td>
+</tr>
+<tr class="row-even"><td><p>get_potential_energies()</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>get_scaled_positions()</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>get_stresses()</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>get_tags()</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>get_velocities()</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>In essence, the <strong>Set methods</strong> are used to supply (the necessary) information for the <strong>Atoms</strong> object,
+whereas <strong>Get methods</strong> are applied to get useful information (usually after setting a calculator)</p>
+</div>
+</div>
+<div class="section" id="appendix-b">
+<h2>Appendix-B<a class="headerlink" href="#appendix-b" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation-of-python-and-numpy">
+<h3>Installation of Python and NumPy<a class="headerlink" href="#installation-of-python-and-numpy" title="Permalink to this headline">¶</a></h3>
+<p>As it is said before, one need to install Python (3.x, 64 bit) scripting language and NumPy
+on the system before the DJMol installation.</p>
+<p>Using this tutorial, one is expected to get sufficient information on how to install a
+64 bit version of python 3and NumPy on a WindowsSystem.</p>
+<div class="section" id="python-installation">
+<h4>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>First, download a 64 bit version of any 3.7.x from python.org. Clicking on the following link automatically downloads the required python</dt><dd><p><a class="reference external" href="https://www.python.org/ftp/python/3.7.2/python-3.7.2">https://www.python.org/ftp/python/3.7.2/python-3.7.2</a>.</p>
+</dd>
+</dl>
+</li>
+<li><p>Install the above file with &lt;pip&gt; support, and for that select custom installation and check all the boxes in the Optional Features window.</p></li>
+</ol>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/061.png"><img alt="061" src="_images/061.png" style="width: 505.6px; height: 320.0px;" /></a>
+</div>
+<p>Note: don’t forget to check (See next figure) <strong>“Add Python to environment variables”</strong> for accessing python using the command prompt.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/062.png"><img alt="062" src="_images/062.png" style="width: 503.20000000000005px; height: 308.0px;" /></a>
+</div>
+</div>
+<div class="section" id="python-modules-installations">
+<h4>Python Modules Installations<a class="headerlink" href="#python-modules-installations" title="Permalink to this headline">¶</a></h4>
+<p>After installing 3.X Python in Windows, you can simply open a command window
+(using Administrative privilege) and type:</p>
+<p><strong>python -m pip install numpy</strong></p>
+<p><strong>python -m pip install scipy</strong></p>
+<p><strong>python -m pip install ase==3.17.0</strong></p>
+<p><strong>python -m pip install matplotlib</strong></p>
+<p>To install numpy, scipy, ase and matplotlib libraries (note: it will install
+latest versions except for ASE).</p>
+<p>(For a specific installation you can also do:</p>
+<blockquote>
+<div><p><strong>python -m pip install nameOfPackage==x.y.z</strong> ,</p>
+</div></blockquote>
+<p>where x,y,z are version numbers)</p>
+</div>
+<div class="section" id="numpy-installation">
+<h4>NumPy Installation<a class="headerlink" href="#numpy-installation" title="Permalink to this headline">¶</a></h4>
+<p>If the above command: python -m pip install numpy fails, this method can be used to install
+the NumPy in Windows OS.</p>
+<p><strong>Disclaimer:</strong> Since NumPy doesn’t have an official build for windows, we’ll be downloading
+an unofficial version from <a class="reference external" href="https://www.lfd.uci.edu/">https://www.lfd.uci.edu/</a> which is maintained by Christoph Gohlke,
+Laboratory for Fluorescence Dynamics, University of California, Irvine.</p>
+<ol class="arabic">
+<li><p>Download the .whl file of NumPy using the link to your Desktop.  Clicking on the following link automatically downloads the required python <a class="reference external" href="https://download.lfd.uci.edu/pythonlibs/r5uhg2lo/numpy-1.16.1+mkl-cp37-cp37m-win_amd64.whl">https://download.lfd.uci.edu/pythonlibs/r5uhg2lo/numpy-1.16.1+mkl-cp37-cp37m-win_amd64.whl</a></p>
+<blockquote>
+<div><p>If the file is not downloaded to the Desktop, Copy the &lt;.whl&gt; file to Desktop.</p>
+<p><strong>Note:</strong> If the above link is not working, goto</p>
+<p><a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy">https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a></p>
+<p>and download the 1.16.1 version of NumPy (Not Numpy-quaternion).</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/063.png"><img alt="063" src="_images/063.png" style="width: 535.0px; height: 349.0px;" /></a>
+</div>
+</div></blockquote>
+</li>
+<li><p>Then run command prompt as administrator: Type  &lt;cmd&gt; in start menu and right click on command prompt and click on “Run as administrator” (See the next figure).</p>
+<blockquote>
+<div><div class="figure align-center">
+<a class="reference internal image-reference" href="_images/064.png"><img alt="064" src="_images/064.png" style="width: 549.0px; height: 420.3px;" /></a>
+</div>
+</div></blockquote>
+</li>
+<li><p>Navigate to your Desktop where the &lt;.whl&gt; file is saved. Type the following command in your command prompt and press Enter.</p>
+<blockquote>
+<div><p><strong>cd %systemdrive%\users\%username%\Desktop</strong></p>
+<p>Or manually find your Desktop path and enter like:</p>
+<p><strong>cd C:\Users\staff\Desktop</strong></p>
+</div></blockquote>
+</li>
+<li><p>Install NumPy using the &lt;.whl&gt; file; Type this command in your command prompt and press Enter.</p>
+<blockquote>
+<div><p><strong>pip install “numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl”</strong></p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="chapter8.html" class="btn btn-neutral float-left" title="Chapter 8: Software Applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Indo-Korea Science and Technology Center, Bengaluru INDIA | Written by GP Krishna mohan, Rahul Sunil, Kapil Gupta, and SC Lee
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
