@@ -74,3 +74,10 @@ Mail krishna.mohan@mbcet.ac.in or krishnamohan.gp@gmail.com for further queries 
     :hidden:
 
     webdoc
+
+.. toctree::
+    :maxdepth: 10
+    :caption: DJMol Tutorials:
+    :hidden:
+
+    vidtutorials
