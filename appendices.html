@@ -177,6 +177,32 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#appendix-c">Appendix-C</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows-subsystem-linux-in-djmol">Windows Subsystem Linux in DJMol</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#setting-up-the-wsl">Setting up the WSL</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#setting-up-the-netbeans-ide">Setting up the Netbeans IDE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#appendix-d">Appendix-D</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#saved-data">Saved data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#appendix-e">Appendix-E</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#demonstration-videos">Demonstration Videos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#appendix-f">Appendix-F</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compiling-installation-of-djmol-and-its-add-ons">Compiling/Installation of DJMol and its Add-Ons</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#general-information">General Information</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#compiling-main-program-djmolplatform">Compiling Main Program, &lt;DJMolplatform&gt;</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#installing-program-djmolplatform">Installing Program, &lt;DJMolplatform&gt;</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#compiling-add-on-programs">Compiling Add-On Programs</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -736,6 +762,328 @@ Laboratory for Fluorescence Dynamics, University of California, Irvine.</p>
 </div></blockquote>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="section" id="appendix-c">
+<h2>Appendix-C<a class="headerlink" href="#appendix-c" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="windows-subsystem-linux-in-djmol">
+<h3>Windows Subsystem Linux in DJMol<a class="headerlink" href="#windows-subsystem-linux-in-djmol" title="Permalink to this headline">¶</a></h3>
+<p>For more advanced scripting/calculations one may want to use a real Linux operating system (instead of Cygwin emulators) in conjunction with DJMol. For this one can use WSL in the Windows 10 OS. It will give a real Linux OS and hence it guarantees a cent percentage of portability of C/C++ or Fortran codes into the Windows system.</p>
+<p>Herein we give a short description of invoking of WSL in the DJMol platform (by assuming that you already have a WSL in your PC; otherwise it can be freely downloaded from Microsoft store, visit:   <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a></p>
+<div class="section" id="setting-up-the-wsl">
+<h4>Setting up the WSL<a class="headerlink" href="#setting-up-the-wsl" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p>Update the Linux packages being used by WSL with the following commands in
+your WSL Ubuntu command window:</p>
+<p><strong>sudo apt update</strong></p>
+<p><strong>sudo apt upgrade</strong></p>
+<p><strong>sudo apt install unzip</strong></p>
+<p><strong>sudo apt install ssh</strong></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/065.png"><img alt="065" src="_images/065.png" style="width: 558.0px; height: 108.0px;" /></a>
+</div>
+</li>
+<li><p>Your Windows installation is probably already using port 22 for its SSH server, we need to change WSL’s SSH server to listen to a different port.</p>
+<p><strong>sudo nano /etc/ssh/sshd_config</strong></p>
+<p>Change the lines:</p>
+<p>What ports, IPs and protocols we listen for</p>
+<p><strong>Port 22</strong></p>
+<p>to</p>
+<p><strong>Port 2222</strong></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/066.png"><img alt="066" src="_images/066.png" style="width: 628.0px; height: 444.0px;" /></a>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/067.png"><img alt="065" src="_images/067.png" style="width: 628.0px; height: 417.0px;" /></a>
+</div>
+<p>The WSL SSH server is initially set up to use key files for authentication.
+To allow authentication with passwords, change:</p>
+<p>Change to no to disable tunnelled clear text passwords</p>
+<p><strong>PasswordAuthentication no</strong></p>
+<p>to</p>
+<p><strong>PasswordAuthentication yes</strong></p>
+<p>Use Ctrl-o to save the file. Use Ctrl-x to exit the nano text editor.</p>
+</li>
+<li><p>Before using the WSL SSH server you must stop and restart the SSH server. You will perform this step every time that you use WSL as the remote host from NetBeans. I suggest placing the command in a script file that you can execute.</p>
+<p><strong>nano startssh.sh</strong></p>
+<p>Insert the following text into the script file:</p>
+<p><strong>sudo service ssh –full-restart</strong></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/068.png"><img alt="065" src="_images/068.png" style="width: 628.0px; height: 226.0px;" /></a>
+</div>
+<p>Use Ctrl-o to save the file. Use Ctrl-x to exit the nano text editor.</p>
+<p>Back at the command line, use the following command to mark the script file as executable:</p>
+<p><strong>chmod a+x startssh.sh</strong></p>
+<p>To restart the SSH server, use the following command:</p>
+<p><strong>./startssh.sh</strong></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/069.png"><img alt="065" src="_images/069.png" style="width: 628.0px; height: 359.0px;" /></a>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="setting-up-the-netbeans-ide">
+<h4>Setting up the Netbeans IDE<a class="headerlink" href="#setting-up-the-netbeans-ide" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p>Open the Terminal and invoke the Terminal as:</p>
+<p><strong>Window → IDE Tools → Terminal</strong></p>
+</li>
+</ol>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/070.png"><img alt="070" src="_images/070.png" style="width: 397.0px; height: 269.0px;" /></a>
+</div>
+<ol class="arabic">
+<li><p>Create New Remote Terminal Tab.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/071.png"><img alt="071" src="_images/071.png" style="width: 435.0px; height: 228.0px;" /></a>
+</div>
+</li>
+<li><p>Enter your credentials.</p>
+<p><strong>User : &lt;your-username&gt;</strong></p>
+<p><strong>Host : localhost</strong></p>
+<p><strong>SSH Port : 2222</strong></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/072.png"><img alt="072" src="_images/072.png" style="width: 266.0px; height: 216.0px;" /></a>
+</div>
+<p>Click OK.</p>
+</li>
+<li><p>Choose Password.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/073.png"><img alt="073" src="_images/073.png" style="width: 389.0px; height: 299.0px;" /></a>
+</div>
+</li>
+<li><p>Enter your linux password.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/074.png"><img alt="074" src="_images/074.png" style="width: 526.0px; height: 319.0px;" /></a>
+</div>
+<p><strong>#Recommended</strong>: Check Remember Password box.</p>
+</li>
+</ol>
+<p>The process is finished; Now one can use WSL in DJMol</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/075.png"><img alt="075" src="_images/075.png" style="width: 483.0px; height: 253.0px;" /></a>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="appendix-d">
+<h2>Appendix-D<a class="headerlink" href="#appendix-d" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="saved-data">
+<h3>Saved data<a class="headerlink" href="#saved-data" title="Permalink to this headline">¶</a></h3>
+<p>DJMol generate a number of text based temporary data, and these are nothing but a
+set of post-processing data from various visualizers or converters were temporarily stored in
+different directories and it can be used for a numerical comparison (for example, how MO levels
+of DFTB+ are different from that of Siesta for a given molecule). A list of such selected post
+processed files with its description is shown in the Table below.</p>
+<table class="colwidths-given docutils align-center" id="id2">
+<caption><span class="caption-text">Table-5: Important binaries of OpenMD and its descriptions.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>PESScan2DPESscanmovie.xyz</p></td>
+<td><p>Geometries of molecules used for the PES</p></td>
+</tr>
+<tr class="row-even"><td><p>PESScan2DPESscan.dat</p></td>
+<td><p>Energies and  geometries of the PES</p></td>
+</tr>
+<tr class="row-odd"><td><p>PESScanView2DPES.dat</p></td>
+<td><p>Coordinates (initial, final step size) and PES energy</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHMODFTB.dat</p></td>
+<td><p>MO energies in DFTB+</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCRATCHMOSiesta.dat</p></td>
+<td><p>MO energies in Siesta</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHForceDFTB.dat</p></td>
+<td><p>Cartesian Force components in DFTB+</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCRATCHForceSiesta.dat</p></td>
+<td><p>Cartesian Force components in Siesta</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHSCFSiesta.txt</p></td>
+<td><p>SCF convergence in Siesta</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCRATCHUvdata_2.csv</p></td>
+<td><p>Fitted UV-Vis data</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHUvdata_1.csv</p></td>
+<td><p>UV-Vis oscillator strength for the spectrum</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCRATCHMDDFTBmovie.xyz</p></td>
+<td><p>Trajectory of MD in XYZ animation format</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHTotalMD.dat</p></td>
+<td><p>Total energies of MD run</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCRATCHKineticMD.dat</p></td>
+<td><p>Kinetic energies of MD run</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHPotentialMD.dat</p></td>
+<td><p>Potential energies of MD run</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCRATCHVelocityAC.out</p></td>
+<td><p>IR spectrum from MD using velocity autocorrelation</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHDipoleAC.out</p></td>
+<td><p>IR spectrum from MD using dipole moment autocorrelation</p></td>
+</tr>
+<tr class="row-odd"><td><p>SCRATCHStdOrientation.xyz</p></td>
+<td><p>Standard orientation of the given molecule</p></td>
+</tr>
+<tr class="row-even"><td><p>SCRATCHMullikenDFTB.dat</p></td>
+<td><p>Mulliken charges from DFTB+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Inputdftb_in.hsd</p></td>
+<td><p>DFTB+ script writer out file</p></td>
+</tr>
+<tr class="row-even"><td><p>InputsiestaTEMP.fdf</p></td>
+<td><p>Siesta script writer out file</p></td>
+</tr>
+<tr class="row-odd"><td><p>ModesBinarymodes_in.hsd</p></td>
+<td><p>DFTB+ file used to construct vibrational data</p></td>
+</tr>
+<tr class="row-even"><td><p>ModesBinarywaveplot_in.hsd</p></td>
+<td><p>DFTB+ file used to construct MO and its density data</p></td>
+</tr>
+<tr class="row-odd"><td><p>ModesBinarymodes.xyz</p></td>
+<td><p>DFTB vibrational modes and frequencies</p></td>
+</tr>
+<tr class="row-even"><td><p>ModesBinary*.cube</p></td>
+<td><p>DFTB Cube files for MOs and Densities</p></td>
+</tr>
+<tr class="row-odd"><td><p>SiestaAppSiestaBinary.4.0CygWin64*.cube</p></td>
+<td><p>Siesta Cube files</p></td>
+</tr>
+<tr class="row-even"><td><p>SiestaAppSiestaBinary.4.0.CygWin64SiestaVibModes.xyz</p></td>
+<td><p>Siesta (DFT) bands</p></td>
+</tr>
+<tr class="row-odd"><td><p>SiestaAppSiestaBinary.4.0.CygWin64BAND.bands</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>SiestaAppSiestaBinary.4.0.CygWin64wannier.bands</p></td>
+<td><p>Siesta Wannier orbitals</p></td>
+</tr>
+<tr class="row-odd"><td><p>SiestaAppSiestaBinary.4.0.CygWin64wannier_*.xsf</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>OpenMD.</p></td>
+<td><p>All OpenMD in and out files</p></td>
+</tr>
+<tr class="row-odd"><td><p>Database.</p></td>
+<td><p>All downloaded Structural files from online repositories</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="appendix-e">
+<h2>Appendix-E<a class="headerlink" href="#appendix-e" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="demonstration-videos">
+<h3>Demonstration Videos<a class="headerlink" href="#demonstration-videos" title="Permalink to this headline">¶</a></h3>
+<p>Please visit: <a class="reference external" href="https://www.youtube.com/channel/UCNczegqwli6gnuo6eqNJSPg">https://www.youtube.com/channel/UCNczegqwli6gnuo6eqNJSPg</a> for Demo videos.
+The list is (as of October 2020):</p>
+<ol class="arabic simple">
+<li><p>Windows OpenMP settings | Executing Stand-alone DFTB+</p></li>
+<li><p>DJMol Demo on Point Group Symmetry Detection</p></li>
+<li><p>Running a DFTB Calculation from DJMol</p></li>
+<li><p>Phonon Density of States (DOS) of Aluminium Bulk: DJMol + ASE Python Scripting</p></li>
+<li><p>PES demo in DJMol (Linux)</p></li>
+<li><p>Demo on Molecular Vibration of Water Molecule</p></li>
+<li><p>Demo on Partial Charges And File Conversions</p></li>
+<li><p>Generating/Displaying Molecular Orbitals in DJMol</p></li>
+<li><p>DFTB+ Input script Writer in DJMol</p></li>
+<li><p>DJmol/Netbeans : How to install ASE, Matplotlib with PIP</p></li>
+<li><p>Adding Python Plugin in Netbeans or in DJMol</p></li>
+<li><p>Siesta’s Charge density and/or electronic wave functions: 2D Contours/Surfaces</p></li>
+<li><p>Siesta’s Charge density and/or electronic wave functions: 3D cube files</p></li>
+<li><p>Remote Submission using SSH tool in DJMol (64v)</p></li>
+<li><p>Band diagram and DOS (density of state) plot of Aluminum FCC</p></li>
+<li><p>Molecular Dynamics Analysis</p></li>
+<li><p>UV-visible spectrum in DJMol</p></li>
+<li><p>Z-Matrix Structure Editor of DJMol</p></li>
+<li><p>Wannier AddOn in DJMol (with Siesta)</p></li>
+<li><p>DJMol Win64 Installation from its ZIP distribution File</p></li>
+<li><p>DJMol Version Control with Github</p></li>
+<li><p>Terminal use in DJMol</p></li>
+<li><p>Building of DJMol with Netbeans 8.2 (Win64OS)</p></li>
+<li><p>Radial Distribution Function from ASAP MD Calculation in the DJMol System</p></li>
+<li><p>Burning of iso-octane fuel at 2500 K (molecular dynamics with DFTB+).</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="appendix-f">
+<h2>Appendix-F<a class="headerlink" href="#appendix-f" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="compiling-installation-of-djmol-and-its-add-ons">
+<h3>Compiling/Installation of DJMol and its Add-Ons<a class="headerlink" href="#compiling-installation-of-djmol-and-its-add-ons" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="general-information">
+<h4>General Information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h4>
+<p>A familiarity with programming using Netbeans IDE is assumed.
+All of the DJMol Program was compiled by using Netbeans IDE, v 8.2 (64bit) in
+Windows 64 OS. This program and all other mandate packages for compiling the software are
+available at free of cost and to download these packages please see: <a class="reference external" href="http://www.djmol.info/download.html">http://www.djmol.info/download.html</a></p>
+<ul>
+<li><p>The needed Packages are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>JAVA 1.8</strong> (jdk-8u201-windows-x64.exe)</p></li>
+<li><p><strong>Netbeans 8.2</strong> (netbeans-8.2-javaee-windows.exe)</p></li>
+<li><p><strong>Python plug-in</strong> (2017-08-29-nbpython-nbms.zip)</p></li>
+<li><p><strong>Python 3.7.2</strong> (python-3.7.2-amd64.exe)</p></li>
+<li><p><strong>Pip script</strong> (get-pip.py)</p></li>
+<li><p><strong>Numpy</strong>     (numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>We also used (64 bit) the following Python packages with version numbers:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>SciPy</strong> (scipy 1.2.1)</p></li>
+<li><p><strong>ASE</strong> (ASE 3.17.0)</p></li>
+<li><p><strong>Matplotlib</strong> (Matplotlib 3.0.3)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>And these programs can be downloaded by using <strong>pip (use pip3)</strong> using a command window.</p>
+</div>
+<div class="section" id="compiling-main-program-djmolplatform">
+<h4>Compiling Main Program, &lt;DJMolplatform&gt;<a class="headerlink" href="#compiling-main-program-djmolplatform" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Open the Project Directory, &lt;DJmol Platform v2.1&gt; and Compile and Build DJMol program. See the YouTube channel for its demonstration.</p></li>
+<li><p>Then make a Zip Distribution (by Selecting project &lt;DJmol Platform v2.1&gt; followed by selecting  &lt;Package as&gt;, &lt;Zip Distribution&gt;). A new &lt;dist&gt; folder will be created and it holds the Zip file.</p></li>
+</ol>
+</div>
+<div class="section" id="installing-program-djmolplatform">
+<h4>Installing Program, &lt;DJMolplatform&gt;<a class="headerlink" href="#installing-program-djmolplatform" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Go to &lt;dist&gt; folder and unzip the file and Copy all the files/folders from the &lt;Auxiliary&gt; folder into &lt;distdjmolplatform1&gt;. This is shown in the demonstration.</p></li>
+<li><p>Go to &lt;distdjmolplatform1etc&gt; and replace the following line in the &lt;djmolplatform1.CONF&gt; file:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">default_options</span><span class="o">=</span><span class="s2">&quot;--branding djmolplatform1 -J-Xms24m -J-Xmx64m&quot;</span>    to
+<span class="nv">default_options</span><span class="o">=</span><span class="s2">&quot;--branding djmolplatform1 -J-Xms240m -J-Xmx640m&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>To adjust the Resolution of the program  Right click on  &lt;djmolplatform164.exe&gt; then move to   &lt;Compatibility&gt; tab and click on &lt;Change high DPI settings&gt; and Select the option “Override high DPI scaling behavior”.</p></li>
+<li><p>Follow the instruction in the PathVariablesSetting.pdf file.</p></li>
+</ol>
+<p>DJMol program can be now simply executed by double clicking &lt;djmolplatform164.exe&gt; which is located in &lt;bin&gt; folder.</p>
+<p>Note that for the First Time of the execution, you may want to select,  &lt;Disable Modules and Continue&gt; option. To fix this, you can try to clean your user-directory as it is mentioned in <a class="reference external" href="http://wiki.netbeans.org/FaqWhatIsUserdir">http://wiki.netbeans.org/FaqWhatIsUserdir</a></p>
+<p>And once the application starts do the following (not mandate but it is useful):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Close &lt;Start Page&gt;
+Close &lt;Services&gt;
+Add &lt;Windows -&gt; Favorites&gt;
+Add &lt;Windows -&gt; Output&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="compiling-add-on-programs">
+<h4>Compiling Add-On Programs<a class="headerlink" href="#compiling-add-on-programs" title="Permalink to this headline">¶</a></h4>
+<p>See &lt;AddOns_compilation.txt&gt; in Add-On directory.</p>
 </div>
 </div>
 </div>

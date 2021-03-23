@@ -419,3 +419,338 @@ Laboratory for Fluorescence Dynamics, University of California, Irvine.
 #. Install NumPy using the <.whl> file; Type this command in your command prompt and press Enter.
     
     **pip install "numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl"**
+
+Appendix-C
+=============
+
+Windows Subsystem Linux in DJMol
+---------------------------------
+
+For more advanced scripting/calculations one may want to use a real Linux operating system (instead of Cygwin emulators) in conjunction with DJMol. For this one can use WSL in the Windows 10 OS. It will give a real Linux OS and hence it guarantees a cent percentage of portability of C/C++ or Fortran codes into the Windows system.
+
+Herein we give a short description of invoking of WSL in the DJMol platform (by assuming that you already have a WSL in your PC; otherwise it can be freely downloaded from Microsoft store, visit:   https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
+Setting up the WSL
+....................
+#.  Update the Linux packages being used by WSL with the following commands in
+    your WSL Ubuntu command window:
+
+    **sudo apt update**
+
+    **sudo apt upgrade**
+
+    **sudo apt install unzip**
+
+    **sudo apt install ssh**
+
+    .. figure:: _static/webdocimages/065.png
+        :alt: 065
+        :align: center
+        :scale: 100%
+
+#.  Your Windows installation is probably already using port 22 for its SSH server, we need to change WSL’s SSH server to listen to a different port.
+    
+    **sudo nano /etc/ssh/sshd_config**
+
+    Change the lines:
+
+    What ports, IPs and protocols we listen for
+
+    **Port 22**
+
+    to
+
+    **Port 2222**
+
+ 
+    .. figure:: _static/webdocimages/066.png
+        :alt: 066
+        :align: center
+        :scale: 100%
+
+    .. figure:: _static/webdocimages/067.png
+        :alt: 065
+        :align: center
+        :scale: 100%
+
+    The WSL SSH server is initially set up to use key files for authentication. 
+    To allow authentication with passwords, change:
+    
+    Change to no to disable tunnelled clear text passwords
+
+    **PasswordAuthentication no**
+
+    to
+
+    **PasswordAuthentication yes**
+    
+    Use Ctrl-o to save the file. Use Ctrl-x to exit the nano text editor.
+    
+#.  Before using the WSL SSH server you must stop and restart the SSH server. You will perform this step every time that you use WSL as the remote host from NetBeans. I suggest placing the command in a script file that you can execute.
+    
+    **nano startssh.sh**
+    
+    Insert the following text into the script file:
+    
+    **sudo service ssh --full-restart**
+
+    .. figure:: _static/webdocimages/068.png
+        :alt: 065
+        :align: center
+        :scale: 100%
+
+    Use Ctrl-o to save the file. Use Ctrl-x to exit the nano text editor.
+
+    Back at the command line, use the following command to mark the script file as executable:
+    
+    **chmod a+x startssh.sh**
+    
+    To restart the SSH server, use the following command:
+    
+    **./startssh.sh**
+
+
+    .. figure:: _static/webdocimages/069.png
+        :alt: 065
+        :align: center
+        :scale: 100%
+
+
+Setting up the Netbeans IDE
+..............................
+
+#.  Open the Terminal and invoke the Terminal as:
+
+    **Window → IDE Tools → Terminal**
+
+.. figure:: _static/webdocimages/070.png
+    :alt: 070
+    :align: center
+    :scale: 100%
+
+#.  Create New Remote Terminal Tab.
+
+    .. figure:: _static/webdocimages/071.png
+        :alt: 071
+        :align: center
+        :scale: 100%
+
+#.  Enter your credentials.
+
+    **User : <your-username>**
+
+    **Host : localhost**
+
+    **SSH Port : 2222**
+
+    .. figure:: _static/webdocimages/072.png
+        :alt: 072
+        :align: center
+        :scale: 100%
+
+    Click OK.
+
+#.  Choose Password.
+
+    .. figure:: _static/webdocimages/073.png
+        :alt: 073
+        :align: center
+        :scale: 100%
+
+#.  Enter your linux password.
+
+    .. figure:: _static/webdocimages/074.png
+        :alt: 074
+        :align: center
+        :scale: 100%
+
+    **#Recommended**: Check Remember Password box.
+
+The process is finished; Now one can use WSL in DJMol
+
+.. figure:: _static/webdocimages/075.png
+    :alt: 075
+    :align: center
+    :scale: 100%
+
+Appendix-D
+============
+
+Saved data
+--------------
+
+DJMol generate a number of text based temporary data, and these are nothing but a 
+set of post-processing data from various visualizers or converters were temporarily stored in 
+different directories and it can be used for a numerical comparison (for example, how MO levels 
+of DFTB+ are different from that of Siesta for a given molecule). A list of such selected post 
+processed files with its description is shown in the Table below.
+
+.. list-table:: Table-5: Important binaries of OpenMD and its descriptions.
+    :widths: 10 20
+    :header-rows: 0
+    :align: center
+
+    * - PESScan\2DPESscanmovie.xyz
+      - Geometries of molecules used for the PES
+    * - PESScan\2DPESscan.dat
+      - Energies and  geometries of the PES
+    * - PESScan\View2DPES.dat
+      - Coordinates (initial, final step size) and PES energy
+    * - SCRATCH\MODFTB.dat
+      - MO energies in DFTB+
+    * - SCRATCH\MOSiesta.dat
+      - MO energies in Siesta
+    * - SCRATCH\ForceDFTB.dat
+      - Cartesian Force components in DFTB+
+    * - SCRATCH\ForceSiesta.dat
+      - Cartesian Force components in Siesta
+    * - SCRATCH\SCFSiesta.txt
+      - SCF convergence in Siesta
+    * - SCRATCH\Uvdata_2.csv
+      - Fitted UV-Vis data
+    * - SCRATCH\Uvdata_1.csv
+      - UV-Vis oscillator strength for the spectrum
+    * - SCRATCH\MDDFTBmovie.xyz
+      - Trajectory of MD in XYZ animation format
+    * - SCRATCH\TotalMD.dat
+      - Total energies of MD run
+    * - SCRATCH\KineticMD.dat
+      - Kinetic energies of MD run
+    * - SCRATCH\PotentialMD.dat
+      - Potential energies of MD run
+    * - SCRATCH\VelocityAC.out
+      - IR spectrum from MD using velocity autocorrelation
+    * - SCRATCH\DipoleAC.out
+      - IR spectrum from MD using dipole moment autocorrelation
+    * - SCRATCH\StdOrientation.xyz
+      - Standard orientation of the given molecule
+    * - SCRATCH\MullikenDFTB.dat
+      - Mulliken charges from DFTB+
+    * - Input\dftb_in.hsd
+      - DFTB+ script writer out file
+    * - Input\siestaTEMP.fdf
+      - Siesta script writer out file
+    * - ModesBinary\modes_in.hsd
+      - DFTB+ file used to construct vibrational data
+    * - ModesBinary\waveplot_in.hsd
+      - DFTB+ file used to construct MO and its density data
+    * - ModesBinary\modes.xyz     
+      - DFTB vibrational modes and frequencies
+    * - ModesBinary\*.cube
+      - DFTB Cube files for MOs and Densities
+    * - SiestaApp\SiestaBinary.4.0CygWin64\*.cube
+      - Siesta Cube files
+    * - SiestaApp\SiestaBinary.4.0.CygWin64\SiestaVibModes.xyz
+      - Siesta (DFT) bands
+    * - SiestaApp\SiestaBinary.4.0.CygWin64\BAND.bands
+      -  
+    * - SiestaApp\SiestaBinary.4.0.CygWin64\wannier.bands
+      - Siesta Wannier orbitals
+    * - SiestaApp\SiestaBinary.4.0.CygWin64\wannier_*.xsf
+      -  
+    * - OpenMD\.
+      - All OpenMD in and out files
+    * - Database\.
+      - All downloaded Structural files from online repositories
+  
+Appendix-E
+================
+
+Demonstration Videos
+----------------------
+
+Please visit: https://www.youtube.com/channel/UCNczegqwli6gnuo6eqNJSPg for Demo videos. 
+The list is (as of October 2020):
+
+#. Windows OpenMP settings | Executing Stand-alone DFTB+
+#. DJMol Demo on Point Group Symmetry Detection
+#. Running a DFTB Calculation from DJMol
+#. Phonon Density of States (DOS) of Aluminium Bulk: DJMol + ASE Python Scripting
+#. PES demo in DJMol (Linux)
+#. Demo on Molecular Vibration of Water Molecule
+#. Demo on Partial Charges And File Conversions
+#. Generating/Displaying Molecular Orbitals in DJMol
+#. DFTB+ Input script Writer in DJMol
+#. DJmol/Netbeans : How to install ASE, Matplotlib with PIP
+#. Adding Python Plugin in Netbeans or in DJMol
+#. Siesta's Charge density and/or electronic wave functions: 2D Contours/Surfaces
+#. Siesta's Charge density and/or electronic wave functions: 3D cube files
+#. Remote Submission using SSH tool in DJMol (64v)
+#. Band diagram and DOS (density of state) plot of Aluminum FCC
+#. Molecular Dynamics Analysis
+#. UV-visible spectrum in DJMol
+#. Z-Matrix Structure Editor of DJMol
+#. Wannier AddOn in DJMol (with Siesta)
+#. DJMol Win64 Installation from its ZIP distribution File
+#. DJMol Version Control with Github
+#. Terminal use in DJMol
+#. Building of DJMol with Netbeans 8.2 (Win64OS)
+#. Radial Distribution Function from ASAP MD Calculation in the DJMol System
+#. Burning of iso-octane fuel at 2500 K (molecular dynamics with DFTB+).
+
+Appendix-F
+===============
+
+Compiling/Installation of DJMol and its Add-Ons
+-------------------------------------------------
+General Information
+.....................
+
+A familiarity with programming using Netbeans IDE is assumed. 
+All of the DJMol Program was compiled by using Netbeans IDE, v 8.2 (64bit) in  
+Windows 64 OS. This program and all other mandate packages for compiling the software are 
+available at free of cost and to download these packages please see: http://www.djmol.info/download.html
+
+* The needed Packages are:
+
+	* **JAVA 1.8** (jdk-8u201-windows-x64.exe)
+	* **Netbeans 8.2** (netbeans-8.2-javaee-windows.exe)
+	* **Python plug-in** (2017-08-29-nbpython-nbms.zip)
+	* **Python 3.7.2** (python-3.7.2-amd64.exe)
+	* **Pip script** (get-pip.py)
+	* **Numpy**	(numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl)
+
+* We also used (64 bit) the following Python packages with version numbers:
+
+    * **SciPy** (scipy 1.2.1)  
+    * **ASE** (ASE 3.17.0)
+    * **Matplotlib** (Matplotlib 3.0.3)
+
+And these programs can be downloaded by using **pip (use pip3)** using a command window.
+
+Compiling Main Program, <DJMolplatform>
+..........................................
+#.  Open the Project Directory, <DJmol Platform v2.1> and Compile and Build DJMol program. See the YouTube channel for its demonstration.
+#.  Then make a Zip Distribution (by Selecting project <DJmol Platform v2.1> followed by selecting  <Package as>, <Zip Distribution>). A new <dist> folder will be created and it holds the Zip file.
+
+Installing Program, <DJMolplatform>
+.....................................
+
+#.  Go to <dist> folder and unzip the file and Copy all the files/folders from the <Auxiliary> folder into <dist\djmolplatform1>. This is shown in the demonstration.
+#.  Go to <dist\djmolplatform1\etc> and replace the following line in the <djmolplatform1.CONF> file:
+
+.. code:: bash
+
+	default_options="--branding djmolplatform1 -J-Xms24m -J-Xmx64m"    to
+	default_options="--branding djmolplatform1 -J-Xms240m -J-Xmx640m"
+
+#.  To adjust the Resolution of the program  Right click on  <djmolplatform164.exe> then move to   <Compatibility> tab and click on <Change high DPI settings> and Select the option "Override high DPI scaling behavior".
+#.  Follow the instruction in the PathVariablesSetting.pdf file.
+
+DJMol program can be now simply executed by double clicking <djmolplatform164.exe> which is located in <bin> folder.  
+
+Note that for the First Time of the execution, you may want to select,  <Disable Modules and Continue> option. To fix this, you can try to clean your user-directory as it is mentioned in http://wiki.netbeans.org/FaqWhatIsUserdir
+
+And once the application starts do the following (not mandate but it is useful):
+
+.. code:: bash
+
+    Close <Start Page>
+    Close <Services>
+    Add <Windows -> Favorites>
+    Add <Windows -> Output>
+
+Compiling Add-On Programs
+...........................
+
+See <AddOns_compilation.txt> in Add-On directory.
