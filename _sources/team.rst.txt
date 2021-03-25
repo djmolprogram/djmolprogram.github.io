@@ -1,0 +1,37 @@
+.. title:: CINEMAS team
+
+==========================
+Developers' group members
+==========================
+
+.. image:: _static/Seung-Cheol-Lee.png
+   :alt: SCLEE
+   :scale: 25%
+   
+| Dr. Seung-Cheol-Lee (Principal Investigator)
+| Director, IKST Bengaluru INDIA
+
+.. image:: _static/gpk.jpeg
+   :alt: GPK
+   :scale: 8%   
+
+| Dr. GP krishna mohan (Developer-in-lead),
+| Assistant professor of chemistry,
+| Mar Baselios College of Science and Technology (MBCET), 
+| Trivandrum, Kerala, India
+
+.. image:: _static/kapil.png
+   :alt: KG
+   :scale: 20%
+
+| Dr. Kapil Gupta (Coordinator-developer)
+| Research Scientist, IKST Bengaluru INDIA
+
+.. image:: _static/rahul.jpeg
+   :alt: RS
+   :scale: 30%
+
+| Rahul Sunil (Developer)
+| Student(B.Tech.), 
+| Mar Baselios College of Science and Technology (MBCET), 
+| Trivandrum, Kerala, India

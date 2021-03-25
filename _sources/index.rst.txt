@@ -56,7 +56,13 @@ The Program is distributed under GPL-v3 (or later). For a detailed review on thi
 
 Contact
 =========
-Mail krishna.mohan@mbcet.ac.in or krishnamohan.gp@gmail.com for further queries on the program.
+Mail the developer-in-charge Dr. GP krishna mohan at krishna.mohan@mbcet.ac.in ; krishnamohan.gp@gmail.com 
+
+or 
+
+the PI Dr. Seung-Cheol Lee at seungcheol.lee@ikst.res.in
+
+for further queries on the program.
 
 
 
@@ -81,3 +87,10 @@ Mail krishna.mohan@mbcet.ac.in or krishnamohan.gp@gmail.com for further queries 
     :hidden:
 
     vidtutorials
+
+.. toctree::
+    :maxdepth: 10
+    :caption: Team:
+    :hidden:
+
+    team
