@@ -754,3 +754,51 @@ Compiling Add-On Programs
 ...........................
 
 See <AddOns_compilation.txt> in Add-On directory.
+
+
+Setting Environment Variables for DJMol(Path, CLASSPATH)
+..........................................................
+
+To get proper functioning of the program one needs to set system variables 
+(namely, **PATH** and **CLASSPATH** variables). 
+Note that we use Windows 10 OS with all OS updates (as of June 2021).
+
+First, get <Control Panel> and select <System and Security> option and 
+then click on <System> option and click on <Advanced system settings>. This will give 
+<System properties> window. Select <Advanced> tab and click on <Environment Variables>. 
+See Figure below:
+
+.. figure:: _static/webdocimages/076.png
+  :alt: 076
+  :align: center
+  :scale: 70%
+
+  Control Panel settings
+
+There are three settings to be done.
+  - In **<User variables>** append the **<Path>** variable with the full path of the **<djmolplatform1>** directory. See Fig. below:
+
+  .. figure:: _static/webdocimages/077.png
+    :alt: 077
+    :align: center
+    :scale: 70%
+
+    User Variable – Path; See last entry.
+  
+  - In **<System Variable>** section, add **<CLASSPATH>** and insert the **<djmolplatform1>** folder path name into it. See Fig. below:
+
+  .. figure:: _static/webdocimages/078.png
+    :alt: 078
+    :align: center
+    :scale: 70%
+
+    System Variable setting – CLASSPATH
+
+  - After that, look at **<Path>** variable, and check whether it include a javapath setting. See Fig. below:
+
+  .. figure:: _static/webdocimages/079.png
+    :alt: 079
+    :align: center
+    :scale: 70%
+
+    System variable setting - Path
