@@ -405,9 +405,13 @@ to download these packages please see: <a class="reference external" href="https
 &lt;Auxilary&gt; folder into &lt;distdjmolplatform1&gt;.
 See <a class="reference external" href="https://www.youtube.com/watch?v=zm6Mbh0T1m8">https://www.youtube.com/watch?v=zm6Mbh0T1m8</a> for the demonstration.</p></li>
 <li><p>Go to &lt;distdjmolplatform1etc&gt; and replace the the following line in the &lt;djmolplatform1.CONF&gt; file:</p>
-<p>default_options=”–branding djmolplatform1 -J-Xms24m -J-Xmx64m”</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">default_options</span><span class="o">=</span><span class="s2">&quot;--branding djmolplatform1 -J-Xms24m -J-Xmx64m&quot;</span>
+</pre></div>
+</div>
 <p>to</p>
-<p>default_options=”–branding djmolplatform1 -J-Xms240m -J-Xmx640m” (meaning RAM is defined between 240-640MB for DJMol)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">default_options</span><span class="o">=</span><span class="s2">&quot;--branding djmolplatform1 -J-Xms240m -J-Xmx640m&quot;</span> <span class="o">(</span>meaning RAM is defined between <span class="m">240</span>-640MB <span class="k">for</span> DJMol<span class="o">)</span>
+</pre></div>
+</div>
 </li>
 <li><dl class="simple">
 <dt>To adjust the Resolution of the program  Right click on  &lt;djmolplatform164.exe&gt; then move to</dt><dd><p>&lt;Compatibility&gt; tab and click on &lt;Change high DPI settings&gt; and Select the option “Override high DPI scaling behavior”.</p>

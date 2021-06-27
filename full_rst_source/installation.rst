@@ -98,11 +98,15 @@ Compiling Main-Program <DJMolplatform>
 
 - Go to <dist\djmolplatform1\etc> and replace the the following line in the <djmolplatform1.CONF> file:
   
-  default_options="--branding djmolplatform1 -J-Xms24m -J-Xmx64m"
+  .. code-block:: bash
+ 
+        default_options="--branding djmolplatform1 -J-Xms24m -J-Xmx64m"
     
   to
+
+  .. code-block:: bash
 	
-  default_options="--branding djmolplatform1 -J-Xms240m -J-Xmx640m" (meaning RAM is defined between 240-640MB for DJMol)
+        default_options="--branding djmolplatform1 -J-Xms240m -J-Xmx640m" (meaning RAM is defined between 240-640MB for DJMol)
 
 - To adjust the Resolution of the program  Right click on  <djmolplatform164.exe> then move to 
     <Compatibility> tab and click on <Change high DPI settings> and Select the option "Override high DPI scaling behavior".
