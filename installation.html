@@ -92,7 +92,17 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation of DJMOL</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#compiling-installation-of-djmol-and-add-ons">Compiling/Installation of DJMol and Add-Ons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-of-binary">Installation of Binary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-information">General Information:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-djmol-v-2-1-in-windows-10-os-64-bit">Running DJMol v 2.1 in Windows 10 OS 64 bit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compilation-from-the-source-code">Compilation from the source code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">General-Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compiling-main-program-djmolplatform">Compiling Main-Program &lt;DJMolplatform&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compiling-add-on-programs">Compiling Add-On Programs:</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
 </ul>
 </li>
@@ -319,81 +329,112 @@
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="compiling-installation-of-djmol-and-add-ons">
-<h2>Compiling/Installation of DJMol and Add-Ons<a class="headerlink" href="#compiling-installation-of-djmol-and-add-ons" title="Permalink to this headline">¶</a></h2>
-<p>A familiarity with programming using Netbeans IDE is assumed. All of the DJMol Program was compiled by using Netbeans IDE, v 8.2 (64bit) in Windows 64 OS.</p>
-<dl class="simple">
-<dt><strong>The needed packages are:</strong></dt><dd><ul class="simple">
-<li><p>JAVA 1.8 (jdk-8u201-windows-x64.exe)</p></li>
-<li><p>Netbeans 8.2 (netbeans-8.2-javaee-windows.exe)</p></li>
-<li><p>Python plug-in (2017-08-29-nbpython-nbms.zip)</p></li>
-<li><p>Python 3.7.2 (python-3.7.2-amd64.exe)</p></li>
-<li><p>Pip script (get-pip.py)</p></li>
-<li><p>Numpy (numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl)</p></li>
+<div class="section" id="installation-of-binary">
+<h2>Installation of Binary<a class="headerlink" href="#installation-of-binary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-information">
+<h3>General Information:<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h3>
+<p>This descibes how to install Binary of DJMol.</p>
+<p>The following programs are required (Mandate) to Run the software</p>
+<ul class="simple">
+<li><p>Java 1.8 or higher (if it is not installed please install
+Java via installing JDK from
+<a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">https://www.oracle.com/technetwork/java/javase/downloads/index.html</a>)
+or from <a class="reference external" href="http://www.djmol.info/download.html">http://www.djmol.info/download.html</a></p></li>
+<li><p>Python 3.X (3.7 preferred)
+Please use 64 bit version of Python.</p></li>
+<li><p>NumPy, ASE and (optionally) Python3 plugg-in for Netbeans.</p></li>
 </ul>
-</dd>
-<dt><strong>We also used (64 bit) the following Python packages with version numbers:</strong></dt><dd><ul class="simple">
-<li><p>SciPy (scipy 1.2.1)</p></li>
-<li><p>ASE (ASE 3.17.0)</p></li>
-<li><p>Matplotlib (Matplotlib 3.0.3)</p></li>
+</div>
+<div class="section" id="running-djmol-v-2-1-in-windows-10-os-64-bit">
+<h3>Running DJMol v 2.1 in Windows 10 OS 64 bit<a class="headerlink" href="#running-djmol-v-2-1-in-windows-10-os-64-bit" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Unzip the file, &lt;dmolplatform1.zip&gt; and Copy all the files/folders from the
+&lt;./Auxilary&gt; folder into &lt;./djmolplatform1/.&gt;.
+See <a class="reference external" href="https://www.youtube.com/watch?v=zm6Mbh0T1m8">https://www.youtube.com/watch?v=zm6Mbh0T1m8</a> for the demonstration.</p></li>
+<li><p>To adjust the Resolution of the program  Right click on  &lt;djmolplatform164.exe&gt; then move to
+&lt;Compatibility&gt; tab and click on &lt;Change high DPI settings&gt; and Select the option “Override high DPI scaling behavior”.</p></li>
+<li><p>Please follow the instruction in the &lt;PathVariablesSetting_v2.pdf&gt; file.</p></li>
 </ul>
+<p>DJMol program can be now simply executed by double clicking &lt;djmolplatform164.exe&gt;
+which is located in &lt;bin&gt; folder.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that for the First Time of the execution, you may want to select,
+&lt;Disable Modules and Continue&gt; option.
+To fix this, you can try to clean your user-directory as it is mentioned in
+<a class="reference external" href="http://wiki.netbeans.org/FaqWhatIsUserdir">http://wiki.netbeans.org/FaqWhatIsUserdir</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="compilation-from-the-source-code">
+<h2>Compilation from the source code<a class="headerlink" href="#compilation-from-the-source-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>General-Information<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>All of the DJMol Program was compiled by using Netbeans IDE, v 8.2 (64bit) for Windows 64 OS.</p>
+<p>This program and all other mandate packages for compiling the software are availble at free of cost and
+to download these packages please see: <a class="reference external" href="https://djmolprogram.github.io">https://djmolprogram.github.io</a></p>
+<ul class="simple">
+<li><p>JAVA1.8         jdk-8u201-windows-x64.exe</p></li>
+<li><p>Netbeans 8.2    netbeans-8.2-javaee-windows.exe</p></li>
+<li><p>Python pluggin  2017-08-29-nbpython-nbms.zip</p></li>
+<li><p>Python 3.7.2    python-3.7.2-amd64.exe</p></li>
+<li><p>Pip script      get-pip.py</p></li>
+<li><p>Numpy           numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl</p></li>
+</ul>
+<p>We also used (64 bit) python packages:
+-       scipy 1.2.1
+-       numpy 1.16.0
+-       ASE 3.17.0
+-       Matplotlib 3.0.3</p>
+<p>And these programs can be downloaded by using pip.</p>
+</div>
+<div class="section" id="compiling-main-program-djmolplatform">
+<h3>Compiling Main-Program &lt;DJMolplatform&gt;<a class="headerlink" href="#compiling-main-program-djmolplatform" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="simple">
+<dt>Open the Project Directory, &lt;DJMolCompPhysComm_2020_BETAformat&gt; and Compile and Build DJMol program.</dt><dd><p>See <a class="reference external" href="https://www.youtube.com/watch?v=9gQzd9qnjN0">https://www.youtube.com/watch?v=9gQzd9qnjN0</a> for its demonstration.</p>
 </dd>
 </dl>
-<p><em>And these modules can be downloaded by using pip (use pip3).</em></p>
-<ul>
-<li><p><strong>Compilation of the main program</strong></p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>Open the Project Directory, <strong>DJmol Platform v2.1</strong> and Compile and Build DJMol program. See the YouTube channel for its demonstration.</p></li>
-<li><p>Then make a Zip Distribution (by Selecting project <strong>DJmol Platform v2.1</strong> followed by selecting <strong>Package as, Zip Distribution</strong>). A new <strong>dist</strong> folder will be created and it holds the Zip file.</p></li>
-</ol>
-</div></blockquote>
 </li>
-<li><p><strong>Installation of the program</strong></p>
-<blockquote>
-<div><ol class="arabic">
-<li><p>Go to dist folder and unzip the file and Copy all the files/folders from the <strong>Auxiliary</strong> folder into <strong>distdjmolplatform1</strong>. This is shown in the demonstration.</p></li>
-<li><p>Go to <strong>dist\djmolplatform1\etc</strong> and replace the following line in the <strong>djmolplatform1.CONF</strong> file:</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">default_options</span><span class="o">=</span><span class="s2">&quot;--branding djmolplatform1 -J-Xms24m -J-Xmx64m&quot;</span>
-</pre></div>
-</div>
+<li><dl class="simple">
+<dt>Then make a Zip Distribution (by Selecting project &lt;DJmol Platform v2.1&gt; followed by selecting</dt><dd><p>&lt;Package as&gt;, &lt;Zip Distribution&gt;). A new &lt;dist&gt; folder will be created and it holds the Zip file.</p>
+</dd>
+</dl>
+</li>
+<li><p>Go to &lt;dist&gt; folder and unzip the file and Copy all the files/folders from the
+&lt;Auxilary&gt; folder into &lt;distdjmolplatform1&gt;.
+See <a class="reference external" href="https://www.youtube.com/watch?v=zm6Mbh0T1m8">https://www.youtube.com/watch?v=zm6Mbh0T1m8</a> for the demonstration.</p></li>
+<li><p>Go to &lt;distdjmolplatform1etc&gt; and replace the the following line in the &lt;djmolplatform1.CONF&gt; file:</p>
+<p>default_options=”–branding djmolplatform1 -J-Xms24m -J-Xmx64m”</p>
 <p>to</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">default_options</span><span class="o">=</span><span class="s2">&quot;--branding djmolplatform1 -J-Xms240m -J-Xmx640m&quot;</span>
-</pre></div>
-</div>
-</div></blockquote>
+<p>default_options=”–branding djmolplatform1 -J-Xms240m -J-Xmx640m” (meaning RAM is defined between 240-640MB for DJMol)</p>
 </li>
-<li><p>To adjust the Resolution of the program Right click on <strong>djmolplatform164.exe</strong> then move to Compatibility tab and click on <strong>Change high DPI settings</strong> and Select the option “Override high DPI scaling behavior”.</p></li>
-<li><p>Follow the instruction in the <strong>PathVariablesSetting.pdf</strong> file.</p></li>
-</ol>
-</div></blockquote>
+<li><dl class="simple">
+<dt>To adjust the Resolution of the program  Right click on  &lt;djmolplatform164.exe&gt; then move to</dt><dd><p>&lt;Compatibility&gt; tab and click on &lt;Change high DPI settings&gt; and Select the option “Override high DPI scaling behavior”.</p>
+</dd>
+</dl>
 </li>
+<li><p>Please follow the instruction in the PathVariablesSetting_v2.pdf file.</p></li>
 </ul>
-<p>DJMol program can be now simply executed by double clicking djmolplatform164.exe which is located in bin folder.</p>
-<p>Note that for the First Time of the execution, you may want to select, Disable Modules and Continue option.
-To fix this, you can try to clean your user-directory as it is mentioned in <a class="reference external" href="http://wiki.netbeans.org/FaqWhatIsUserdir">http://wiki.netbeans.org/FaqWhatIsUserdir</a>.</p>
-<p>And once the application starts do the following (not mandate but it is useful):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Close &lt;Start Page&gt;
-Close &lt;Services&gt;
-Add &lt;Windows -&gt; Favorites&gt;
-Add &lt;Windows -&gt; Output&gt;
-</pre></div>
+<p>DJMol program can be now simply executed by double clicking &lt;djmolplatform164.exe&gt;
+which is located in &lt;bin&gt; folder.</p>
+<p>Note that for the First Time of the execution, you may want to select,
+&lt;Disable Modules and Continue&gt; option.
+To fix this, you can try to clean your user-directory as it is mentioned in
+<a class="reference external" href="http://wiki.netbeans.org/FaqWhatIsUserdir">http://wiki.netbeans.org/FaqWhatIsUserdir</a></p>
 </div>
-<ul>
-<li><p><strong>Compiling Add-On Programs</strong></p>
-<blockquote>
-<div><p>See <strong>AddOns_compilation.txt</strong> in Add-On directory.</p>
-</div></blockquote>
-</li>
-</ul>
+<div class="section" id="compiling-add-on-programs">
+<h3>Compiling Add-On Programs:<a class="headerlink" href="#compiling-add-on-programs" title="Permalink to this headline">¶</a></h3>
+<p>See &lt;AddOns_compilation.txt&gt; in Add-On directory.</p>
+<p>For Furthur info: Please see the &lt;DJMol Channel&gt; on &lt;Compilation&gt; and &lt;Installation&gt;.</p>
+</div>
 </div>
 <div class="section" id="system-requirements">
 <h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Software:</dt><dd><ul>
-<li><p>Windows 10-7 64 bit OS</p></li>
+<li><p>Windows 7/10 64 bit OS</p></li>
 <li><p>Java 1.8 or later, Python 3.x</p></li>
 </ul>
 </dd>

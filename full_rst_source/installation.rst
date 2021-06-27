@@ -11,73 +11,124 @@ Download
         - `Source V2.1 (June 2021) <https://drive.google.com/file/d/1jRCYA33f3bsJussPG9fqxCGmxMlocsmR/view?usp=sharing>`_
   
 
-Compiling/Installation of DJMol and Add-Ons
-=================================================
 
-A familiarity with programming using Netbeans IDE is assumed. All of the DJMol Program was compiled by using Netbeans IDE, v 8.2 (64bit) in Windows 64 OS.
+Installation of Binary
+=======================
 
-**The needed packages are:**
-    - JAVA 1.8 (jdk-8u201-windows-x64.exe)
-    - Netbeans 8.2 (netbeans-8.2-javaee-windows.exe)
-    - Python plug-in (2017-08-29-nbpython-nbms.zip)
-    - Python 3.7.2 (python-3.7.2-amd64.exe)
-    - Pip script (get-pip.py)
-    - Numpy (numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl)
+General Information:
+-----------------------
 
-**We also used (64 bit) the following Python packages with version numbers:**    
-    - SciPy (scipy 1.2.1)
-    - ASE (ASE 3.17.0)
-    - Matplotlib (Matplotlib 3.0.3)
-  
-*And these modules can be downloaded by using pip (use pip3).*
+This descibes how to install Binary of DJMol.
 
-* **Compilation of the main program**
-
-    #. Open the Project Directory, **DJmol Platform v2.1** and Compile and Build DJMol program. See the YouTube channel for its demonstration.
-    #. Then make a Zip Distribution (by Selecting project **DJmol Platform v2.1** followed by selecting **Package as, Zip Distribution**). A new **dist** folder will be created and it holds the Zip file.
-
-* **Installation of the program**
-
-    #. Go to dist folder and unzip the file and Copy all the files/folders from the **Auxiliary** folder into **dist\djmolplatform1**. This is shown in the demonstration.
-  
-    #. Go to **dist\\djmolplatform1\\etc** and replace the following line in the **djmolplatform1.CONF** file:
-        
-        .. code-block:: bash
-
-            default_options="--branding djmolplatform1 -J-Xms24m -J-Xmx64m"
-
-        to 
-
-        .. code-block:: bash
-
-            default_options="--branding djmolplatform1 -J-Xms240m -J-Xmx640m"
+The following programs are required (Mandate) to Run the software
     
-    #. To adjust the Resolution of the program Right click on **djmolplatform164.exe** then move to Compatibility tab and click on **Change high DPI settings** and Select the option “Override high DPI scaling behavior”.
-    #. Follow the instruction in the **PathVariablesSetting.pdf** file.
+- Java 1.8 or higher (if it is not installed please install
+  Java via installing JDK from 
+  https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+  or from http://www.djmol.info/download.html 
+- Python 3.X (3.7 preferred)
+  Please use 64 bit version of Python. 
+- NumPy, ASE and (optionally) Python3 plugg-in for Netbeans.
 
-DJMol program can be now simply executed by double clicking djmolplatform164.exe which is located in bin folder.
 
-Note that for the First Time of the execution, you may want to select, Disable Modules and Continue option. 
-To fix this, you can try to clean your user-directory as it is mentioned in `http://wiki.netbeans.org/FaqWhatIsUserdir <http://wiki.netbeans.org/FaqWhatIsUserdir>`_.
+Running DJMol v 2.1 in Windows 10 OS 64 bit
+---------------------------------------------
 
-And once the application starts do the following (not mandate but it is useful):
+- Unzip the file, <dmolplatform1.zip> and Copy all the files/folders from the
+  <./Auxilary> folder into <./djmolplatform1/.>. 
+  See https://www.youtube.com/watch?v=zm6Mbh0T1m8 for the demonstration.
 
-.. code-block:: bash
+- To adjust the Resolution of the program  Right click on  <djmolplatform164.exe> then move to 
+  <Compatibility> tab and click on <Change high DPI settings> and Select the option "Override high DPI scaling behavior".
 
-    Close <Start Page>
-    Close <Services>
-    Add <Windows -> Favorites>
-    Add <Windows -> Output>
+- Please follow the instruction in the <PathVariablesSetting_v2.pdf> file.
 
-* **Compiling Add-On Programs**
+DJMol program can be now simply executed by double clicking <djmolplatform164.exe>
+which is located in <bin> folder.  
 
-    See **AddOns_compilation.txt** in Add-On directory.
+.. note:: 
 
+    Note that for the First Time of the execution, you may want to select, 
+    <Disable Modules and Continue> option.
+    To fix this, you can try to clean your user-directory as it is mentioned in 
+    http://wiki.netbeans.org/FaqWhatIsUserdir 
+        
+
+Compilation from the source code
+=====================================
+
+
+General-Information
+-----------------------
+
+All of the DJMol Program was compiled by using Netbeans IDE, v 8.2 (64bit) for Windows 64 OS.
+
+This program and all other mandate packages for compiling the software are availble at free of cost and
+to download these packages please see: https://djmolprogram.github.io
+
+-	JAVA1.8		jdk-8u201-windows-x64.exe
+-	Netbeans 8.2	netbeans-8.2-javaee-windows.exe
+-	Python pluggin	2017-08-29-nbpython-nbms.zip
+-	Python 3.7.2	python-3.7.2-amd64.exe
+-	Pip script 	get-pip.py
+-	Numpy		numpy-1.16.0+mkl-cp37-cp37m-win_amd64.whl
+
+
+We also used (64 bit) python packages:
+-	scipy 1.2.1  
+-	numpy 1.16.0 
+-	ASE 3.17.0
+-	Matplotlib 3.0.3 
+
+And these programs can be downloaded by using pip.
+
+
+Compiling Main-Program <DJMolplatform>
+----------------------------------------
+
+- Open the Project Directory, <DJMolCompPhysComm_2020_BETAformat> and Compile and Build DJMol program.
+    See https://www.youtube.com/watch?v=9gQzd9qnjN0 for its demonstration.
+
+- Then make a Zip Distribution (by Selecting project <DJmol Platform v2.1> followed by selecting 
+    <Package as>, <Zip Distribution>). A new <dist> folder will be created and it holds the Zip file.
+
+- Go to <dist> folder and unzip the file and Copy all the files/folders from the
+  <Auxilary> folder into <dist\djmolplatform1>. 
+  See https://www.youtube.com/watch?v=zm6Mbh0T1m8 for the demonstration.
+
+- Go to <dist\djmolplatform1\etc> and replace the the following line in the <djmolplatform1.CONF> file:
+  
+  default_options="--branding djmolplatform1 -J-Xms24m -J-Xmx64m"
+    
+  to
+	
+  default_options="--branding djmolplatform1 -J-Xms240m -J-Xmx640m" (meaning RAM is defined between 240-640MB for DJMol)
+
+- To adjust the Resolution of the program  Right click on  <djmolplatform164.exe> then move to 
+    <Compatibility> tab and click on <Change high DPI settings> and Select the option "Override high DPI scaling behavior".
+
+- Please follow the instruction in the PathVariablesSetting_v2.pdf file.
+
+DJMol program can be now simply executed by double clicking <djmolplatform164.exe>
+which is located in <bin> folder.  
+
+Note that for the First Time of the execution, you may want to select, 
+<Disable Modules and Continue> option.
+To fix this, you can try to clean your user-directory as it is mentioned in 
+http://wiki.netbeans.org/FaqWhatIsUserdir
+
+
+Compiling Add-On Programs:
+-----------------------------
+See <AddOns_compilation.txt> in Add-On directory.
+
+For Furthur info: Please see the <DJMol Channel> on <Compilation> and <Installation>.
+    
 System Requirements
 =======================
 
 * Software:
-    * Windows 10-7 64 bit OS
+    * Windows 7/10 64 bit OS
     * Java 1.8 or later, Python 3.x
 
 * Hardware:
