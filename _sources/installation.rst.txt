@@ -7,8 +7,8 @@ Installation of DJMOL
 Download 
 ===========================
 
-        - `Binaries <https://djmol.s3.amazonaws.com/DJMolPlatformv2.1_Win64.zip>`_
-        - `Source <https://djmol.s3.amazonaws.com/DJMolSource_2020_BETAformat.zip>`_
+        - `Binaries V2.1 (June 2021) <https://drive.google.com/file/d/1whpwssDTE43mL4HGfY4CsSo4IRKqBC_S/view?usp=sharing>`_
+        - `Source V2.1 (June 2021) <https://drive.google.com/file/d/1jRCYA33f3bsJussPG9fqxCGmxMlocsmR/view?usp=sharing>`_
   
 
 Compiling/Installation of DJMol and Add-Ons
