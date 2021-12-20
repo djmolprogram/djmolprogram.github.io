@@ -35,3 +35,12 @@ Developers' group members
 | Student(B.Tech.), 
 | Mar Baselios College of Science and Technology (MBCET), 
 | Trivandrum, Kerala, India
+
+.. image:: _static/senthil.jpg
+   :alt: RS
+   :scale: 30%
+
+| Senthil Kumar (Software Testing)
+| Consultant(IBM), 
+| Vancouver, Canada 
+
